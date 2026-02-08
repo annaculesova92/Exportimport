@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronDown } from 'lucide-react';
+import { Globe, ChevronDown } from 'lucide-react';
 import { useLanguage, Language } from '@/app/contexts/LanguageContext';
 
 const languages = [
@@ -31,12 +31,12 @@ export function LanguageSwitcher() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-200 hover:border-teal-300 bg-white hover:bg-teal-50/50 transition-all duration-200 text-sm font-medium text-slate-700"
+        className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-slate-100 transition-all duration-200 text-slate-600"
       >
+        <Globe className="w-4 h-4" />
         <span className="text-base leading-none">{current.flag}</span>
-        <span className="hidden sm:inline">{current.short}</span>
         <ChevronDown
-          className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-3 h-3 text-slate-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
 
