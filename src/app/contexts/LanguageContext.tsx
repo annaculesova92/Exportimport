@@ -226,7 +226,7 @@ const translations = {
       sent: 'Отправлено',
       privacyNote: 'Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности',
       location: 'Расположение',
-      address: 'Милан, Италия',
+      address: 'Верона, Италия',
       hours: 'Часы работы',
       workingHours: 'Пн-Пт: 9:00 - 18:00',
       socialTitle: 'Следите за нами',
@@ -261,7 +261,7 @@ const translations = {
       locationText: 'Милан / Верона, вся Италия и ЕС',
       connectWhatsapp: 'Связаться в WhatsApp',
       contactsTitle: 'КОНТАКТЫ',
-      officeMilan: 'Милан, Италия',
+      officeMilan: 'Верона, Италия',
       allRightsFull: 'Все права защищены.'
     },
     process_ui: {
@@ -455,7 +455,7 @@ const translations = {
       secureNote: 'Your data is protected by 256-bit encryption',
       close: 'Close',
       location: 'Location',
-      address: 'Milan, Italy',
+      address: 'Verona, Italy',
       hours: 'Working Hours',
       workingHours: 'Mon-Fri: 9:00 AM - 6:00 PM',
       ctaTitle: 'Start Working with Us',
@@ -479,7 +479,10 @@ const translations = {
       followUs: 'Follow us',
       allRights: 'All rights reserved.',
       madeWith: 'Made with',
-      forBusiness: 'for business'
+      forBusiness: 'for business',
+      contactsTitle: 'CONTACTS',
+      officeMilan: 'Verona, Italy',
+      allRightsFull: 'All rights reserved.'
     },
     process_ui: {
       step: 'Step',
@@ -672,7 +675,7 @@ const translations = {
       secureNote: 'Vos données sont protégées par un chiffrement 256 bits',
       close: 'Fermer',
       location: 'Localisation',
-      address: 'Milan, Italie',
+      address: 'Vérone, Italie',
       hours: 'Heures de travail',
       workingHours: 'Lun-Ven: 9:00 - 18:00',
       ctaTitle: 'Commencez à travailler avec nous',
@@ -708,7 +711,7 @@ const translations = {
       locationText: 'Milan / Vérone, toute l\'Italie et l\'UE',
       connectWhatsapp: 'Contactez-nous via WhatsApp',
       contactsTitle: 'CONTACTS',
-      officeMilan: 'Milan, Italie',
+      officeMilan: 'Vérone, Italie',
       allRightsFull: 'Tous droits réservés.'
     },
     process_ui: {
@@ -898,7 +901,7 @@ const translations = {
       sent: 'Inviato',
       privacyNote: 'Cliccando sul pulsante, accetti la politica sulla privacy',
       location: 'Posizione',
-      address: 'Milano, Italia',
+      address: 'Verona, Italia',
       hours: 'Orari di lavoro',
       workingHours: 'Lun-Ven: 9:00 - 18:00',
       socialTitle: 'Seguici',
@@ -933,7 +936,7 @@ const translations = {
       locationText: 'Milano / Verona, tutta l\'Italia e l\'UE',
       connectWhatsapp: 'Contattaci via WhatsApp',
       contactsTitle: 'CONTATTI',
-      officeMilan: 'Milano, Italia',
+      officeMilan: 'Verona, Italia',
       allRightsFull: 'Tutti i diritti riservati.'
     },
     process_ui: {
