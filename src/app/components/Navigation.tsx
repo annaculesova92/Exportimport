@@ -40,8 +40,7 @@ export function Navigation({ onContactClick }: NavigationProps) {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
+        <div className="flex justify-between items-center h-16 sm:h-20">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -49,8 +48,8 @@ export function Navigation({ onContactClick }: NavigationProps) {
             className="flex items-center space-x-3 cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <div className="w-11 h-11 premium-gradient rounded-xl flex items-center justify-center shadow-lg">
-              <Lock className="w-6 h-6 text-white" />
+            <div className="w-10 h-10 sm:w-11 sm:h-11 premium-gradient rounded-xl flex items-center justify-center shadow-lg">
+              <Lock className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
             <div className="hidden sm:block">
               <div className="text-lg font-bold text-foreground">{t('nav.companyName')}</div>
@@ -58,7 +57,6 @@ export function Navigation({ onContactClick }: NavigationProps) {
             </div>
           </motion.div>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {['services', 'process', 'team'].map((item, index) => (
               <motion.button
@@ -75,35 +73,31 @@ export function Navigation({ onContactClick }: NavigationProps) {
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="flex items-center space-x-3 sm:space-x-4">
             <LanguageSwitcher />
             <motion.button
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
               onClick={onContactClick}
-              className="px-6 py-2.5 premium-gradient text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all duration-300"
+              className="px-4 py-2 sm:px-6 sm:py-2.5 premium-gradient text-white rounded-xl font-semibold text-sm hover:shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all duration-300"
             >
               {t('nav.contact')}
             </motion.button>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden p-2 rounded-xl hover:bg-primary/10 transition-colors"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-5 h-5 text-foreground" />
+              ) : (
+                <Menu className="w-5 h-5 text-foreground" />
+              )}
+            </button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-xl hover:bg-primary/10 transition-colors"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-foreground" />
-            ) : (
-              <Menu className="w-6 h-6 text-foreground" />
-            )}
-          </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -112,25 +106,16 @@ export function Navigation({ onContactClick }: NavigationProps) {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden glass-effect border-t border-border"
           >
-            <div className="px-4 py-6 space-y-3">
-              <div className="flex justify-center mb-4">
-                <LanguageSwitcher />
-              </div>
+            <div className="px-4 py-4 space-y-2">
               {['services', 'process', 'team'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className="block w-full text-left px-6 py-3 rounded-xl hover:bg-primary/10 transition-colors text-foreground font-semibold"
+                  className="block w-full text-left px-5 py-3 rounded-xl hover:bg-primary/10 transition-colors text-foreground font-semibold"
                 >
                   {t(`nav.${item}`)}
                 </button>
               ))}
-              <button
-                onClick={onContactClick}
-                className="w-full px-6 py-3 premium-gradient text-white rounded-xl font-semibold mt-2"
-              >
-                {t('nav.contact')}
-              </button>
             </div>
           </motion.div>
         )}
