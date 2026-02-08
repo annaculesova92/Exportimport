@@ -26,9 +26,9 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
   ];
 
   return (
-    <section id="services" className="py-14 sm:py-18 md:py-20 bg-white">
+    <section id="services" className="py-16 sm:py-20 md:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 sm:mb-12">
+        <div className="text-center mb-12 sm:mb-14">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -52,23 +52,19 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              whileHover={{ y: -3, transition: { duration: 0.2 } }}
+              whileHover={{ y: -5, transition: { duration: 0.25 } }}
               className="group"
             >
-              <div className="bg-slate-50 rounded-xl p-5 sm:p-6 h-full border border-transparent hover:border-teal-200 hover:bg-white hover:shadow-md transition-all duration-300">
-                <div className="flex items-start gap-4 mb-3">
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 bg-teal-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
-                    <service.icon className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-white" strokeWidth={2} />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-base font-bold text-teal-900 mb-1.5">
-                      {t(`services.${service.key}.title`)}
-                    </h3>
-                    <p className="text-sm text-slate-500 leading-relaxed">
-                      {t(`services.${service.key}.description`)}
-                    </p>
-                  </div>
+              <div className="bg-slate-50 rounded-2xl p-6 h-full border border-transparent hover:border-teal-200 hover:bg-white hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-400">
+                <div className="w-12 h-12 bg-teal-100 border border-teal-200/50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-gradient-to-br group-hover:from-teal-600 group-hover:to-teal-700 group-hover:border-transparent group-hover:shadow-lg group-hover:shadow-teal-600/25 transition-all duration-400">
+                  <service.icon className="w-6 h-6 text-teal-700 group-hover:text-white transition-colors duration-400" strokeWidth={2} />
                 </div>
+                <h3 className="text-base font-bold text-teal-900 mb-2 group-hover:text-teal-700 transition-colors">
+                  {t(`services.${service.key}.title`)}
+                </h3>
+                <p className="text-sm text-slate-500 leading-relaxed">
+                  {t(`services.${service.key}.description`)}
+                </p>
               </div>
             </motion.div>
           ))}
@@ -81,12 +77,14 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-center"
         >
-          <button
+          <motion.button
             onClick={onContactClick}
-            className="px-8 py-3 bg-teal-700 text-white rounded-xl font-semibold hover:bg-teal-800 transition-colors duration-300 text-sm"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            className="px-8 py-3.5 bg-gradient-to-r from-teal-700 to-teal-800 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-teal-800/20 transition-all duration-300 text-sm"
           >
             {t('services.cta')}
-          </button>
+          </motion.button>
         </motion.div>
       </div>
     </section>

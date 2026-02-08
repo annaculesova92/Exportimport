@@ -34,10 +34,8 @@ export function AppContent() {
 
   return (
     <div className="min-h-screen bg-background antialiased">
-      {/* Navigation */}
       <Navigation onContactClick={() => setIsContactModalOpen(true)} />
 
-      {/* Main Content */}
       <main>
         <HeroSection onContactClick={() => setIsContactModalOpen(true)} />
         <SpecializationSection />
@@ -50,16 +48,13 @@ export function AppContent() {
         <ContactSection />
       </main>
 
-      {/* Footer */}
       <Footer onContactClick={() => setIsContactModalOpen(true)} />
 
-      {/* Contact Modal */}
-      <ContactModal 
-        isOpen={isContactModalOpen} 
-        onClose={() => setIsContactModalOpen(false)} 
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
       />
 
-      {/* Floating Action Buttons */}
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
@@ -67,36 +62,24 @@ export function AppContent() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             onClick={scrollToTop}
-            className="fixed bottom-6 right-4 sm:right-6 z-40 w-12 h-12 sm:w-14 sm:h-14 premium-gradient text-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl hover:shadow-primary/25 hover:scale-110 transition-all duration-300 flex items-center justify-center"
+            className="fixed bottom-6 right-4 sm:right-6 z-40 w-12 h-12 premium-gradient text-white rounded-xl shadow-lg hover:shadow-xl hover:shadow-primary/25 hover:scale-110 transition-all duration-300 flex items-center justify-center"
           >
-            <ArrowUp className="w-5 h-5 sm:w-6 sm:h-6" />
+            <ArrowUp className="w-5 h-5" />
           </motion.button>
         )}
       </AnimatePresence>
 
-      {/* Floating Message Button */}
       <motion.button
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.5 }}
         onClick={() => setIsContactModalOpen(true)}
-        className="fixed bottom-6 left-4 sm:left-6 z-40 w-14 h-14 sm:w-16 sm:h-16 premium-gradient text-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl hover:shadow-primary/25 hover:scale-110 transition-all duration-300 flex items-center justify-center group"
+        className="fixed bottom-6 left-4 sm:left-6 z-40 w-14 h-14 premium-gradient text-white rounded-2xl shadow-lg hover:shadow-xl hover:shadow-primary/25 hover:scale-110 transition-all duration-300 flex items-center justify-center group"
       >
-        <Mail className="w-6 h-6 sm:w-7 sm:h-7" />
-        <div className="absolute left-full ml-3 sm:ml-4 px-3 py-2 sm:px-4 sm:py-2 dark-gradient text-white rounded-lg sm:rounded-xl shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-xs sm:text-sm font-semibold pointer-events-none hidden sm:block">
+        <Mail className="w-6 h-6" />
+        <div className="absolute left-full ml-3 px-3 py-2 dark-gradient text-white rounded-xl shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-xs font-semibold pointer-events-none hidden sm:block">
           {t('contactUs')}
         </div>
-      </motion.button>
-
-      {/* Floating Contact Button - Mobile Only */}
-      <motion.button
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-        onClick={() => setIsContactModalOpen(true)}
-        className="fixed bottom-20 left-1/2 -translate-x-1/2 z-40 px-5 py-3 sm:px-6 sm:py-3 premium-gradient text-white rounded-xl shadow-lg hover:shadow-xl hover:shadow-primary/25 font-semibold text-sm md:hidden"
-      >
-        {t('writeUs')}
       </motion.button>
     </div>
   );
