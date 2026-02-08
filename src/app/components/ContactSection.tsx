@@ -139,63 +139,102 @@ export function ContactSection() {
             transition={{ delay: 0.1 }}
             className="flex flex-col gap-4 justify-center"
           >
-            <a
-              href="https://wa.me/393245436954"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-green-100/40 hover:border-green-100 transition-all duration-300 group"
-            >
-              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg shadow-green-500/25 group-hover:shadow-xl group-hover:shadow-green-500/35 group-hover:scale-105 transition-all duration-300">
-                <WhatsAppIcon className="w-5.5 h-5.5 text-white" />
-              </div>
-              <div>
-                <div className="text-xs font-semibold text-slate-400 mb-0.5">WhatsApp</div>
-                <div className="text-sm font-bold text-slate-700">+39 324 543 6954</div>
-              </div>
-            </a>
+            <div className="hidden md:flex flex-col gap-4">
+              <a
+                href="https://wa.me/393245436954"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-green-100/40 hover:border-green-100 transition-all duration-300 group"
+              >
+                <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg shadow-green-500/25 group-hover:shadow-xl group-hover:shadow-green-500/35 group-hover:scale-105 transition-all duration-300">
+                  <WhatsAppIcon className="w-5.5 h-5.5 text-white" />
+                </div>
+                <div>
+                  <div className="text-xs font-semibold text-slate-400 mb-0.5">WhatsApp</div>
+                  <div className="text-sm font-bold text-slate-700">+39 324 543 6954</div>
+                </div>
+              </a>
 
-            <a
-              href="https://www.instagram.com/boutiquebusiness.consulting"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-pink-100/40 hover:border-pink-100 transition-all duration-300 group"
-            >
-              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center shadow-lg shadow-pink-500/25 group-hover:shadow-xl group-hover:shadow-pink-500/35 group-hover:scale-105 transition-all duration-300">
-                <Instagram className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
-              </div>
-              <div>
-                <div className="text-xs font-semibold text-slate-400 mb-0.5">Instagram</div>
-                <div className="text-sm font-bold text-slate-700">@boutiquebusiness.consulting</div>
-              </div>
-            </a>
+              <a
+                href="https://www.instagram.com/boutiquebusiness.consulting"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-pink-100/40 hover:border-pink-100 transition-all duration-300 group"
+              >
+                <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center shadow-lg shadow-pink-500/25 group-hover:shadow-xl group-hover:shadow-pink-500/35 group-hover:scale-105 transition-all duration-300">
+                  <Instagram className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
+                </div>
+                <div>
+                  <div className="text-xs font-semibold text-slate-400 mb-0.5">Instagram</div>
+                  <div className="text-sm font-bold text-slate-700">@boutiquebusiness.consulting</div>
+                </div>
+              </a>
 
-            <a
-              href="https://www.linkedin.com/in/anna-culesova-7955ab26a/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-blue-100/40 hover:border-blue-100 transition-all duration-300 group"
-            >
-              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-600/25 group-hover:shadow-xl group-hover:shadow-blue-600/35 group-hover:scale-105 transition-all duration-300">
-                <Linkedin className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
-              </div>
-              <div>
-                <div className="text-xs font-semibold text-slate-400 mb-0.5">LinkedIn</div>
-                <div className="text-sm font-bold text-slate-700">Anna Culesova</div>
-              </div>
-            </a>
+              <a
+                href="https://www.linkedin.com/in/anna-culesova-7955ab26a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-blue-100/40 hover:border-blue-100 transition-all duration-300 group"
+              >
+                <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-600/25 group-hover:shadow-xl group-hover:shadow-blue-600/35 group-hover:scale-105 transition-all duration-300">
+                  <Linkedin className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
+                </div>
+                <div>
+                  <div className="text-xs font-semibold text-slate-400 mb-0.5">LinkedIn</div>
+                  <div className="text-sm font-bold text-slate-700">Anna Culesova</div>
+                </div>
+              </a>
 
-            <a
-              href="mailto:mary.lobach@gmail.com"
-              className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-teal-100/40 hover:border-teal-100 transition-all duration-300 group"
-            >
-              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center shadow-lg shadow-teal-600/25 group-hover:shadow-xl group-hover:shadow-teal-600/35 group-hover:scale-105 transition-all duration-300">
-                <Mail className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
-              </div>
-              <div>
-                <div className="text-xs font-semibold text-slate-400 mb-0.5">Email</div>
-                <div className="text-sm font-bold text-slate-700">mary.lobach@gmail.com</div>
-              </div>
-            </a>
+              <a
+                href="mailto:mary.lobach@gmail.com"
+                className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-teal-100/40 hover:border-teal-100 transition-all duration-300 group"
+              >
+                <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center shadow-lg shadow-teal-600/25 group-hover:shadow-xl group-hover:shadow-teal-600/35 group-hover:scale-105 transition-all duration-300">
+                  <Mail className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
+                </div>
+                <div>
+                  <div className="text-xs font-semibold text-slate-400 mb-0.5">Email</div>
+                  <div className="text-sm font-bold text-slate-700">mary.lobach@gmail.com</div>
+                </div>
+              </a>
+            </div>
+
+            <div className="flex md:hidden justify-center gap-5 py-2">
+              <a
+                href="https://wa.me/393245436954"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg shadow-green-500/25 hover:scale-110 transition-transform duration-300"
+                aria-label="WhatsApp"
+              >
+                <WhatsAppIcon className="w-6 h-6 text-white" />
+              </a>
+              <a
+                href="https://www.instagram.com/boutiquebusiness.consulting"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center shadow-lg shadow-pink-500/25 hover:scale-110 transition-transform duration-300"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-6 h-6 text-white" strokeWidth={1.8} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/anna-culesova-7955ab26a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-600/25 hover:scale-110 transition-transform duration-300"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-6 h-6 text-white" strokeWidth={1.8} />
+              </a>
+              <a
+                href="mailto:mary.lobach@gmail.com"
+                className="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center shadow-lg shadow-teal-600/25 hover:scale-110 transition-transform duration-300"
+                aria-label="Email"
+              >
+                <Mail className="w-6 h-6 text-white" strokeWidth={1.8} />
+              </a>
+            </div>
           </motion.div>
         </div>
 

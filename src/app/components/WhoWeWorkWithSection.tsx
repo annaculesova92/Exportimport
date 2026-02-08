@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Store, Rocket, TrendingUp } from 'lucide-react';
+import { Store, Rocket, TrendingUp, ArrowDown } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useState } from 'react';
 
@@ -133,6 +133,24 @@ export function WhoWeWorkWithSection() {
             );
           })}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mt-10 sm:mt-14"
+        >
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-2.5 px-7 sm:px-9 py-3.5 sm:py-4 bg-gradient-to-r from-teal-700 to-teal-800 hover:from-teal-800 hover:to-teal-900 text-white font-semibold text-sm sm:text-base rounded-xl shadow-lg shadow-teal-800/25 hover:shadow-xl hover:shadow-teal-800/35 transition-all duration-300"
+          >
+            {t('contactUs')}
+            <ArrowDown className="w-4 h-4" />
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );
