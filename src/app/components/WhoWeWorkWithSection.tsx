@@ -12,30 +12,30 @@ export function WhoWeWorkWithSection() {
       key: 'distributors',
       icon: Store,
       number: '01',
-      gradient: 'from-teal-600 to-emerald-500',
+      gradient: 'from-teal-700 to-emerald-600',
       lightGradient: 'from-teal-50 to-emerald-50',
-      iconColor: 'text-teal-600',
+      iconColor: 'text-teal-700',
     },
     {
       key: 'smallBusiness',
       icon: Rocket,
       number: '02',
-      gradient: 'from-teal-500 to-teal-700',
+      gradient: 'from-teal-700 to-teal-600',
       lightGradient: 'from-teal-50 to-teal-100',
-      iconColor: 'text-teal-600',
+      iconColor: 'text-teal-700',
     },
     {
       key: 'investors',
       icon: TrendingUp,
       number: '03',
-      gradient: 'from-emerald-600 to-teal-600',
+      gradient: 'from-emerald-700 to-teal-700',
       lightGradient: 'from-emerald-50 to-teal-50',
-      iconColor: 'text-emerald-600',
+      iconColor: 'text-emerald-700',
     },
   ];
 
   return (
-    <section className="py-20 sm:py-28 relative overflow-hidden bg-white">
+    <section className="py-16 sm:py-20 md:py-28 relative overflow-hidden bg-white">
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-300/50 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-300/50 to-transparent" />
@@ -57,17 +57,17 @@ export function WhoWeWorkWithSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3 sm:mb-4">
             {t('whoWeWorkWith.title')}
           </h2>
-          <p className="text-lg text-slate-500 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-slate-500 max-w-2xl mx-auto px-2">
             {t('whoWeWorkWith.subtitle')}
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {audiences.map((audience, index) => {
             const Icon = audience.icon;
             const isHovered = hoveredIndex === index;
@@ -93,10 +93,10 @@ export function WhoWeWorkWithSection() {
                     animate={{ opacity: isHovered ? 1 : 0 }}
                   />
 
-                  <div className="relative z-10 p-8">
-                    <div className="flex items-start justify-between mb-6">
+                  <div className="relative z-10 p-5 sm:p-6 md:p-8">
+                    <div className="flex items-start justify-between mb-4 sm:mb-6">
                       <motion.div
-                        className={`w-14 h-14 rounded-xl flex items-center justify-center transition-all duration-500 ${
+                        className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center transition-all duration-500 ${
                           isHovered
                             ? 'bg-white/20 backdrop-blur-sm'
                             : `bg-gradient-to-br ${audience.lightGradient}`
@@ -104,25 +104,25 @@ export function WhoWeWorkWithSection() {
                         animate={isHovered ? { rotate: [0, -10, 10, 0] } : {}}
                         transition={{ duration: 0.5 }}
                       >
-                        <Icon className={`w-7 h-7 transition-colors duration-500 ${
+                        <Icon className={`w-6 h-6 sm:w-7 sm:h-7 transition-colors duration-500 ${
                           isHovered ? 'text-white' : audience.iconColor
                         }`} />
                       </motion.div>
 
-                      <span className={`text-5xl font-black transition-colors duration-500 ${
+                      <span className={`text-4xl sm:text-5xl font-black transition-colors duration-500 ${
                         isHovered ? 'text-white/20' : 'text-slate-100'
                       }`}>
                         {audience.number}
                       </span>
                     </div>
 
-                    <h3 className={`text-xl font-bold mb-3 transition-colors duration-500 ${
+                    <h3 className={`text-lg sm:text-xl font-bold mb-2 sm:mb-3 transition-colors duration-500 ${
                       isHovered ? 'text-white' : 'text-slate-900'
                     }`}>
                       {t(`whoWeWorkWith.${audience.key}.title`)}
                     </h3>
 
-                    <p className={`text-sm leading-relaxed transition-colors duration-500 ${
+                    <p className={`text-xs sm:text-sm leading-relaxed transition-colors duration-500 ${
                       isHovered ? 'text-white/85' : 'text-slate-500'
                     }`}>
                       {t(`whoWeWorkWith.${audience.key}.description`)}
