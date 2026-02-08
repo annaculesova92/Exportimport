@@ -1,44 +1,80 @@
-import { motion } from 'motion/react';
+import { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { ChevronDown } from 'lucide-react';
 import { useLanguage, Language } from '@/app/contexts/LanguageContext';
 
 const languages = [
-  { code: 'ru' as Language, name: 'RU', flag: '🇷🇺' },
-  { code: 'en' as Language, name: 'EN', flag: '🇬🇧' },
-  { code: 'fr' as Language, name: 'FR', flag: '🇫🇷' },
-  { code: 'it' as Language, name: 'IT', flag: '🇮🇹' },
+  { code: 'ru' as Language, name: 'Русский', short: 'RU', flag: '🇷🇺' },
+  { code: 'en' as Language, name: 'English', short: 'EN', flag: '🇬🇧' },
+  { code: 'fr' as Language, name: 'Français', short: 'FR', flag: '🇫🇷' },
+  { code: 'it' as Language, name: 'Italiano', short: 'IT', flag: '🇮🇹' },
 ];
 
 export function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage();
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const current = languages.find((l) => l.code === language) || languages[1];
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
-    <div className="flex items-center gap-1">
-      {languages.map((lang) => {
-        const isActive = language === lang.code;
-        return (
-          <motion.button
-            key={lang.code}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={() => setLanguage(lang.code)}
-            className={`relative flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 ${
-              isActive
-                ? 'bg-primary/10 text-primary border border-primary/20'
-                : 'text-muted-foreground hover:text-foreground hover:bg-slate-100'
-            }`}
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-200 hover:border-teal-300 bg-white hover:bg-teal-50/50 transition-all duration-200 text-sm font-medium text-slate-700"
+      >
+        <span className="text-base leading-none">{current.flag}</span>
+        <span className="hidden sm:inline">{current.short}</span>
+        <ChevronDown
+          className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+        />
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -8, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -8, scale: 0.95 }}
+            transition={{ duration: 0.15 }}
+            className="absolute right-0 top-full mt-2 bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden min-w-[160px] z-50"
           >
-            <span className="text-sm leading-none">{lang.flag}</span>
-            <span className="hidden sm:inline">{lang.name}</span>
-            {isActive && (
-              <motion.div
-                layoutId="activeLanguage"
-                className="absolute inset-0 rounded-lg border border-primary/30"
-                transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-              />
-            )}
-          </motion.button>
-        );
-      })}
+            {languages.map((lang) => {
+              const isActive = language === lang.code;
+              return (
+                <button
+                  key={lang.code}
+                  onClick={() => {
+                    setLanguage(lang.code);
+                    setIsOpen(false);
+                  }}
+                  className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
+                    isActive
+                      ? 'bg-teal-50 text-teal-800 font-semibold'
+                      : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                  }`}
+                >
+                  <span className="text-base leading-none">{lang.flag}</span>
+                  <span>{lang.name}</span>
+                  {isActive && (
+                    <div className="ml-auto w-1.5 h-1.5 rounded-full bg-teal-500" />
+                  )}
+                </button>
+              );
+            })}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

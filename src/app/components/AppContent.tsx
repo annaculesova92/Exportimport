@@ -47,7 +47,7 @@ export function AppContent() {
         <StatsSection />
         <TrustBadges />
         <TeamSection onContactClick={() => setIsContactModalOpen(true)} />
-        <ContactSection onContactClick={() => setIsContactModalOpen(true)} />
+        <ContactSection />
       </main>
 
       {/* Footer */}

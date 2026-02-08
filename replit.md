@@ -26,12 +26,14 @@ A React + Vite single-page website for an export/import business consulting firm
 - Static deployment, build with `npm run build`, serve `dist/` directory
 
 ## User Preferences
-- Compact, premium, business-focused design aesthetic
-- Language flags directly visible on navbar (no dropdowns)
+- Premium, business-focused design aesthetic with breathing room
+- Language switcher as dropdown on navbar (flag + current lang + chevron, click to expand)
+- Hero section spacious with floating thematic icons (Globe, Ship, TrendingUp)
 - Stats should be small, interactive, and elegant (not large card layouts)
-- Reduced padding and spacing throughout for a tighter, cleaner look
-- Animated interactions preferred (counters, hover effects)
+- Contact section: compact with form + social icons (Instagram, LinkedIn, Email)
+- Animated interactions preferred (counters, hover effects, floating elements)
 
 ## Recent Changes
 - 2026-02-08: Initial Replit setup - configured Vite for port 5000, installed react/react-dom as direct dependencies, added .gitignore
 - 2026-02-08: UI redesign - language switcher to inline flags, stats section with animated counters, tightened all section layouts, polished Value/Services/Hero/Contact/TrustBadges/Footer for premium business look
+- 2026-02-08: Language switcher changed to dropdown, Hero redesigned with spacious layout and floating thematic icons, Contact section completely redesigned with form + Instagram/LinkedIn/Email links
