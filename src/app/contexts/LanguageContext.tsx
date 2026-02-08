@@ -543,31 +543,31 @@ const translations = {
     },
     whoWeWorkWith: {
       badge: 'Our audience',
-      title: 'Who We Work With',
+      title: 'Who we work with',
       subtitle: 'Three types of clients, each with a tailored solution',
       distributors: {
-        title: 'Distributors & Retailers',
+        title: 'Distributors & retailers',
         description: 'Market professionals seeking exclusive products from small family-owned Italian manufacturers. We help you stand out from competitors, find unique products, and ensure turnkey supply stability.',
         cta: 'Find exclusives'
       },
       smallBusiness: {
-        title: 'Small Business & Ambitious Newcomers',
+        title: 'Small business & ambitious newcomers',
         description: 'Entrepreneurs who want to launch their first European import project but fear mistakes and bureaucracy. We become your external trade department: help assemble your first mixed shipment from various suppliers and guide you through every logistics stage.',
         cta: 'Start importing'
       },
       investors: {
-        title: 'Strategic Investors',
+        title: 'Strategic investors',
         description: 'People with capital aimed at diversification through the real sector and commodity business in Italy. We select liquid niches with high margins, calculate ROI, and take on complete operational management.',
         cta: 'Calculate ROI'
       }
     },
     whyThisWorks: {
       badge: 'Our approach',
-      title: 'Why This Works',
+      title: 'Why this works',
       subtitle: 'For each client type — a key argument and tailored strategy',
       distributor: {
-        tabTitle: 'For Distributors',
-        title: 'Exclusivity & Competitive Edge',
+        tabTitle: 'For distributors',
+        title: 'Exclusivity & competitive edge',
         description: 'For distributors, the key words are "exclusivity" and "standing out from competitors," because everyone already has mass-market products. We find unique Italian manufacturers with no direct contracts with major players.',
         point1: 'Direct contracts with manufacturers',
         point2: 'Exclusive territorial rights',
@@ -575,8 +575,8 @@ const translations = {
         point4: 'Clear competitive differentiation'
       },
       beginner: {
-        tabTitle: 'For Newcomers',
-        title: 'Safety & Mixed Shipments',
+        tabTitle: 'For newcomers',
+        title: 'Safety & mixed shipments',
         description: 'For newcomers, the key is "safety" and "mixed shipments" (no need to buy a whole container at once). We minimize first import risks and provide guidance at every stage.',
         point1: 'Mixed shipments from multiple suppliers',
         point2: 'Full A-to-Z support',
@@ -584,8 +584,8 @@ const translations = {
         point4: 'Foreign trade process training'
       },
       investor: {
-        tabTitle: 'For Investors',
-        title: 'ROI, Liquid Niches & Zero Operations',
+        tabTitle: 'For investors',
+        title: 'ROI, liquid niches & zero operations',
         description: 'For investors, it\'s all about numbers ("ROI," "liquid niches") and "zero operations" (process management). We handle all operational work while you receive transparent reporting.',
         point1: 'ROI calculation before project launch',
         point2: 'Liquid niches with high margins',

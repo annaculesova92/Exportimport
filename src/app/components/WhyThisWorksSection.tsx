@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Gem, ShieldCheck, BarChart3, ChevronRight, Zap } from 'lucide-react';
+import { Gem, ShieldCheck, BarChart3, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useState } from 'react';
 
@@ -14,29 +14,20 @@ export function WhyThisWorksSection() {
       emoji: '💎',
       accentFrom: 'from-teal-500',
       accentTo: 'to-emerald-400',
-      bgLight: 'bg-teal-50',
-      textAccent: 'text-teal-600',
-      borderAccent: 'border-teal-500',
     },
     {
       key: 'beginner',
       icon: ShieldCheck,
       emoji: '🛡️',
-      accentFrom: 'from-amber-500',
-      accentTo: 'to-orange-400',
-      bgLight: 'bg-amber-50',
-      textAccent: 'text-amber-600',
-      borderAccent: 'border-amber-500',
+      accentFrom: 'from-teal-600',
+      accentTo: 'to-teal-400',
     },
     {
       key: 'investor',
       icon: BarChart3,
       emoji: '📊',
-      accentFrom: 'from-indigo-500',
-      accentTo: 'to-purple-400',
-      bgLight: 'bg-indigo-50',
-      textAccent: 'text-indigo-600',
-      borderAccent: 'border-indigo-500',
+      accentFrom: 'from-emerald-500',
+      accentTo: 'to-teal-500',
     },
   ];
 
@@ -55,7 +46,7 @@ export function WhyThisWorksSection() {
           transition={{ duration: 12, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-60 h-60 bg-amber-500/10 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-60 h-60 bg-emerald-500/10 rounded-full blur-3xl"
           animate={{ x: [0, -40, 0], y: [0, 40, 0] }}
           transition={{ duration: 15, repeat: Infinity }}
         />
@@ -69,19 +60,6 @@ export function WhyThisWorksSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ type: 'spring', stiffness: 200, delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6"
-          >
-            <Zap className="w-4 h-4 text-amber-400" />
-            <span className="text-sm font-semibold text-amber-300 tracking-wide uppercase">
-              {t('whyThisWorks.badge')}
-            </span>
-          </motion.div>
-
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             {t('whyThisWorks.title')}
           </h2>
@@ -172,10 +150,7 @@ export function WhyThisWorksSection() {
                         transition={{ delay: i * 0.1 }}
                         className="flex items-start gap-3 p-3 rounded-lg bg-white/5"
                       >
-                        <ChevronRight className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                          activeTab === 0 ? 'text-teal-400' :
-                          activeTab === 1 ? 'text-amber-400' : 'text-indigo-400'
-                        }`} />
+                        <ChevronRight className="w-5 h-5 mt-0.5 flex-shrink-0 text-teal-400" />
                         <span className="text-sm text-slate-300">{pointText}</span>
                       </motion.div>
                     );
