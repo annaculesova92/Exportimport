@@ -82,12 +82,12 @@ export function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-center lg:items-start">
+        <div className="flex flex-col sm:flex-row gap-8 sm:gap-10 items-center sm:items-start justify-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="w-full lg:flex-1 lg:max-w-md"
+            className="w-full sm:max-w-md"
           >
             <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 shadow-lg shadow-slate-200/50 border border-slate-100">
               <div className="space-y-3 mb-4">
@@ -166,7 +166,7 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="flex flex-row lg:flex-col items-center lg:items-start gap-5 lg:gap-6 lg:pt-6"
+            className="flex flex-row sm:flex-col items-center sm:items-start gap-5 sm:gap-5 sm:pt-4"
           >
             {contacts.map((contact, index) => (
               <motion.a
