@@ -36,7 +36,7 @@ export function AppContent() {
     <div className="min-h-screen bg-background antialiased">
       <Navigation onContactClick={() => setIsContactModalOpen(true)} />
 
-      <main>
+      <main className="pt-16 sm:pt-20">
         <HeroSection onContactClick={() => setIsContactModalOpen(true)} />
         <SpecializationSection />
         <ValueSection />
