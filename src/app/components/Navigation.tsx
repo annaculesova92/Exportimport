@@ -73,14 +73,14 @@ export function Navigation({ onContactClick }: NavigationProps) {
             ))}
           </div>
 
-          <div className="flex items-center space-x-3 sm:space-x-4">
+          <div className="flex items-center gap-2 sm:gap-3">
             <LanguageSwitcher />
             <motion.button
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
               onClick={onContactClick}
-              className="px-4 py-2 sm:px-6 sm:py-2.5 premium-gradient text-white rounded-xl font-semibold text-sm hover:shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all duration-300"
+              className="hidden sm:block px-5 py-2 sm:px-6 sm:py-2.5 premium-gradient text-white rounded-xl font-semibold text-sm hover:shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all duration-300"
             >
               {t('nav.contact')}
             </motion.button>
@@ -116,6 +116,15 @@ export function Navigation({ onContactClick }: NavigationProps) {
                   {t(`nav.${item}`)}
                 </button>
               ))}
+              <button
+                onClick={() => {
+                  onContactClick();
+                  setIsMobileMenuOpen(false);
+                }}
+                className="sm:hidden w-full px-5 py-3 premium-gradient text-white rounded-xl font-semibold mt-2"
+              >
+                {t('nav.contact')}
+              </button>
             </div>
           </motion.div>
         )}
