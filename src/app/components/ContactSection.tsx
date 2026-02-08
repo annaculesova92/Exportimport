@@ -56,14 +56,14 @@ export function ContactSection() {
           >
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl shadow-slate-200/60 border border-slate-100/80 h-full">
               <h3 className="text-lg font-bold text-slate-800 mb-6">
-                {t('contact.formTitle') !== 'contact.formTitle' ? t('contact.formTitle') : 'Отправьте нам сообщение'}
+                {t('contact.formTitle')}
               </h3>
 
               <form onSubmit={handleSubmit}>
                 <div className="space-y-4 mb-5">
                   <div>
                     <label className="block text-xs font-semibold text-slate-500 mb-1.5">
-                      {t('contact.name') !== 'contact.name' ? t('contact.name') : 'Ваше имя'}
+                      {t('contact.name')}
                     </label>
                     <input
                       type="text"
@@ -76,7 +76,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-slate-500 mb-1.5">
-                      {t('contact.email') !== 'contact.email' ? t('contact.email') : 'Email'}
+                      {t('contact.email')}
                     </label>
                     <input
                       type="email"
@@ -89,7 +89,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-slate-500 mb-1.5">
-                      {t('contact.message') !== 'contact.message' ? t('contact.message') : 'Сообщение'}
+                      {t('contact.message')}
                     </label>
                     <textarea
                       required

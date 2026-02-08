@@ -136,7 +136,7 @@ export function ProcessSection() {
                           isActive ? 'text-teal-700' : 'text-slate-400'
                         }`}
                       >
-                        Шаг {index + 1}
+                        {t('process_ui.step')} {index + 1}
                       </motion.div>
                     </motion.button>
                   );
@@ -218,7 +218,7 @@ export function ProcessSection() {
                           className="px-6 py-3 bg-slate-100 text-teal-700 rounded-xl font-semibold hover:bg-slate-200 transition-colors inline-flex items-center gap-2"
                         >
                           <ArrowRight className="w-5 h-5 rotate-180" />
-                          Назад
+                          {t('process_ui.back')}
                         </motion.button>
                       )}
                       {activeStep < steps.length - 1 && (
@@ -228,7 +228,7 @@ export function ProcessSection() {
                           whileTap={{ scale: 0.95 }}
                           className="px-6 py-3 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-xl font-semibold shadow-lg shadow-teal-500/30 hover:shadow-xl transition-all inline-flex items-center gap-2"
                         >
-                          Далее
+                          {t('process_ui.next')}
                           <ArrowRight className="w-5 h-5" />
                         </motion.button>
                       )}

@@ -264,6 +264,11 @@ const translations = {
       officeMilan: 'Милан, Италия',
       allRightsFull: 'Все права защищены.'
     },
+    process_ui: {
+      step: 'Шаг',
+      back: 'Назад',
+      next: 'Далее'
+    },
     whatsapp: 'Связаться в WhatsApp',
     writeUs: 'Написать нам',
     contactUs: 'Связаться с нами'
@@ -475,6 +480,11 @@ const translations = {
       allRights: 'All rights reserved.',
       madeWith: 'Made with',
       forBusiness: 'for business'
+    },
+    process_ui: {
+      step: 'Step',
+      back: 'Back',
+      next: 'Next'
     },
     whatsapp: 'Contact via WhatsApp',
     writeUs: 'Write to us',
@@ -701,6 +711,11 @@ const translations = {
       officeMilan: 'Milan, Italie',
       allRightsFull: 'Tous droits réservés.'
     },
+    process_ui: {
+      step: 'Étape',
+      back: 'Retour',
+      next: 'Suivant'
+    },
     whatsapp: 'Contactez-nous via WhatsApp',
     writeUs: 'Écrivez-nous',
     contactUs: 'Nous contacter'
@@ -920,6 +935,11 @@ const translations = {
       contactsTitle: 'CONTATTI',
       officeMilan: 'Milano, Italia',
       allRightsFull: 'Tutti i diritti riservati.'
+    },
+    process_ui: {
+      step: 'Passo',
+      back: 'Indietro',
+      next: 'Avanti'
     },
     whatsapp: 'Contattaci via WhatsApp',
     writeUs: 'Scrivici',
