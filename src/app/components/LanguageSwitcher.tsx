@@ -31,12 +31,12 @@ export function LanguageSwitcher() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg hover:bg-slate-100 transition-all duration-200 text-slate-600"
+        className="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-200 bg-white hover:border-teal-300 hover:bg-slate-50 transition-all duration-200 text-slate-600"
       >
-        <Globe className="w-4 h-4" />
-        <span className="text-base leading-none">{current.flag}</span>
+        <Globe className="w-5 h-5" />
+        <span className="text-lg leading-none">{current.flag}</span>
         <ChevronDown
-          className={`w-3 h-3 text-slate-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
 
