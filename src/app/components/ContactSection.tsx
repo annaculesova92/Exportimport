@@ -28,137 +28,108 @@ export function ContactSection() {
     }, 1200);
   };
 
-  const contacts = [
-    {
-      icon: Mail,
-      label: 'Email',
-      href: 'mailto:info@exportimport.com',
-      color: 'bg-teal-50 border-teal-100 hover:bg-teal-600 hover:border-teal-600',
-      iconColor: 'text-teal-600 group-hover:text-white',
-      labelColor: 'group-hover:text-teal-600',
-    },
-    {
-      icon: WhatsAppIcon,
-      label: 'WhatsApp',
-      href: 'https://wa.me/391234567890',
-      color: 'bg-green-50 border-green-100 hover:bg-green-500 hover:border-green-500',
-      iconColor: 'text-green-600 group-hover:text-white',
-      labelColor: 'group-hover:text-green-600',
-    },
-    {
-      icon: Instagram,
-      label: 'Instagram',
-      href: 'https://instagram.com/your_account',
-      color: 'bg-pink-50 border-pink-100 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:border-pink-500',
-      iconColor: 'text-pink-500 group-hover:text-white',
-      labelColor: 'group-hover:text-pink-500',
-    },
-    {
-      icon: Linkedin,
-      label: 'LinkedIn',
-      href: 'https://linkedin.com/company/your_company',
-      color: 'bg-blue-50 border-blue-100 hover:bg-blue-600 hover:border-blue-600',
-      iconColor: 'text-blue-600 group-hover:text-white',
-      labelColor: 'group-hover:text-blue-600',
-    },
-  ];
-
   return (
     <section id="contact" className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-white via-slate-50/30 to-white relative overflow-hidden">
       <div className="absolute top-0 right-1/4 w-[350px] h-[350px] bg-teal-100/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-1/3 w-[300px] h-[300px] bg-emerald-50/30 rounded-full blur-3xl" />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-10 sm:mb-12"
+          className="text-center mb-12 sm:mb-14"
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-teal-900 mb-3">
             {t('contact.title')}
           </h2>
-          <p className="text-sm sm:text-base text-slate-500 max-w-md mx-auto">
+          <p className="text-sm sm:text-base text-slate-500 max-w-lg mx-auto">
             {t('contact.subtitle')}
           </p>
         </motion.div>
 
-        <div className="flex flex-col sm:flex-row gap-8 sm:gap-10 items-center sm:items-start justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="w-full sm:max-w-md"
           >
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 shadow-lg shadow-slate-200/50 border border-slate-100">
-              <div className="space-y-3 mb-4">
-                <div>
-                  <label className="block text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wider">
-                    {t('contact.name') !== 'contact.name' ? t('contact.name') : 'Name'}
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-teal-400 focus:ring-2 focus:ring-teal-100 focus:bg-white transition-all outline-none text-sm text-slate-800 placeholder:text-slate-400"
-                    placeholder={t('contact.namePlaceholder')}
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wider">
-                    {t('contact.email') !== 'contact.email' ? t('contact.email') : 'Email'}
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-teal-400 focus:ring-2 focus:ring-teal-100 focus:bg-white transition-all outline-none text-sm text-slate-800 placeholder:text-slate-400"
-                    placeholder={t('contact.emailPlaceholder')}
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wider">
-                    {t('contact.message') !== 'contact.message' ? t('contact.message') : 'Message'}
-                  </label>
-                  <textarea
-                    required
-                    rows={3}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-teal-400 focus:ring-2 focus:ring-teal-100 focus:bg-white transition-all outline-none text-sm text-slate-800 resize-none placeholder:text-slate-400"
-                    placeholder={t('contact.messagePlaceholder')}
-                  />
-                </div>
-              </div>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl shadow-slate-200/60 border border-slate-100/80">
+              <h3 className="text-lg font-bold text-slate-800 mb-6">
+                {t('contact.formTitle') !== 'contact.formTitle' ? t('contact.formTitle') : 'Отправьте нам сообщение'}
+              </h3>
 
-              <motion.button
-                type="submit"
-                disabled={isSubmitting || submitStatus === 'success'}
-                whileHover={{ scale: isSubmitting ? 1 : 1.01 }}
-                whileTap={{ scale: 0.99 }}
-                className={`w-full py-3 rounded-xl font-semibold text-sm text-white flex items-center justify-center gap-2.5 transition-all duration-300 ${
-                  submitStatus === 'success'
-                    ? 'bg-emerald-500 shadow-lg shadow-emerald-500/25'
-                    : 'bg-gradient-to-r from-teal-700 to-teal-800 hover:from-teal-800 hover:to-teal-900 shadow-lg shadow-teal-700/20 hover:shadow-xl hover:shadow-teal-700/30'
-                } disabled:opacity-60 disabled:cursor-not-allowed`}
-              >
-                {isSubmitting ? (
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                    className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
-                  />
-                ) : submitStatus === 'success' ? (
-                  <>{t('contact.sent')}</>
-                ) : (
-                  <>
-                    <Send className="w-4 h-4" />
-                    {t('contact.submit')}
-                  </>
-                )}
-              </motion.button>
-            </form>
+              <form onSubmit={handleSubmit}>
+                <div className="space-y-4 mb-5">
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-500 mb-1.5">
+                      {t('contact.name') !== 'contact.name' ? t('contact.name') : 'Ваше имя'}
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl bg-white border-2 border-slate-100 focus:border-teal-500 focus:ring-0 transition-colors outline-none text-sm text-slate-800 placeholder:text-slate-350"
+                      placeholder={t('contact.namePlaceholder')}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-500 mb-1.5">
+                      {t('contact.email') !== 'contact.email' ? t('contact.email') : 'Email'}
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl bg-white border-2 border-slate-100 focus:border-teal-500 focus:ring-0 transition-colors outline-none text-sm text-slate-800 placeholder:text-slate-350"
+                      placeholder={t('contact.emailPlaceholder')}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-500 mb-1.5">
+                      {t('contact.message') !== 'contact.message' ? t('contact.message') : 'Сообщение'}
+                    </label>
+                    <textarea
+                      required
+                      rows={4}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="w-full px-4 py-3 rounded-xl bg-white border-2 border-slate-100 focus:border-teal-500 focus:ring-0 transition-colors outline-none text-sm text-slate-800 resize-none placeholder:text-slate-350"
+                      placeholder={t('contact.messagePlaceholder')}
+                    />
+                  </div>
+                </div>
+
+                <motion.button
+                  type="submit"
+                  disabled={isSubmitting || submitStatus === 'success'}
+                  whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className={`w-full py-3.5 rounded-xl font-semibold text-sm text-white flex items-center justify-center gap-2.5 transition-all duration-300 ${
+                    submitStatus === 'success'
+                      ? 'bg-emerald-500 shadow-lg shadow-emerald-500/25'
+                      : 'bg-gradient-to-r from-teal-700 to-teal-800 hover:from-teal-800 hover:to-teal-900 shadow-lg shadow-teal-800/25 hover:shadow-xl hover:shadow-teal-800/30'
+                  } disabled:opacity-60 disabled:cursor-not-allowed`}
+                >
+                  {isSubmitting ? (
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                      className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
+                    />
+                  ) : submitStatus === 'success' ? (
+                    <>{t('contact.sent')}</>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      {t('contact.submit')}
+                    </>
+                  )}
+                </motion.button>
+              </form>
+            </div>
           </motion.div>
 
           <motion.div
@@ -166,46 +137,81 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="flex flex-row sm:flex-col items-center sm:items-start gap-5 sm:gap-5 sm:pt-4"
+            className="flex flex-col gap-4"
           >
-            {contacts.map((contact, index) => (
+            <a
+              href="mailto:info@exportimport.com"
+              className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-teal-100/40 hover:border-teal-100 transition-all duration-300 group"
+            >
+              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center shadow-lg shadow-teal-600/25 group-hover:shadow-xl group-hover:shadow-teal-600/35 group-hover:scale-105 transition-all duration-300">
+                <Mail className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
+              </div>
+              <div>
+                <div className="text-xs font-semibold text-slate-400 mb-0.5">Email</div>
+                <div className="text-sm font-bold text-slate-700">info@exportimport.com</div>
+              </div>
+            </a>
+
+            <a
+              href="https://wa.me/391234567890"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-green-100/40 hover:border-green-100 transition-all duration-300 group"
+            >
+              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg shadow-green-500/25 group-hover:shadow-xl group-hover:shadow-green-500/35 group-hover:scale-105 transition-all duration-300">
+                <WhatsAppIcon className="w-5.5 h-5.5 text-white" />
+              </div>
+              <div>
+                <div className="text-xs font-semibold text-slate-400 mb-0.5">WhatsApp</div>
+                <div className="text-sm font-bold text-slate-700">+39 123 456 7890</div>
+              </div>
+            </a>
+
+            <div className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50">
+              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/25">
+                <MapPin className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
+              </div>
+              <div>
+                <div className="text-xs font-semibold text-slate-400 mb-0.5">{t('contact.location')}</div>
+                <div className="text-sm font-bold text-slate-700">{t('contact.address')}</div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50">
+              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-teal-500/25">
+                <Clock className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
+              </div>
+              <div>
+                <div className="text-xs font-semibold text-slate-400 mb-0.5">{t('contact.hours')}</div>
+                <div className="text-sm font-bold text-slate-700">{t('contact.workingHours')}</div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 mt-2 justify-center">
               <motion.a
-                key={index}
-                href={contact.href}
-                target={contact.href.startsWith('mailto') ? undefined : '_blank'}
-                rel={contact.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
-                whileHover={{ y: -4, scale: 1.05 }}
+                href="https://instagram.com/your_account"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -3, scale: 1.1 }}
                 transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                className="group flex flex-col items-center gap-2.5"
+                className="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-pink-500/20 hover:shadow-xl hover:shadow-pink-500/30 transition-shadow duration-300"
               >
-                <div className={`w-14 h-14 rounded-2xl border flex items-center justify-center shadow-sm ${contact.color} group-hover:shadow-lg transition-all duration-300`}>
-                  <contact.icon className={`w-6 h-6 ${contact.iconColor} transition-colors duration-300`} strokeWidth={1.8} />
-                </div>
-                <span className={`text-xs font-semibold text-slate-400 ${contact.labelColor} transition-colors duration-300`}>
-                  {contact.label}
-                </span>
+                <Instagram className="w-5 h-5 text-white" strokeWidth={1.8} />
               </motion.a>
-            ))}
+
+              <motion.a
+                href="https://linkedin.com/company/your_company"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -3, scale: 1.1 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-600/20 hover:shadow-xl hover:shadow-blue-600/30 transition-shadow duration-300"
+              >
+                <Linkedin className="w-5 h-5 text-white" strokeWidth={1.8} />
+              </motion.a>
+            </div>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="flex items-center justify-center gap-6 text-xs text-slate-400 mt-10"
-        >
-          <div className="flex items-center gap-1.5">
-            <MapPin className="w-3.5 h-3.5 text-teal-500" />
-            <span>{t('contact.address')}</span>
-          </div>
-          <div className="w-1 h-1 rounded-full bg-slate-300" />
-          <div className="flex items-center gap-1.5">
-            <Clock className="w-3.5 h-3.5 text-teal-500" />
-            <span>{t('contact.workingHours')}</span>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
