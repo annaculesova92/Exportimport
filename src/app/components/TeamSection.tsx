@@ -16,6 +16,7 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
       name: 'Anna',
       role: 'Founder & CEO',
       initials: 'AK',
+      photo: '/anna-photo.jpg',
       gradient: 'from-teal-700 to-teal-800',
       key: 'anna',
       linkedin: 'https://www.linkedin.com/in/anna-culesova-7955ab26a/',
@@ -119,9 +120,15 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
 
                   <div className="relative z-10">
                     {/* Avatar */}
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-white/20 backdrop-blur-sm border-4 border-white/30 rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 mx-auto shadow-xl group-hover:scale-110 transition-transform duration-300">
-                      {member.initials}
-                    </div>
+                    {member.photo ? (
+                      <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 border-4 border-white/30 rounded-xl sm:rounded-2xl mb-4 sm:mb-6 mx-auto shadow-xl group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                        <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top" />
+                      </div>
+                    ) : (
+                      <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-white/20 backdrop-blur-sm border-4 border-white/30 rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 mx-auto shadow-xl group-hover:scale-110 transition-transform duration-300">
+                        {member.initials}
+                      </div>
+                    )}
                     
                     {/* Info */}
                     <h3 className="text-2xl sm:text-3xl font-bold mb-2 text-center">{member.name}</h3>
