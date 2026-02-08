@@ -192,12 +192,12 @@ const translations = {
       cta: 'Записаться на консультацию',
       anna: {
         name: 'Анна',
-        role: 'Co-founder, Export Expert',
-        bio: '12+ лет опыта в международной торговле. Создала экспортные каналы для 80+ компаний. Специализация: Европа, Азия.',
-        experience1: 'Вела международные бизнес-проекты с доходом €5M+ в год',
-        experience2: 'Управляла проектами запуска брендов на итальянских и европейских рынках, ответственная за адаптацию продукта и коммерческую стратегию',
+        role: 'Co-founder, Business Developer',
+        bio: 'Маркетолог-стратег и Business Developer с 12-летним опытом жизни и работы в Италии',
+        experience1: '8 лет в маркетинге и 4 года в консалтинге: специализируется на построении системных продаж и стратегических воронках для B2B-сектора',
+        experience2: 'Управляла проектами по выводу брендов на рынки Италии и Европы, отвечая за адаптацию продукта и коммерческую стратегию',
         experience3: 'Архитектор деловых сообществ: создала экосистему для предпринимателей в Италии, обеспечивая доступ к локальному нетворку и партнёрам',
-        quote: '«Моя цель — не ограничиться запуском проекта, а построить систему, обеспечивающую его устойчивую прибыльность на рынке»'
+        quote: '«Моя задача — не ограничиться запуском проекта, а выстроить систему, обеспечивающую его устойчивую прибыльность на рынке»'
       },
       marina: {
         name: 'Марина Лобач',
@@ -468,12 +468,12 @@ const translations = {
       cta: 'Book a consultation',
       anna: {
         name: 'Anna',
-        role: 'Co-founder, Export Expert',
-        bio: '12+ years of experience in international trade. Built export channels for 80+ companies. Specialization: Europe, Asia.',
-        experience1: 'Led international business projects with revenues of €5M+ per year',
-        experience2: 'Managed brand launch projects in Italian and European markets, responsible for product adaptation and commercial strategy',
+        role: 'Co-founder, Business Developer',
+        bio: 'Marketing strategist and Business Developer with 12 years of living and working experience in Italy',
+        experience1: '8 years in marketing and 4 years in consulting: specializes in building systematic sales and strategic funnels for the B2B sector',
+        experience2: 'Managed projects to launch brands in Italian and European markets, responsible for product adaptation and commercial strategy',
         experience3: 'Architect of business communities: created an ecosystem for entrepreneurs in Italy, providing access to local network and partners',
-        quote: '"My goal is not to limit myself to launching a project, but to build a system ensuring its sustainable profitability in the market"'
+        quote: '"My mission is not just to launch a project, but to build a system ensuring its sustainable profitability in the market"'
       },
       marina: {
         name: 'Marina Lobach',
@@ -740,12 +740,12 @@ const translations = {
       cta: 'Réserver une consultation',
       anna: {
         name: 'Anna',
-        role: 'Co-fondatrice, Experte en exportation',
-        bio: '12+ ans d\'expérience dans le commerce international. Mis en place des canaux d\'exportation pour plus de 80 entreprises. Spécialisation: Europe, Asie.',
-        experience1: 'A dirigé des projets d\'affaires internationaux avec des revenus de €5M+ par an',
-        experience2: 'A géré des projets de lancement de marque sur les marchés italiens et européens, responsable de l\'adaptation du produit et de la stratégie commerciale',
+        role: 'Co-fondatrice, Business Developer',
+        bio: 'Stratège marketing et Business Developer avec 12 ans d\'expérience de vie et de travail en Italie',
+        experience1: '8 ans en marketing et 4 ans en conseil: spécialisée dans la construction de ventes systématiques et d\'entonnoirs stratégiques pour le secteur B2B',
+        experience2: 'A géré des projets de lancement de marques sur les marchés italiens et européens, responsable de l\'adaptation du produit et de la stratégie commerciale',
         experience3: 'Architecte de communautés d\'affaires: a créé un écosystème pour les entrepreneurs en Italie, fournissant un accès au réseau local et aux partenaires',
-        quote: '«Mon objectif n\'est pas de me limiter au lancement d\'un projet, mais de construire un système assurant sa rentabilité durable sur le marché»'
+        quote: '«Ma mission n\'est pas de me limiter au lancement d\'un projet, mais de construire un système assurant sa rentabilité durable sur le marché»'
       },
       marina: {
         name: 'Marina Lobach',
@@ -1022,13 +1022,12 @@ const translations = {
       cta: 'Prenota una consulenza',
       anna: {
         name: 'Anna',
-        role: 'Co-fondatrice',
-        title: 'Esperta di marketing strategico e Business Development',
-        bio: '12 anni di esperienza nel commercio internazionale',
-        experience1: 'Dirigente di progetti aziendali internazionali con ricavi di €5M+ all\'anno',
-        experience2: 'Gestione di progetti di lancio di marchi sui mercati italiani e europei, responsabile dell\'adattamento del prodotto e della strategia commerciale',
+        role: 'Co-fondatrice, Business Developer',
+        bio: 'Stratega di marketing e Business Developer con 12 anni di esperienza di vita e lavoro in Italia',
+        experience1: '8 anni nel marketing e 4 anni nella consulenza: specializzata nella costruzione di vendite sistematiche e funnel strategici per il settore B2B',
+        experience2: 'Ha gestito progetti di lancio di marchi sui mercati italiani ed europei, responsabile dell\'adattamento del prodotto e della strategia commerciale',
         experience3: 'Architetto di comunità aziendali: ha creato un ecosistema per gli imprenditori in Italia, garantendo l\'accesso alla rete locale e ai partner',
-        quote: '«Il mio obiettivo non è limitarsi al lancio di un progetto, ma costruire un sistema che assicuri la sua redditività sostenibile sul mercato»'
+        quote: '«La mia missione non è limitarsi al lancio di un progetto, ma costruire un sistema che assicuri la sua redditività sostenibile sul mercato»'
       },
       marina: {
         name: 'Marina Lobach',
