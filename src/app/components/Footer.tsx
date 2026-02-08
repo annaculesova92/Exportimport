@@ -71,15 +71,15 @@ export function Footer({ onContactClick }: FooterProps) {
             <h3 className="font-bold mb-3 sm:mb-4 text-xs sm:text-sm text-accent">{t('footer.contactsTitle')}</h3>
             <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               <li>
-                <a href="mailto:info@exportimport.eu" className="text-white/70 hover:text-accent transition-colors flex items-center space-x-2">
+                <a href="mailto:anna.culesova@gmail.com" className="text-white/70 hover:text-accent transition-colors flex items-center space-x-2">
                   <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                  <span className="text-xs sm:text-sm">info@exportimport.eu</span>
+                  <span className="text-xs sm:text-sm">anna.culesova@gmail.com</span>
                 </a>
               </li>
               <li>
-                <a href="tel:+390123456789" className="text-white/70 hover:text-accent transition-colors flex items-center space-x-2">
+                <a href="https://wa.me/393245436954" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-accent transition-colors flex items-center space-x-2">
                   <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                  <span className="text-xs sm:text-sm">+39 012 345 6789</span>
+                  <span className="text-xs sm:text-sm">+39 324 543 6954</span>
                 </a>
               </li>
               <li className="text-white/70 flex items-center space-x-2">
@@ -91,7 +91,7 @@ export function Footer({ onContactClick }: FooterProps) {
             {/* Social Links */}
             <div className="flex items-center space-x-2 sm:space-x-3 mt-4 sm:mt-6">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/anna-culesova-7955ab26a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-accent transition-colors flex items-center justify-center"
@@ -99,18 +99,30 @@ export function Footer({ onContactClick }: FooterProps) {
                 <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
-                href="mailto:info@exportimport.eu"
+                href="mailto:anna.culesova@gmail.com"
                 className="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-accent transition-colors flex items-center justify-center"
               >
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
-                href="https://wa.me/"
+                href="https://wa.me/393245436954"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-accent transition-colors flex items-center justify-center"
               >
                 <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/boutiquebusiness.consulting"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 sm:w-10 sm:h-10 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-accent transition-colors flex items-center justify-center"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 sm:w-5 sm:h-5">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
               </a>
             </div>
           </div>

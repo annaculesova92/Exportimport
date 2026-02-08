@@ -17,14 +17,18 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
       role: 'Founder & CEO',
       initials: 'AK',
       gradient: 'from-teal-700 to-teal-800',
-      key: 'anna'
+      key: 'anna',
+      linkedin: 'https://www.linkedin.com/in/anna-culesova-7955ab26a/',
+      email: 'anna.culesova@gmail.com'
     },
     {
       name: 'Marina',
       role: 'Co-Founder & COO',
       initials: 'MR',
       gradient: 'from-yellow-500 to-yellow-600',
-      key: 'marina'
+      key: 'marina',
+      linkedin: 'https://www.linkedin.com/in/marina-lobach-a1ab48176/',
+      email: 'mary.lobach@gmail.com'
     }
   ];
 
@@ -129,15 +133,20 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
 
                     {/* Contact Icons */}
                     <div className="flex justify-center space-x-2 sm:space-x-3 mt-4 sm:mt-6">
-                      <button className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-lg sm:rounded-xl hover:bg-white hover:text-teal-700 transition-all flex items-center justify-center hover:scale-110">
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-lg sm:rounded-xl hover:bg-white hover:text-teal-700 transition-all flex items-center justify-center hover:scale-110"
+                      >
                         <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
-                      </button>
-                      <button 
-                        onClick={onContactClick}
+                      </a>
+                      <a 
+                        href={`mailto:${member.email}`}
                         className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-lg sm:rounded-xl hover:bg-white hover:text-yellow-600 transition-all flex items-center justify-center hover:scale-110"
                       >
                         <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>

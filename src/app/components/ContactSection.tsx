@@ -140,7 +140,7 @@ export function ContactSection() {
             className="flex flex-col gap-4 justify-center"
           >
             <a
-              href="https://wa.me/391234567890"
+              href="https://wa.me/393245436954"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-green-100/40 hover:border-green-100 transition-all duration-300 group"
@@ -150,12 +150,12 @@ export function ContactSection() {
               </div>
               <div>
                 <div className="text-xs font-semibold text-slate-400 mb-0.5">WhatsApp</div>
-                <div className="text-sm font-bold text-slate-700">+39 123 456 7890</div>
+                <div className="text-sm font-bold text-slate-700">+39 324 543 6954</div>
               </div>
             </a>
 
             <a
-              href="https://instagram.com/your_account"
+              href="https://www.instagram.com/boutiquebusiness.consulting"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-pink-100/40 hover:border-pink-100 transition-all duration-300 group"
@@ -165,12 +165,12 @@ export function ContactSection() {
               </div>
               <div>
                 <div className="text-xs font-semibold text-slate-400 mb-0.5">Instagram</div>
-                <div className="text-sm font-bold text-slate-700">@exportimport</div>
+                <div className="text-sm font-bold text-slate-700">@boutiquebusiness.consulting</div>
               </div>
             </a>
 
             <a
-              href="https://linkedin.com/company/your_company"
+              href="https://www.linkedin.com/in/anna-culesova-7955ab26a/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-blue-100/40 hover:border-blue-100 transition-all duration-300 group"
@@ -180,12 +180,12 @@ export function ContactSection() {
               </div>
               <div>
                 <div className="text-xs font-semibold text-slate-400 mb-0.5">LinkedIn</div>
-                <div className="text-sm font-bold text-slate-700">Export & Import</div>
+                <div className="text-sm font-bold text-slate-700">Anna Culesova</div>
               </div>
             </a>
 
             <a
-              href="mailto:info@exportimport.com"
+              href="mailto:mary.lobach@gmail.com"
               className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-teal-100/40 hover:border-teal-100 transition-all duration-300 group"
             >
               <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center shadow-lg shadow-teal-600/25 group-hover:shadow-xl group-hover:shadow-teal-600/35 group-hover:scale-105 transition-all duration-300">
@@ -193,7 +193,7 @@ export function ContactSection() {
               </div>
               <div>
                 <div className="text-xs font-semibold text-slate-400 mb-0.5">Email</div>
-                <div className="text-sm font-bold text-slate-700">info@exportimport.com</div>
+                <div className="text-sm font-bold text-slate-700">mary.lobach@gmail.com</div>
               </div>
             </a>
           </motion.div>
@@ -235,13 +235,13 @@ export function ContactSection() {
                 </div>
               </div>
 
-              <a href="mailto:info@exportimport.com" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+              <a href="mailto:anna.culesova@gmail.com" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
                 <div className="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/10">
                   <Mail className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
                 </div>
                 <div>
                   <div className="text-[10px] font-semibold text-white/60 uppercase tracking-wider">Email</div>
-                  <div className="text-sm font-bold text-white">info@exportimport.com</div>
+                  <div className="text-sm font-bold text-white">anna.culesova@gmail.com</div>
                 </div>
               </a>
             </div>
