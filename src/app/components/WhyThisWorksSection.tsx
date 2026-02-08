@@ -67,13 +67,13 @@ export function WhyThisWorksSection() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:w-1/3 w-full flex flex-row lg:flex-col gap-2 sm:gap-3 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0"
+            className="lg:w-1/3 w-full flex flex-col sm:flex-row lg:flex-col gap-2 sm:gap-3"
           >
             {reasons.map((reason, index) => (
               <motion.button
                 key={reason.key}
                 onClick={() => setActiveTab(index)}
-                className={`relative flex-1 lg:flex-none w-full min-w-[120px] sm:min-w-[140px] lg:min-w-0 text-left p-3 sm:p-4 lg:p-5 rounded-xl border transition-all duration-400 ${
+                className={`relative flex-1 lg:flex-none w-full text-left p-3 sm:p-4 lg:p-5 rounded-xl border transition-all duration-400 ${
                   activeTab === index
                     ? 'bg-white/15 backdrop-blur-sm border-white/30 shadow-lg'
                     : 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20'
