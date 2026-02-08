@@ -48,13 +48,13 @@ export function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl shadow-slate-200/60 border border-slate-100/80">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl shadow-slate-200/60 border border-slate-100/80 h-full">
               <h3 className="text-lg font-bold text-slate-800 mb-6">
                 {t('contact.formTitle') !== 'contact.formTitle' ? t('contact.formTitle') : 'Отправьте нам сообщение'}
               </h3>
@@ -137,21 +137,8 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-4 justify-center"
           >
-            <a
-              href="mailto:info@exportimport.com"
-              className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-teal-100/40 hover:border-teal-100 transition-all duration-300 group"
-            >
-              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center shadow-lg shadow-teal-600/25 group-hover:shadow-xl group-hover:shadow-teal-600/35 group-hover:scale-105 transition-all duration-300">
-                <Mail className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
-              </div>
-              <div>
-                <div className="text-xs font-semibold text-slate-400 mb-0.5">Email</div>
-                <div className="text-sm font-bold text-slate-700">info@exportimport.com</div>
-              </div>
-            </a>
-
             <a
               href="https://wa.me/391234567890"
               target="_blank"
@@ -167,51 +154,99 @@ export function ContactSection() {
               </div>
             </a>
 
-            <div className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50">
-              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/25">
-                <MapPin className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
+            <a
+              href="https://instagram.com/your_account"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-pink-100/40 hover:border-pink-100 transition-all duration-300 group"
+            >
+              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center shadow-lg shadow-pink-500/25 group-hover:shadow-xl group-hover:shadow-pink-500/35 group-hover:scale-105 transition-all duration-300">
+                <Instagram className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
               </div>
               <div>
-                <div className="text-xs font-semibold text-slate-400 mb-0.5">{t('contact.location')}</div>
-                <div className="text-sm font-bold text-slate-700">{t('contact.address')}</div>
+                <div className="text-xs font-semibold text-slate-400 mb-0.5">Instagram</div>
+                <div className="text-sm font-bold text-slate-700">@exportimport</div>
               </div>
-            </div>
+            </a>
 
-            <div className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50">
-              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-teal-500/25">
-                <Clock className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
+            <a
+              href="https://linkedin.com/company/your_company"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-blue-100/40 hover:border-blue-100 transition-all duration-300 group"
+            >
+              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-600/25 group-hover:shadow-xl group-hover:shadow-blue-600/35 group-hover:scale-105 transition-all duration-300">
+                <Linkedin className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
               </div>
               <div>
-                <div className="text-xs font-semibold text-slate-400 mb-0.5">{t('contact.hours')}</div>
-                <div className="text-sm font-bold text-slate-700">{t('contact.workingHours')}</div>
+                <div className="text-xs font-semibold text-slate-400 mb-0.5">LinkedIn</div>
+                <div className="text-sm font-bold text-slate-700">Export & Import</div>
               </div>
-            </div>
+            </a>
 
-            <div className="flex items-center gap-3 mt-2 justify-center">
-              <motion.a
-                href="https://instagram.com/your_account"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ y: -3, scale: 1.1 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                className="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-pink-500/20 hover:shadow-xl hover:shadow-pink-500/30 transition-shadow duration-300"
-              >
-                <Instagram className="w-5 h-5 text-white" strokeWidth={1.8} />
-              </motion.a>
-
-              <motion.a
-                href="https://linkedin.com/company/your_company"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ y: -3, scale: 1.1 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-                className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-600/20 hover:shadow-xl hover:shadow-blue-600/30 transition-shadow duration-300"
-              >
-                <Linkedin className="w-5 h-5 text-white" strokeWidth={1.8} />
-              </motion.a>
-            </div>
+            <a
+              href="mailto:info@exportimport.com"
+              className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-teal-100/40 hover:border-teal-100 transition-all duration-300 group"
+            >
+              <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center shadow-lg shadow-teal-600/25 group-hover:shadow-xl group-hover:shadow-teal-600/35 group-hover:scale-105 transition-all duration-300">
+                <Mail className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
+              </div>
+              <div>
+                <div className="text-xs font-semibold text-slate-400 mb-0.5">Email</div>
+                <div className="text-sm font-bold text-slate-700">info@exportimport.com</div>
+              </div>
+            </a>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.15 }}
+          className="relative rounded-2xl overflow-hidden shadow-xl shadow-slate-200/60 border border-slate-100/80"
+        >
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=10.95%2C45.42%2C11.02%2C45.45&layer=mapnik&marker=45.4384%2C10.9917"
+            className="w-full h-[280px] sm:h-[320px] border-0 grayscale-[30%] contrast-[1.05]"
+            loading="lazy"
+            title="Verona, Italy"
+          />
+
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-5 sm:p-6">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-8">
+              <div className="flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/10">
+                  <MapPin className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
+                </div>
+                <div>
+                  <div className="text-[10px] font-semibold text-white/60 uppercase tracking-wider">{t('contact.location')}</div>
+                  <div className="text-sm font-bold text-white">{t('contact.address')}</div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/10">
+                  <Clock className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
+                </div>
+                <div>
+                  <div className="text-[10px] font-semibold text-white/60 uppercase tracking-wider">{t('contact.hours')}</div>
+                  <div className="text-sm font-bold text-white">{t('contact.workingHours')}</div>
+                </div>
+              </div>
+
+              <a href="mailto:info@exportimport.com" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+                <div className="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/10">
+                  <Mail className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
+                </div>
+                <div>
+                  <div className="text-[10px] font-semibold text-white/60 uppercase tracking-wider">Email</div>
+                  <div className="text-sm font-bold text-white">info@exportimport.com</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
