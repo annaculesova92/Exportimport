@@ -10,7 +10,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-slate-50 via-white to-teal-50/30 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24 overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-slate-50 via-white to-teal-50/30 pt-8 pb-16 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-24 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 right-[10%] w-[500px] h-[500px] bg-teal-100/40 rounded-full blur-[100px]" />
         <div className="absolute bottom-10 left-[5%] w-[400px] h-[400px] bg-emerald-100/30 rounded-full blur-[80px]" />

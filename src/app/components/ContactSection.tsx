@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, Instagram, Linkedin, Send, MapPin, Clock, MessageCircle, ArrowRight } from 'lucide-react';
+import { Mail, Instagram, Linkedin, Send, MapPin, Clock } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useState } from 'react';
 
@@ -28,11 +28,46 @@ export function ContactSection() {
     }, 1200);
   };
 
+  const contacts = [
+    {
+      icon: Mail,
+      label: 'Email',
+      href: 'mailto:info@exportimport.com',
+      color: 'bg-teal-50 border-teal-100 hover:bg-teal-600 hover:border-teal-600',
+      iconColor: 'text-teal-600 group-hover:text-white',
+      labelColor: 'group-hover:text-teal-600',
+    },
+    {
+      icon: WhatsAppIcon,
+      label: 'WhatsApp',
+      href: 'https://wa.me/391234567890',
+      color: 'bg-green-50 border-green-100 hover:bg-green-500 hover:border-green-500',
+      iconColor: 'text-green-600 group-hover:text-white',
+      labelColor: 'group-hover:text-green-600',
+    },
+    {
+      icon: Instagram,
+      label: 'Instagram',
+      href: 'https://instagram.com/your_account',
+      color: 'bg-pink-50 border-pink-100 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 hover:border-pink-500',
+      iconColor: 'text-pink-500 group-hover:text-white',
+      labelColor: 'group-hover:text-pink-500',
+    },
+    {
+      icon: Linkedin,
+      label: 'LinkedIn',
+      href: 'https://linkedin.com/company/your_company',
+      color: 'bg-blue-50 border-blue-100 hover:bg-blue-600 hover:border-blue-600',
+      iconColor: 'text-blue-600 group-hover:text-white',
+      labelColor: 'group-hover:text-blue-600',
+    },
+  ];
+
   return (
     <section id="contact" className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-white via-slate-50/30 to-white relative overflow-hidden">
       <div className="absolute top-0 right-1/4 w-[350px] h-[350px] bg-teal-100/20 rounded-full blur-3xl" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,14 +82,15 @@ export function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-center lg:items-start">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="w-full lg:flex-1 lg:max-w-md"
           >
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 sm:p-7 shadow-lg shadow-slate-200/50 border border-slate-100">
-              <div className="space-y-4 mb-4">
+            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-6 shadow-lg shadow-slate-200/50 border border-slate-100">
+              <div className="space-y-3 mb-4">
                 <div>
                   <label className="block text-xs font-semibold text-slate-500 mb-1.5 uppercase tracking-wider">
                     {t('contact.name') !== 'contact.name' ? t('contact.name') : 'Name'}
@@ -87,7 +123,7 @@ export function ContactSection() {
                   </label>
                   <textarea
                     required
-                    rows={4}
+                    rows={3}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-teal-400 focus:ring-2 focus:ring-teal-100 focus:bg-white transition-all outline-none text-sm text-slate-800 resize-none placeholder:text-slate-400"
@@ -130,85 +166,46 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="flex flex-col gap-4"
+            className="flex flex-row lg:flex-col items-center lg:items-start gap-5 lg:gap-6 lg:pt-6"
           >
-            <div className="space-y-3">
-              <a
-                href="mailto:info@exportimport.com"
-                className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-100 hover:border-teal-200 hover:shadow-md hover:shadow-teal-50 transition-all duration-300 group"
+            {contacts.map((contact, index) => (
+              <motion.a
+                key={index}
+                href={contact.href}
+                target={contact.href.startsWith('mailto') ? undefined : '_blank'}
+                rel={contact.href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                whileHover={{ y: -4, scale: 1.05 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                className="group flex flex-col items-center gap-2.5"
               >
-                <div className="w-11 h-11 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center shrink-0 group-hover:bg-teal-600 group-hover:border-teal-600 group-hover:shadow-lg group-hover:shadow-teal-600/20 transition-all duration-300">
-                  <Mail className="w-5 h-5 text-teal-600 group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
+                <div className={`w-14 h-14 rounded-2xl border flex items-center justify-center shadow-sm ${contact.color} group-hover:shadow-lg transition-all duration-300`}>
+                  <contact.icon className={`w-6 h-6 ${contact.iconColor} transition-colors duration-300`} strokeWidth={1.8} />
                 </div>
-                <div className="min-w-0 flex-1">
-                  <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-0.5">Email</div>
-                  <div className="text-sm font-semibold text-slate-700 truncate">info@exportimport.com</div>
-                </div>
-                <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-teal-500 group-hover:translate-x-1 transition-all shrink-0" />
-              </a>
-
-              <a
-                href="https://wa.me/391234567890"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-100 hover:border-green-200 hover:shadow-md hover:shadow-green-50 transition-all duration-300 group"
-              >
-                <div className="w-11 h-11 rounded-xl bg-green-50 border border-green-100 flex items-center justify-center shrink-0 group-hover:bg-green-500 group-hover:border-green-500 group-hover:shadow-lg group-hover:shadow-green-500/20 transition-all duration-300">
-                  <WhatsAppIcon className="w-5 h-5 text-green-600 group-hover:text-white transition-colors duration-300" />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-0.5">WhatsApp</div>
-                  <div className="text-sm font-semibold text-slate-700 truncate">+39 123 456 7890</div>
-                </div>
-                <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-green-500 group-hover:translate-x-1 transition-all shrink-0" />
-              </a>
-
-              <a
-                href="https://instagram.com/your_account"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-100 hover:border-pink-200 hover:shadow-md hover:shadow-pink-50 transition-all duration-300 group"
-              >
-                <div className="w-11 h-11 rounded-xl bg-pink-50 border border-pink-100 flex items-center justify-center shrink-0 group-hover:bg-gradient-to-br group-hover:from-purple-500 group-hover:to-pink-500 group-hover:border-pink-500 group-hover:shadow-lg group-hover:shadow-pink-500/20 transition-all duration-300">
-                  <Instagram className="w-5 h-5 text-pink-500 group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-0.5">Instagram</div>
-                  <div className="text-sm font-semibold text-slate-700 truncate">@exportimport</div>
-                </div>
-                <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-pink-500 group-hover:translate-x-1 transition-all shrink-0" />
-              </a>
-
-              <a
-                href="https://linkedin.com/company/your_company"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 bg-white rounded-xl border border-slate-100 hover:border-blue-200 hover:shadow-md hover:shadow-blue-50 transition-all duration-300 group"
-              >
-                <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0 group-hover:bg-blue-600 group-hover:border-blue-600 group-hover:shadow-lg group-hover:shadow-blue-600/20 transition-all duration-300">
-                  <Linkedin className="w-5 h-5 text-blue-600 group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-0.5">LinkedIn</div>
-                  <div className="text-sm font-semibold text-slate-700 truncate">Export & Import</div>
-                </div>
-                <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-blue-500 group-hover:translate-x-1 transition-all shrink-0" />
-              </a>
-            </div>
-
-            <div className="flex items-center gap-4 mt-1 px-1">
-              <div className="flex items-center gap-2 text-xs text-slate-400">
-                <MapPin className="w-3.5 h-3.5 text-teal-500" />
-                <span>{t('contact.address')}</span>
-              </div>
-              <div className="w-1 h-1 rounded-full bg-slate-300" />
-              <div className="flex items-center gap-2 text-xs text-slate-400">
-                <Clock className="w-3.5 h-3.5 text-teal-500" />
-                <span>{t('contact.workingHours')}</span>
-              </div>
-            </div>
+                <span className={`text-xs font-semibold text-slate-400 ${contact.labelColor} transition-colors duration-300`}>
+                  {contact.label}
+                </span>
+              </motion.a>
+            ))}
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="flex items-center justify-center gap-6 text-xs text-slate-400 mt-10"
+        >
+          <div className="flex items-center gap-1.5">
+            <MapPin className="w-3.5 h-3.5 text-teal-500" />
+            <span>{t('contact.address')}</span>
+          </div>
+          <div className="w-1 h-1 rounded-full bg-slate-300" />
+          <div className="flex items-center gap-1.5">
+            <Clock className="w-3.5 h-3.5 text-teal-500" />
+            <span>{t('contact.workingHours')}</span>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
