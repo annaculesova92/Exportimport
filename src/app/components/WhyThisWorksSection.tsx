@@ -67,7 +67,7 @@ export function WhyThisWorksSection() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:w-1/3 w-full flex flex-col sm:flex-row lg:flex-col gap-2 sm:gap-3"
+            className="lg:w-1/3 w-full flex flex-row lg:flex-col gap-2 sm:gap-3"
           >
             {reasons.map((reason, index) => (
               <motion.button
@@ -88,9 +88,8 @@ export function WhyThisWorksSection() {
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                   />
                 )}
-                <div className="flex items-center gap-2 sm:gap-3">
-                  <span className="text-lg sm:text-2xl">{reason.emoji}</span>
-                  <p className={`text-xs sm:text-sm font-bold transition-colors ${
+                <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
+                  <p className={`text-[11px] sm:text-sm font-bold transition-colors text-center sm:text-left ${
                     activeTab === index ? 'text-white' : 'text-teal-300/60'
                   }`}>
                     {t(`whyThisWorks.${reason.key}.tabTitle`)}
