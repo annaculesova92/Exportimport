@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Navigation } from '@/app/components/Navigation';
 import { HeroSection } from '@/app/components/HeroSection';
 import { SpecializationSection } from '@/app/components/SpecializationSection';
+import { WhoWeWorkWithSection } from '@/app/components/WhoWeWorkWithSection';
+import { WhyThisWorksSection } from '@/app/components/WhyThisWorksSection';
 import { ValueSection } from '@/app/components/ValueSection';
 import { ServicesSection } from '@/app/components/ServicesSection';
 import { ProcessSection } from '@/app/components/ProcessSection';
@@ -39,6 +41,8 @@ export function AppContent() {
       <main className="pt-16 sm:pt-20">
         <HeroSection onContactClick={() => setIsContactModalOpen(true)} />
         <SpecializationSection />
+        <WhoWeWorkWithSection />
+        <WhyThisWorksSection />
         <ValueSection />
         <ServicesSection onContactClick={() => setIsContactModalOpen(true)} />
         <ProcessSection />

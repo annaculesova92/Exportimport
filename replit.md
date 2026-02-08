@@ -44,3 +44,8 @@ A React + Vite single-page website for an export/import business consulting firm
   - ServicesSection: improved hover effects with color-changing icon containers (teal bg to gradient)
   - AppContent: cleaned up floating buttons (removed redundant mobile CTA)
   - Navigation: language switcher always visible next to hamburger on mobile
+- 2026-02-08: Added two new sections after SpecializationSection:
+  - WhoWeWorkWithSection: 3 audience cards (Distributors, Small Business, Investors) with gradient hover effects, floating animations, numbered cards
+  - WhyThisWorksSection: dark-themed tab interface showing value propositions for each audience type with bullet points
+  - Full translations in all 4 languages (RU, EN, FR, IT)
+  - Location updated to Verona across all translations

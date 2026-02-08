@@ -269,6 +269,58 @@ const translations = {
       back: 'Назад',
       next: 'Далее'
     },
+    whoWeWorkWith: {
+      badge: 'Наша аудитория',
+      title: 'С кем мы работаем',
+      subtitle: 'Три типа клиентов, для каждого из которых у нас есть точное решение',
+      distributors: {
+        title: 'Дистрибьюторы и ритейлеры',
+        description: 'Профессиональные игроки рынка, которые ищут эксклюзивные продукты от небольших семейных мануфактур Италии. Мы поможем вам отстроиться от конкурентов, найдем уникальные позиции и обеспечим стабильность поставок «под ключ».',
+        cta: 'Найти эксклюзив'
+      },
+      smallBusiness: {
+        title: 'Малый бизнес и амбициозные новички',
+        description: 'Предприниматели, которые хотят запустить свой первый проект по импорту из Европы, но боятся ошибок и бюрократии. Мы станем вашим внешним отделом ВЭД: поможем собрать первую партию из товаров от разных поставщиков и проведем через все этапы логистики.',
+        cta: 'Начать импорт'
+      },
+      investors: {
+        title: 'Инвесторы-стратеги',
+        description: 'Люди с капиталом, нацеленные на диверсификацию через реальный сектор и товарный бизнес в Италии. Мы подберем ликвидные ниши с высокой маржинальностью, рассчитаем ROI и возьмем на себя полное операционное управление процессами.',
+        cta: 'Рассчитать ROI'
+      }
+    },
+    whyThisWorks: {
+      badge: 'Наш подход',
+      title: 'Почему это сработает',
+      subtitle: 'Для каждого типа клиента — свой ключевой аргумент и стратегия',
+      distributor: {
+        tabTitle: 'Для дистрибьюторов',
+        title: 'Эксклюзив и отстройка от конкурентов',
+        description: 'Для дистрибьютора ключевое слово — «эксклюзив» и «отстроиться от конкурентов», потому что массмаркет уже у всех есть. Мы находим уникальных итальянских производителей, с которыми нет прямых контрактов у крупных игроков.',
+        point1: 'Прямые контракты с мануфактурами',
+        point2: 'Эксклюзивные права на территорию',
+        point3: 'Стабильные поставки под ключ',
+        point4: 'Отстройка от конкурентов'
+      },
+      beginner: {
+        tabTitle: 'Для новичков',
+        title: 'Безопасность и сборная партия',
+        description: 'Для новичка главное — «безопасность» и «сборная партия» (возможность не покупать сразу целый контейнер). Мы минимизируем риски первого импорта и сопровождаем на каждом этапе.',
+        point1: 'Сборная партия от разных поставщиков',
+        point2: 'Полное сопровождение «от А до Я»',
+        point3: 'Минимальные риски для бюджета',
+        point4: 'Обучение процессам ВЭД'
+      },
+      investor: {
+        tabTitle: 'Для инвесторов',
+        title: 'ROI, ликвидные ниши и ноль операционки',
+        description: 'Для инвестора важны цифры («ROI», «ликвидные ниши») и «отсутствие операционки» (управление процессами). Мы берем на себя всю операционную работу, а вы получаете прозрачную отчетность.',
+        point1: 'Расчет ROI до старта проекта',
+        point2: 'Ликвидные ниши с высокой маржой',
+        point3: 'Полное операционное управление',
+        point4: 'Прозрачная финансовая отчетность'
+      }
+    },
     whatsapp: 'Связаться в WhatsApp',
     writeUs: 'Написать нам',
     contactUs: 'Связаться с нами'
@@ -488,6 +540,58 @@ const translations = {
       step: 'Step',
       back: 'Back',
       next: 'Next'
+    },
+    whoWeWorkWith: {
+      badge: 'Our audience',
+      title: 'Who We Work With',
+      subtitle: 'Three types of clients, each with a tailored solution',
+      distributors: {
+        title: 'Distributors & Retailers',
+        description: 'Market professionals seeking exclusive products from small family-owned Italian manufacturers. We help you stand out from competitors, find unique products, and ensure turnkey supply stability.',
+        cta: 'Find exclusives'
+      },
+      smallBusiness: {
+        title: 'Small Business & Ambitious Newcomers',
+        description: 'Entrepreneurs who want to launch their first European import project but fear mistakes and bureaucracy. We become your external trade department: help assemble your first mixed shipment from various suppliers and guide you through every logistics stage.',
+        cta: 'Start importing'
+      },
+      investors: {
+        title: 'Strategic Investors',
+        description: 'People with capital aimed at diversification through the real sector and commodity business in Italy. We select liquid niches with high margins, calculate ROI, and take on complete operational management.',
+        cta: 'Calculate ROI'
+      }
+    },
+    whyThisWorks: {
+      badge: 'Our approach',
+      title: 'Why This Works',
+      subtitle: 'For each client type — a key argument and tailored strategy',
+      distributor: {
+        tabTitle: 'For Distributors',
+        title: 'Exclusivity & Competitive Edge',
+        description: 'For distributors, the key words are "exclusivity" and "standing out from competitors," because everyone already has mass-market products. We find unique Italian manufacturers with no direct contracts with major players.',
+        point1: 'Direct contracts with manufacturers',
+        point2: 'Exclusive territorial rights',
+        point3: 'Turnkey stable supply chain',
+        point4: 'Clear competitive differentiation'
+      },
+      beginner: {
+        tabTitle: 'For Newcomers',
+        title: 'Safety & Mixed Shipments',
+        description: 'For newcomers, the key is "safety" and "mixed shipments" (no need to buy a whole container at once). We minimize first import risks and provide guidance at every stage.',
+        point1: 'Mixed shipments from multiple suppliers',
+        point2: 'Full A-to-Z support',
+        point3: 'Minimal budget risks',
+        point4: 'Foreign trade process training'
+      },
+      investor: {
+        tabTitle: 'For Investors',
+        title: 'ROI, Liquid Niches & Zero Operations',
+        description: 'For investors, it\'s all about numbers ("ROI," "liquid niches") and "zero operations" (process management). We handle all operational work while you receive transparent reporting.',
+        point1: 'ROI calculation before project launch',
+        point2: 'Liquid niches with high margins',
+        point3: 'Complete operational management',
+        point4: 'Transparent financial reporting'
+      }
     },
     whatsapp: 'Contact via WhatsApp',
     writeUs: 'Write to us',
@@ -719,6 +823,58 @@ const translations = {
       back: 'Retour',
       next: 'Suivant'
     },
+    whoWeWorkWith: {
+      badge: 'Notre public',
+      title: 'Avec qui nous travaillons',
+      subtitle: 'Trois types de clients, chacun avec une solution sur mesure',
+      distributors: {
+        title: 'Distributeurs et détaillants',
+        description: 'Des professionnels du marché à la recherche de produits exclusifs de petites manufactures familiales italiennes. Nous vous aidons à vous démarquer de la concurrence, à trouver des produits uniques et à assurer la stabilité des livraisons clé en main.',
+        cta: 'Trouver l\'exclusivité'
+      },
+      smallBusiness: {
+        title: 'Petites entreprises et nouveaux ambitieux',
+        description: 'Des entrepreneurs qui souhaitent lancer leur premier projet d\'importation européenne mais craignent les erreurs et la bureaucratie. Nous devenons votre département commerce extérieur : nous vous aidons à constituer votre premier lot mixte et vous guidons à chaque étape logistique.',
+        cta: 'Commencer l\'import'
+      },
+      investors: {
+        title: 'Investisseurs stratégiques',
+        description: 'Des personnes disposant de capital visant la diversification par le secteur réel et le commerce de marchandises en Italie. Nous sélectionnons des niches liquides à haute marge, calculons le ROI et prenons en charge la gestion opérationnelle complète.',
+        cta: 'Calculer le ROI'
+      }
+    },
+    whyThisWorks: {
+      badge: 'Notre approche',
+      title: 'Pourquoi ça marche',
+      subtitle: 'Pour chaque type de client — un argument clé et une stratégie adaptée',
+      distributor: {
+        tabTitle: 'Pour les distributeurs',
+        title: 'Exclusivité et avantage concurrentiel',
+        description: 'Pour le distributeur, les mots clés sont « exclusivité » et « se démarquer de la concurrence », car tout le monde a déjà du mass-market. Nous trouvons des fabricants italiens uniques sans contrats directs avec les grands acteurs.',
+        point1: 'Contrats directs avec les manufactures',
+        point2: 'Droits territoriaux exclusifs',
+        point3: 'Chaîne d\'approvisionnement clé en main',
+        point4: 'Différenciation concurrentielle claire'
+      },
+      beginner: {
+        tabTitle: 'Pour les débutants',
+        title: 'Sécurité et lots mixtes',
+        description: 'Pour le débutant, l\'essentiel est la « sécurité » et le « lot mixte » (pas besoin d\'acheter un conteneur entier). Nous minimisons les risques de la première importation et accompagnons à chaque étape.',
+        point1: 'Lots mixtes de différents fournisseurs',
+        point2: 'Accompagnement complet de A à Z',
+        point3: 'Risques budgétaires minimaux',
+        point4: 'Formation aux processus de commerce extérieur'
+      },
+      investor: {
+        tabTitle: 'Pour les investisseurs',
+        title: 'ROI, niches liquides et zéro opérationnel',
+        description: 'Pour l\'investisseur, ce sont les chiffres qui comptent (« ROI », « niches liquides ») et « zéro opérationnel » (gestion des processus). Nous prenons en charge tout le travail opérationnel avec une transparence totale.',
+        point1: 'Calcul du ROI avant le lancement',
+        point2: 'Niches liquides à haute marge',
+        point3: 'Gestion opérationnelle complète',
+        point4: 'Rapports financiers transparents'
+      }
+    },
     whatsapp: 'Contactez-nous via WhatsApp',
     writeUs: 'Écrivez-nous',
     contactUs: 'Nous contacter'
@@ -943,6 +1099,58 @@ const translations = {
       step: 'Passo',
       back: 'Indietro',
       next: 'Avanti'
+    },
+    whoWeWorkWith: {
+      badge: 'Il nostro pubblico',
+      title: 'Con chi lavoriamo',
+      subtitle: 'Tre tipi di clienti, ognuno con una soluzione su misura',
+      distributors: {
+        title: 'Distributori e rivenditori',
+        description: 'Professionisti del mercato alla ricerca di prodotti esclusivi da piccole manifatture familiari italiane. Vi aiutiamo a distinguervi dalla concorrenza, a trovare prodotti unici e a garantire la stabilità delle forniture chiavi in mano.',
+        cta: 'Trovare l\'esclusività'
+      },
+      smallBusiness: {
+        title: 'Piccole imprese e nuovi ambiziosi',
+        description: 'Imprenditori che vogliono lanciare il loro primo progetto di importazione europea ma temono errori e burocrazia. Diventiamo il vostro dipartimento commercio estero: vi aiutiamo a comporre il primo lotto misto da diversi fornitori e vi guidiamo in ogni fase logistica.',
+        cta: 'Iniziare l\'importazione'
+      },
+      investors: {
+        title: 'Investitori strategici',
+        description: 'Persone con capitale orientate alla diversificazione attraverso il settore reale e il commercio di merci in Italia. Selezioniamo nicchie liquide ad alto margine, calcoliamo il ROI e ci occupiamo della gestione operativa completa.',
+        cta: 'Calcolare il ROI'
+      }
+    },
+    whyThisWorks: {
+      badge: 'Il nostro approccio',
+      title: 'Perché funziona',
+      subtitle: 'Per ogni tipo di cliente — un argomento chiave e una strategia su misura',
+      distributor: {
+        tabTitle: 'Per i distributori',
+        title: 'Esclusività e vantaggio competitivo',
+        description: 'Per il distributore, le parole chiave sono «esclusività» e «distinguersi dalla concorrenza», perché il mass-market lo hanno tutti. Troviamo produttori italiani unici senza contratti diretti con i grandi player.',
+        point1: 'Contratti diretti con le manifatture',
+        point2: 'Diritti territoriali esclusivi',
+        point3: 'Catena di fornitura chiavi in mano',
+        point4: 'Differenziazione competitiva chiara'
+      },
+      beginner: {
+        tabTitle: 'Per i principianti',
+        title: 'Sicurezza e lotti misti',
+        description: 'Per il principiante, l\'essenziale è la «sicurezza» e il «lotto misto» (non serve comprare un intero container). Minimizziamo i rischi della prima importazione e accompagniamo in ogni fase.',
+        point1: 'Lotti misti da diversi fornitori',
+        point2: 'Accompagnamento completo dalla A alla Z',
+        point3: 'Rischi di budget minimi',
+        point4: 'Formazione sui processi di commercio estero'
+      },
+      investor: {
+        tabTitle: 'Per gli investitori',
+        title: 'ROI, nicchie liquide e zero operatività',
+        description: 'Per l\'investitore contano i numeri («ROI», «nicchie liquide») e «zero operatività» (gestione dei processi). Ci occupiamo di tutto il lavoro operativo con totale trasparenza.',
+        point1: 'Calcolo del ROI prima del lancio',
+        point2: 'Nicchie liquide ad alto margine',
+        point3: 'Gestione operativa completa',
+        point4: 'Report finanziari trasparenti'
+      }
     },
     whatsapp: 'Contattaci via WhatsApp',
     writeUs: 'Scrivici',
