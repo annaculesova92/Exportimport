@@ -26,6 +26,7 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
       name: 'Marina',
       role: 'Co-Founder & COO',
       initials: 'MR',
+      photo: '/marina-photo.jpg',
       gradient: 'from-yellow-500 to-yellow-600',
       key: 'marina',
       linkedin: 'https://www.linkedin.com/in/marina-lobach-a1ab48176/',
