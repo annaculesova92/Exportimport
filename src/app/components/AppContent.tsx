@@ -46,8 +46,6 @@ export function AppContent() {
         <ValueSection />
         <ServicesSection onContactClick={() => setIsContactModalOpen(true)} />
         <ProcessSection />
-        <StatsSection />
-        <TrustBadges />
         <TeamSection onContactClick={() => setIsContactModalOpen(true)} />
         <ContactSection />
       </main>

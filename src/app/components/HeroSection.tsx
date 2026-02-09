@@ -125,23 +125,6 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             </button>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="flex items-center gap-8 sm:gap-12"
-          >
-            {[
-              { value: '150+', key: 'clients' },
-              { value: '35+', key: 'countries' },
-              { value: '12+', key: 'experience' },
-            ].map((stat, i) => (
-              <div key={i} className="relative">
-                <span className="text-3xl sm:text-4xl font-bold text-teal-700">{stat.value}</span>
-                <span className="block text-xs sm:text-sm text-slate-400 font-medium mt-1">{t(`stats.${stat.key}`)}</span>
-              </div>
-            ))}
-          </motion.div>
         </div>
       </div>
     </section>
