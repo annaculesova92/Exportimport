@@ -14,7 +14,7 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
   const teamMembers = [
     {
       name: 'Anna',
-      role: 'Founder & CEO',
+      role: 'Founder',
       initials: 'AK',
       photo: '/anna-photo.jpg',
       gradient: 'from-teal-700 to-teal-800',
@@ -24,7 +24,7 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
     },
     {
       name: 'Marina',
-      role: 'Co-Founder & COO',
+      role: 'Founder',
       initials: 'MR',
       photo: '/marina-photo.jpg',
       gradient: 'from-yellow-500 to-yellow-600',
