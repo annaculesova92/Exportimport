@@ -804,7 +804,7 @@ const translations = {
       companyTagline: 'Consulenza aziendale'
     },
     hero: {
-      title: 'Il vostro partner per l\'export e l\'import in Italia e in Europa',
+      title: 'Il vostro partner per l\'export e l\'import in Italia e nel Mondo',
       subtitle: 'Gestione strategica delle operazioni di export-import in Italia e nell\'UE',
       description: 'Vino, olio d\'oliva, pomodori, gioielli — siamo specializzati nell\'export e nell\'import di prodotti alimentari italiani e beni di lusso.',
       cta: 'Richiedi una consulenza',
@@ -900,7 +900,7 @@ const translations = {
         description: 'Redigiamo contratti di commercio estero, prepariamo i documenti doganali e gestiamo le questioni relative alle accise (per il vino) e alla logistica.'
       },
       step4: {
-        title: 'Consegna e supporto continuo',
+        title: 'Consegna e supporto',
         description: 'Supervisioniamo la spedizione in Europa, il passaggio doganale e la consegna fino al vostro magazzino.'
       },
       strategicSession: {
