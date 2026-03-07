@@ -24,8 +24,6 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
       value: '+39 324 543 6954',
       icon: <WhatsAppIcon className="w-5 h-5" />,
       gradient: 'from-green-500 to-green-600',
-      shadow: 'shadow-green-500/20',
-      hoverShadow: 'hover:shadow-green-500/30',
       external: true,
     },
     {
@@ -34,8 +32,6 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
       value: 'anna.culesova@gmail.com',
       icon: <Mail className="w-5 h-5" />,
       gradient: 'from-teal-600 to-teal-700',
-      shadow: 'shadow-teal-600/20',
-      hoverShadow: 'hover:shadow-teal-600/30',
       external: false,
     },
     {
@@ -44,8 +40,6 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
       value: 'Anna Culesova',
       icon: <Linkedin className="w-5 h-5" />,
       gradient: 'from-blue-600 to-blue-700',
-      shadow: 'shadow-blue-600/20',
-      hoverShadow: 'hover:shadow-blue-600/30',
       external: true,
     },
     {
@@ -54,151 +48,182 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
       value: '@boutiquebusiness.consulting',
       icon: <Instagram className="w-5 h-5" />,
       gradient: 'from-purple-500 via-pink-500 to-orange-400',
-      shadow: 'shadow-pink-500/20',
-      hoverShadow: 'hover:shadow-pink-500/30',
       external: true,
     },
   ];
 
   return (
-    <section id="team" className="py-16 sm:py-20 md:py-28 bg-gradient-to-b from-white via-teal-50/20 to-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <motion.div
-          className="absolute top-1/4 left-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] bg-teal-200 rounded-full blur-3xl"
-          animate={{ scale: [1, 1.15, 1], x: [0, 30, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute bottom-0 right-0 w-[350px] h-[350px] sm:w-[500px] sm:h-[500px] bg-yellow-100 rounded-full blur-3xl"
-          animate={{ scale: [1, 1.2, 1], x: [0, -25, 0] }}
-          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
-        />
-      </div>
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-10 sm:mb-14"
-        >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 bg-gradient-to-r from-teal-700 via-teal-600 to-yellow-600 bg-clip-text text-transparent">
-            {t('team.title')}
-          </h2>
-          <p className="text-sm sm:text-base text-slate-500 max-w-md mx-auto">
-            {t('team.subtitle')}
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10 items-start">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-2 flex flex-col items-center"
-          >
-            <div className="relative mb-6">
-              <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-2xl overflow-hidden border-4 border-white shadow-2xl shadow-teal-900/15">
-                <img src="/anna-photo.jpg" alt="Anna" className="w-full h-full object-cover object-[center_20%]" />
-              </div>
-              <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl flex items-center justify-center shadow-lg shadow-teal-700/30">
-                <span className="text-white text-xs font-bold leading-tight text-center">12+<br /><span className="text-[9px] font-medium opacity-80">years</span></span>
-              </div>
-            </div>
-
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-1">Anna</h3>
-            <span className="text-xs font-semibold text-teal-600 bg-teal-50 px-3 py-1 rounded-full mb-4">Founder & Business Developer</span>
-
-            <div className="relative p-4 sm:p-5 rounded-xl bg-gradient-to-br from-teal-50 to-teal-100/40 border border-teal-200/50 max-w-sm">
-              <Quote className="absolute top-3 left-3 w-4 h-4 text-teal-600/20" />
-              <p className="text-xs sm:text-sm italic text-slate-600 pl-5 leading-relaxed">
-                {t('team.anna.quote')}
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="lg:col-span-3"
-          >
-            <p className="text-sm sm:text-base font-semibold text-slate-700 mb-5 leading-relaxed">
-              {t('team.anna.bio')}
-            </p>
-
-            <div className="space-y-3 sm:space-y-4 mb-8">
-              {[0, 1, 2].map((expIndex) => {
-                const expKey = `team.anna.experience${expIndex + 1}`;
-                const expText = t(expKey);
-                if (!expText || expText === expKey) return null;
-                return (
-                  <motion.div
-                    key={expIndex}
-                    initial={{ opacity: 0, x: -15 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.2 + expIndex * 0.1 }}
-                    className="flex items-start gap-3"
-                  >
-                    <div className="flex-shrink-0 mt-0.5">
-                      <CheckCircle className="w-[18px] h-[18px] text-teal-600" />
-                    </div>
-                    <p className="text-sm text-slate-600 leading-relaxed">{expText}</p>
-                  </motion.div>
-                );
-              })}
-            </div>
-
-            <div className="border-t border-slate-200/80 pt-6">
-              <h4 className="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2">
-                <ArrowRight className="w-4 h-4 text-teal-600" />
-                {t('team.contactMe')}
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {contactLinks.map((link, i) => (
-                  <motion.a
-                    key={i}
-                    href={link.href}
-                    target={link.external ? '_blank' : undefined}
-                    rel={link.external ? 'noopener noreferrer' : undefined}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: 0.3 + i * 0.08 }}
-                    className={`flex items-center gap-3 p-3 rounded-xl bg-white border border-slate-100 shadow-sm ${link.shadow} hover:shadow-md ${link.hoverShadow} hover:border-slate-200 transition-all duration-300 group`}
-                  >
-                    <div className={`w-9 h-9 rounded-lg bg-gradient-to-br ${link.gradient} flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform`}>
-                      {link.icon}
-                    </div>
-                    <div className="min-w-0">
-                      <div className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">{link.label}</div>
-                      <div className="text-xs sm:text-sm font-bold text-slate-700 truncate">{link.value}</div>
-                    </div>
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+    <section id="team" className="relative overflow-hidden">
+      <div className="bg-gradient-to-br from-teal-800 via-teal-900 to-teal-950 relative">
+        <div className="absolute inset-0 opacity-[0.07]">
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-yellow-300 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-teal-300 rounded-full blur-3xl" />
         </div>
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12 sm:mt-16 text-center"
-        >
-          <button
-            onClick={onContactClick}
-            className="group relative px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-teal-600 to-teal-700 text-white rounded-2xl font-semibold text-base sm:text-lg shadow-xl shadow-teal-700/20 hover:shadow-2xl hover:shadow-teal-700/30 hover:scale-105 transition-all duration-300"
-          >
-            {t('team.cta')}
-          </button>
-        </motion.div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[600px]">
+
+            <div className="lg:col-span-5 relative flex flex-col items-center lg:items-end justify-center py-12 sm:py-16 lg:py-20 px-6 sm:px-10">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="relative"
+              >
+                <div className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border-4 border-white/15 shadow-2xl shadow-black/30">
+                  <img src="/anna-photo.jpg" alt="Anna" className="w-full h-full object-cover object-[center_20%]" />
+                </div>
+                <div className="absolute -bottom-4 -right-4 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-xl px-4 py-2 shadow-lg shadow-yellow-500/30">
+                  <span className="text-teal-900 text-sm font-extrabold">12+ years</span>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="mt-8 text-center lg:text-right"
+              >
+                <h3 className="text-3xl sm:text-4xl font-bold text-white mb-1">Anna</h3>
+                <span className="text-sm font-semibold text-yellow-400/90">Founder & Business Developer</span>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                className="flex gap-2 mt-5"
+              >
+                {[
+                  { href: 'https://wa.me/393245436954', icon: <WhatsAppIcon className="w-4 h-4" />, ext: true },
+                  { href: 'https://www.linkedin.com/in/anna-culesova-7955ab26a/', icon: <Linkedin className="w-4 h-4" />, ext: true },
+                  { href: 'https://www.instagram.com/boutiquebusiness.consulting', icon: <Instagram className="w-4 h-4" />, ext: true },
+                  { href: 'mailto:anna.culesova@gmail.com', icon: <Mail className="w-4 h-4" />, ext: false },
+                ].map((s, i) => (
+                  <a
+                    key={i}
+                    href={s.href}
+                    target={s.ext ? '_blank' : undefined}
+                    rel={s.ext ? 'noopener noreferrer' : undefined}
+                    className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/70 hover:bg-white hover:text-teal-800 transition-all duration-300 hover:scale-110"
+                  >
+                    {s.icon}
+                  </a>
+                ))}
+              </motion.div>
+            </div>
+
+            <div className="lg:col-span-7 py-12 sm:py-16 lg:py-20 px-6 sm:px-10 lg:px-14 flex flex-col justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">
+                  {t('team.title')}
+                </h2>
+                <p className="text-sm sm:text-base text-teal-300/60 mb-8">
+                  {t('team.subtitle')}
+                </p>
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+                className="text-sm sm:text-base font-medium text-white/90 mb-6 leading-relaxed"
+              >
+                {t('team.anna.bio')}
+              </motion.p>
+
+              <div className="space-y-3 mb-8">
+                {[0, 1, 2].map((expIndex) => {
+                  const expKey = `team.anna.experience${expIndex + 1}`;
+                  const expText = t(expKey);
+                  if (!expText || expText === expKey) return null;
+                  return (
+                    <motion.div
+                      key={expIndex}
+                      initial={{ opacity: 0, x: -15 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.2 + expIndex * 0.1 }}
+                      className="flex items-start gap-3"
+                    >
+                      <CheckCircle className="w-[18px] h-[18px] text-yellow-400 flex-shrink-0 mt-0.5" />
+                      <p className="text-sm text-white/70 leading-relaxed">{expText}</p>
+                    </motion.div>
+                  );
+                })}
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="relative p-5 rounded-xl bg-white/5 border border-white/10 mb-8"
+              >
+                <Quote className="absolute top-3 left-4 w-5 h-5 text-yellow-400/30" />
+                <p className="text-sm italic text-white/60 pl-7 leading-relaxed">
+                  {t('team.anna.quote')}
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+              >
+                <h4 className="text-xs font-bold text-white/40 uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <ArrowRight className="w-3.5 h-3.5 text-yellow-400" />
+                  {t('team.contactMe')}
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {contactLinks.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link.href}
+                      target={link.external ? '_blank' : undefined}
+                      rel={link.external ? 'noopener noreferrer' : undefined}
+                      className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/8 hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
+                    >
+                      <div className={`w-9 h-9 rounded-lg bg-gradient-to-br ${link.gradient} flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform shadow-lg`}>
+                        {link.icon}
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-[10px] font-semibold text-white/30 uppercase tracking-wider">{link.label}</div>
+                        <div className="text-xs sm:text-sm font-semibold text-white/80 truncate">{link.value}</div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6 }}
+                className="mt-8"
+              >
+                <button
+                  onClick={onContactClick}
+                  className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-teal-900 rounded-xl font-bold text-sm sm:text-base shadow-xl shadow-yellow-500/20 hover:shadow-2xl hover:shadow-yellow-500/30 hover:scale-105 transition-all duration-300"
+                >
+                  {t('team.cta')}
+                </button>
+              </motion.div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
