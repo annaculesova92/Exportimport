@@ -25,7 +25,7 @@ export function ValueSection() {
   const maxWidths = ['720px', '590px', '460px', '330px'];
 
   return (
-    <section id="value" className="py-20 sm:py-24 md:py-28 relative overflow-hidden bg-gradient-to-b from-white via-slate-50/50 to-white">
+    <section id="value" className="py-12 sm:py-14 md:py-16 relative overflow-hidden bg-gradient-to-b from-white via-slate-50/50 to-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-14 sm:mb-18">
           <motion.div
