@@ -27,7 +27,7 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
   ];
 
   return (
-    <section id="services" className="py-12 sm:py-14 md:py-16 bg-white">
+    <section id="services" className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-white via-white to-slate-50/60">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-10">
           <motion.div

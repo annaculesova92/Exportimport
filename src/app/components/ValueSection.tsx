@@ -15,7 +15,7 @@ export function ValueSection() {
   ];
 
   return (
-    <section id="value" className="py-12 sm:py-14 md:py-16 bg-gradient-to-br from-white via-teal-50/20 to-white relative overflow-hidden">
+    <section id="value" className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-slate-50/80 via-teal-50/20 to-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-teal-400 rounded-full blur-3xl" />
       </div>

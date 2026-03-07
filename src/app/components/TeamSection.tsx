@@ -19,7 +19,7 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
 
   return (
     <section id="team" className="relative overflow-hidden">
-      <div className="bg-gradient-to-br from-teal-50 via-white to-yellow-50/40 relative">
+      <div className="bg-gradient-to-b from-slate-50/40 via-teal-50/30 to-white relative">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-teal-100/40 rounded-full blur-3xl -translate-y-1/3" />
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-yellow-100/30 rounded-full blur-3xl translate-y-1/3" />
 

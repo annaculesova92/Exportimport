@@ -35,10 +35,8 @@ export function WhoWeWorkWithSection() {
   ];
 
   return (
-    <section className="py-12 sm:py-14 md:py-16 relative overflow-hidden bg-white">
+    <section className="py-12 sm:py-14 md:py-16 relative overflow-hidden bg-gradient-to-b from-white via-white to-slate-50/80">
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-300/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-300/50 to-transparent" />
         <motion.div
           className="absolute top-20 right-10 w-72 h-72 bg-teal-100/30 rounded-full blur-3xl"
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}

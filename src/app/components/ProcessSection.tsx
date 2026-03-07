@@ -31,7 +31,7 @@ export function ProcessSection() {
   ];
 
   return (
-    <section id="process" className="py-12 sm:py-14 md:py-16 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
+    <section id="process" className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-slate-50/60 via-white to-slate-50/40 relative overflow-hidden">
       {/* Animated Dots Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0" style={{

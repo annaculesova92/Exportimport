@@ -6,8 +6,6 @@ import { WhoWeWorkWithSection } from '@/app/components/WhoWeWorkWithSection';
 import { ValueSection } from '@/app/components/ValueSection';
 import { ServicesSection } from '@/app/components/ServicesSection';
 import { ProcessSection } from '@/app/components/ProcessSection';
-import { StatsSection } from '@/app/components/StatsSection';
-import { TrustBadges } from '@/app/components/TrustBadges';
 import { TeamSection } from '@/app/components/TeamSection';
 import { ContactSection } from '@/app/components/ContactSection';
 import { ContactModal } from '@/app/components/ContactModal';

@@ -10,7 +10,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-[75vh] flex items-center bg-gradient-to-br from-slate-50 via-white to-teal-50/30 pt-6 pb-12 sm:pt-8 sm:pb-14 lg:pt-10 lg:pb-16 overflow-hidden">
+    <section className="relative min-h-[88vh] flex items-center bg-gradient-to-br from-slate-50 via-white to-teal-50/30 pt-8 pb-16 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-24 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 right-[10%] w-[500px] h-[500px] bg-teal-100/40 rounded-full blur-[100px]" />
         <div className="absolute bottom-10 left-[5%] w-[400px] h-[400px] bg-emerald-100/30 rounded-full blur-[80px]" />
@@ -62,7 +62,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
         <div className="w-2 h-2 bg-emerald-400 rounded-full" />
       </motion.div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal-200/50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-teal-900 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="max-w-3xl">
@@ -70,7 +70,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="inline-flex items-center space-x-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-6 sm:mb-8 border border-teal-200/60 shadow-sm"
+            className="inline-flex items-center space-x-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-8 sm:mb-10 border border-teal-200/60 shadow-sm"
           >
             <Shield className="w-4 h-4 text-teal-600" />
             <span className="text-xs sm:text-sm font-semibold text-teal-700">
@@ -84,7 +84,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             transition={{ delay: 0.2 }}
             className="mb-8 sm:mb-10"
           >
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.1] mb-5 sm:mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-[1.1] mb-6 sm:mb-8">
               {t('hero.title')}
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed max-w-2xl">
@@ -96,7 +96,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-sm sm:text-base text-slate-500 leading-relaxed mb-8 sm:mb-10 max-w-2xl"
+            className="text-sm sm:text-base text-slate-500 leading-relaxed mb-10 sm:mb-12 max-w-2xl"
           >
             {t('hero.description')}
           </motion.p>
@@ -105,11 +105,11 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 mb-10 sm:mb-12"
+            className="flex flex-col sm:flex-row gap-4 mb-14 sm:mb-16"
           >
             <button
               onClick={onContactClick}
-              className="group px-7 py-3.5 sm:px-8 sm:py-4 bg-teal-700 text-white rounded-2xl font-semibold text-sm sm:text-base hover:bg-teal-800 hover:shadow-xl hover:shadow-teal-700/20 hover:scale-[1.02] transition-all duration-300 flex items-center justify-center space-x-3"
+              className="group px-8 py-4 sm:px-10 sm:py-5 bg-teal-700 text-white rounded-2xl font-semibold text-sm sm:text-base hover:bg-teal-800 hover:shadow-xl hover:shadow-teal-700/20 hover:scale-[1.02] transition-all duration-300 flex items-center justify-center space-x-3"
             >
               <span>{t('hero.cta')}</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -119,7 +119,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
                 const el = document.getElementById('value');
                 el?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-7 py-3.5 sm:px-8 sm:py-4 bg-white border-2 border-slate-200 text-slate-700 rounded-2xl font-semibold text-sm sm:text-base hover:border-teal-300 hover:text-teal-700 hover:bg-teal-50/50 transition-all duration-300"
+              className="px-8 py-4 sm:px-10 sm:py-5 bg-white border-2 border-slate-200 text-slate-700 rounded-2xl font-semibold text-sm sm:text-base hover:border-teal-300 hover:text-teal-700 hover:bg-teal-50/50 transition-all duration-300"
             >
               {t('hero.learnMore')}
             </button>

@@ -53,7 +53,19 @@ A React + Vite single-page website for Anna's solo export/import business consul
 - White/teal-emerald/gold color palette
 - Solo business (Anna only, no team references)
 
+## Gallery Images
+- `public/gallery-wine.jpg` - Italian wine/vineyard
+- `public/gallery-oil.jpg` - Italian olive oil
+- `public/gallery-food.jpg` - Italian food/tomatoes
+- `public/gallery-jewelry.jpg` - Italian jewelry
+- `public/gallery-luxury.jpg` - Italian luxury goods
+
 ## Recent Changes
+- 2026-03-07: Smooth section transitions and gallery:
+  - Hero restored to spacious layout (min-h-88vh), gradient fade to dark specialization section
+  - SpecializationSection: added photo gallery (5 stock images) with auto-rotation, thumbnail strip, side-by-side layout with cards
+  - All sections now use gradient backgrounds that blend into each other (no sharp edges)
+  - Gradient overlays: hero → dark specialization (teal-900 gradient), specialization → white (bottom gradient), sections use from/to slate-50 blending
 - 2026-03-07: Major content overhaul across all 4 languages:
   - Hero description: now lists specific products (wine, olive oil, tomatoes, jewelry)
   - SpecializationSection: renamed to "Niches I specialize in" with 4 product cards (Wine & Oil, Food, Jewelry, Luxury Goods)

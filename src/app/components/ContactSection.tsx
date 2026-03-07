@@ -29,7 +29,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-white via-slate-50/30 to-white relative overflow-hidden">
+    <section id="contact" className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-white via-slate-50/20 to-slate-50 relative overflow-hidden">
       <div className="absolute top-0 right-1/4 w-[350px] h-[350px] bg-teal-100/20 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-1/3 w-[300px] h-[300px] bg-emerald-50/30 rounded-full blur-3xl" />
 
