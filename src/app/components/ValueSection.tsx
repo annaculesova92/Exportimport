@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Shield, Users, Clock, Award } from 'lucide-react';
+import { Contact, FileCheck, Ship, UserCheck } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useState } from 'react';
 
@@ -8,10 +8,10 @@ export function ValueSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const solutions = [
-    { icon: Shield, key: 'confidentiality' },
-    { icon: Clock, key: 'speed' },
-    { icon: Award, key: 'professionalism' },
-    { icon: Users, key: 'support' },
+    { icon: Contact, key: 'directContacts' },
+    { icon: FileCheck, key: 'certification' },
+    { icon: Ship, key: 'customs' },
+    { icon: UserCheck, key: 'personalApproach' },
   ];
 
   return (

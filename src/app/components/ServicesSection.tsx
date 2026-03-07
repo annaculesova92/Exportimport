@@ -4,8 +4,9 @@ import {
   Package,
   FileText,
   TrendingUp,
-  Users,
-  BarChart
+  BarChart,
+  ShieldCheck,
+  MessageSquareMore
 } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 
@@ -22,7 +23,7 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
     { icon: FileText, key: 'compliance' },
     { icon: TrendingUp, key: 'logistics' },
     { icon: BarChart, key: 'analysis' },
-    { icon: Users, key: 'risk' },
+    { icon: ShieldCheck, key: 'risk' },
   ];
 
   return (
@@ -43,6 +44,36 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
             </p>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-8"
+        >
+          <div className="relative bg-gradient-to-br from-teal-700 via-teal-800 to-emerald-800 rounded-2xl p-6 sm:p-8 border-2 border-yellow-400/30 shadow-xl shadow-teal-900/10 overflow-hidden">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-yellow-400/10 rounded-full blur-3xl" />
+            <div className="relative z-10 flex items-start gap-5">
+              <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl flex items-center justify-center shadow-lg shadow-yellow-500/30">
+                <MessageSquareMore className="w-7 h-7 text-teal-900" strokeWidth={2} />
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-white">
+                    {t('services.consultation.title')}
+                  </h3>
+                  <span className="px-2.5 py-0.5 bg-yellow-400/20 text-yellow-300 text-[11px] font-bold rounded-full uppercase tracking-wider">
+                    Key
+                  </span>
+                </div>
+                <p className="text-sm sm:text-base text-teal-100/80 leading-relaxed">
+                  {t('services.consultation.description')}
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
           {services.map((service, index) => (

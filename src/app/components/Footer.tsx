@@ -32,7 +32,10 @@ export function Footer({ onContactClick }: FooterProps) {
                 <div className="text-xs text-white/60">{t('nav.companyTagline')}</div>
               </div>
             </div>
-            <p className="text-white/70 text-xs sm:text-sm leading-relaxed">
+            <p className="text-white/70 text-xs sm:text-sm leading-relaxed mb-2">
+              {t('footer.annaTagline')}
+            </p>
+            <p className="text-white/50 text-xs leading-relaxed">
               {t('footer.companyDescription')}
             </p>
           </div>

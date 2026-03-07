@@ -47,7 +47,6 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   );
 }
 
-// Translations
 const translations = {
   ru: {
     nav: {
@@ -61,47 +60,59 @@ const translations = {
     hero: {
       title: 'Ваш партнер по экспорту и импорту в Италии и Европе',
       subtitle: 'Стратегическое управление экспортно-импортными операциями в Италии и ЕС',
-      description: 'Комплексная интеграция бизнеса в европейскую среду: от разработки Go-to-Market стратегии до операционного менеджмента поставок и обеспечения комплаенса.',
+      description: 'Вино, оливковое масло, томаты, бижутерия — специализируемся на экспорте и импорте итальянских продуктов питания и товаров класса люкс.',
       cta: 'Запросить консультацию',
       learnMore: 'Почему мы',
       trusted: 'Доверяют более 150+ компаний'
     },
     specialization: {
-      title: 'Наша специализация',
-      subtitle: 'Мы работаем с компаниями и собственниками бизнеса, которые ищут:',
-      item1: 'Выстроенные цепочки поставок и подрядчиков',
-      item2: 'Контролируемый выход на новый рынок',
-      item3: 'Минимизацию регуляторных, операционных и финансовых рисков',
-      item4: 'Предсказуемый результат без потери управляемости'
+      title: 'Ниши, в которых я эксперт',
+      subtitle: 'Реальные товары, с которыми я работаю каждый день',
+      item1: {
+        title: 'Вино и оливковое масло',
+        description: 'Прямые контакты с винодельнями и маслобойнями Тосканы, Венето и Сицилии. Подбор уникальных позиций для вашего рынка.'
+      },
+      item2: {
+        title: 'Продукты питания',
+        description: 'Томаты, соусы, паста, сыры и деликатесы. Полная сертификация пищевой продукции и контроль качества.'
+      },
+      item3: {
+        title: 'Бижутерия',
+        description: 'Итальянская бижутерия ручной работы от семейных мастерских. Эксклюзивные коллекции для вашего бизнеса.'
+      },
+      item4: {
+        title: 'Товары класса люкс',
+        description: 'Премиальные итальянские бренды, аксессуары и предметы интерьера. Работа с производителями напрямую.'
+      }
     },
     value: {
       title: 'Почему выбирают нас',
-      subtitle: 'Конфиденциальность, экспертиза и результат',
-      confidentiality: {
-        title: 'Абсолютная конфиденциальность',
-        description: 'Все данные защищены. NDA с каждым клиентом. Полная анонимность сделок.'
+      subtitle: 'Конкретные преимущества работы с нами',
+      directContacts: {
+        title: 'Прямые контакты с производителями',
+        description: 'Собственная база проверенных производителей в Италии — от виноделен Тосканы до ювелирных мастерских Милана.'
       },
-      speed: {
-        title: 'Скорость исполнения',
-        description: 'Быстрое решение задач. Оперативная обработка запросов. Минимум времени на запуск.'
+      certification: {
+        title: 'Знание сертификации и акцизов',
+        description: 'Глубокое понимание требований к сертификации пищевой продукции, акцизной политики на вино и алкоголь.'
       },
-      professionalism: {
-        title: 'Профессионализм',
-        description: 'Высочайшие стандарты работы. Подтверждённая экспертиза. Признанное качество услуг.'
+      customs: {
+        title: 'Опыт работы с таможней ЕС',
+        description: 'Многолетний опыт прохождения таможенных процедур в Италии и странах Евросоюза, решение нестандартных ситуаций.'
       },
-      expertise: {
-        title: 'Экспертный консалтинг',
-        description: 'Опыт работы с крупнейшими компаниями. Глубокое знание международных рынков.'
-      },
-      support: {
-        title: 'Сопровождение 24/7',
-        description: 'Всегда на связи. Решаем вопросы в режиме реального времени.'
+      personalApproach: {
+        title: 'Персональное сопровождение',
+        description: 'Индивидуальный подход к каждому проекту. Контроль на всех этапах — от поиска поставщика до доставки на ваш склад.'
       }
     },
     services: {
       title: 'Наши услуги',
       subtitle: 'Полный цикл консалтинга для вашего бизнеса',
       cta: 'Обсудить проект',
+      consultation: {
+        title: 'Экспертная консультация',
+        description: 'Экспертное мнение и аудит ваших текущих поставок. Анализ цепочки, выявление рисков и точек роста.'
+      },
       export: {
         title: 'Экспортный консалтинг',
         description: 'Поможем выйти на международные рынки, подберём партнёров, оформим всю документацию'
@@ -131,20 +142,20 @@ const translations = {
       title: 'Как мы работаем',
       subtitle: 'Простой и прозрачный процесс',
       step1: {
-        title: 'Консультация',
-        description: 'Обсуждаем вашу ситуацию и цели в конфиденциальной обстановке'
+        title: 'Экспертный аудит и бриф',
+        description: 'Анализируем ваш запрос, проверяем категорию товара (вино, продукты, бижутерия) на соответствие требованиям ввоза.'
       },
       step2: {
-        title: 'Анализ',
-        description: 'Изучаем рынок, оцениваем возможности и риски'
+        title: 'Подбор и проверка поставщиков',
+        description: 'Отбираем производителей в Италии, проверяем наличие экспортных лицензий и сертификатов качества для конкретных рынков.'
       },
       step3: {
-        title: 'Стратегия',
-        description: 'Разрабатываем индивидуальный план действий'
+        title: 'Контракт и Compliance',
+        description: 'Составляем внешнеторговые контракты, готовим документы для таможни, решаем вопросы с акцизами (для вина) и логистикой.'
       },
       step4: {
-        title: 'Реализация',
-        description: 'Сопровождаем на каждом этапе до достижения результата'
+        title: 'Поставка и сопровождение',
+        description: 'Контролируем отгрузку в Европе, прохождение границы и доставку до вашего склада.'
       },
       strategicSession: {
         title: 'Стратегическая сессия',
@@ -227,7 +238,7 @@ const translations = {
     },
     footer: {
       company: 'О компании',
-      companyDescription: 'Премиальный консалтинг в сфере международной торговли с гарантией конфиденциальности',
+      companyDescription: 'Эксперт по ВЭД. Экспорт продуктов питания и вина из Италии.',
       quickLinks: 'Быстрые ссылки',
       services: 'Услуги',
       process: 'Процесс работы',
@@ -253,7 +264,8 @@ const translations = {
       connectWhatsapp: 'Связаться в WhatsApp',
       contactsTitle: 'КОНТАКТЫ',
       officeMilan: 'Верона, Италия',
-      allRightsFull: 'Все права защищены.'
+      allRightsFull: 'Все права защищены.',
+      annaTagline: 'Анна — эксперт по ВЭД. Экспорт продуктов питания и вина.'
     },
     process_ui: {
       step: 'Шаг',
@@ -266,50 +278,18 @@ const translations = {
       subtitle: 'Три типа клиентов, для каждого из которых у нас есть точное решение',
       distributors: {
         title: 'Дистрибьюторы и ритейлеры',
-        description: 'Профессиональные игроки рынка, которые ищут эксклюзивные продукты от небольших семейных мануфактур Италии. Мы поможем вам отстроиться от конкурентов, найдем уникальные позиции и обеспечим стабильность поставок «под ключ».',
+        description: 'Помогаем дистрибьюторам найти эксклюзивные итальянские винодельни с уникальной историей, поставщиков оливкового масла и деликатесов. Обеспечиваем стабильность поставок и эксклюзивные права на территорию.',
         cta: 'Найти эксклюзив'
       },
       smallBusiness: {
         title: 'Малый бизнес и амбициозные новички',
-        description: 'Предприниматели, которые хотят запустить свой первый проект по импорту из Европы, но боятся ошибок и бюрократии. Мы станем вашим внешним отделом ВЭД: поможем собрать первую партию из товаров от разных поставщиков и проведем через все этапы логистики.',
+        description: 'Хотите начать импорт итальянского вина, продуктов питания или бижутерии, но не знаете с чего начать? Мы станем вашим внешним отделом ВЭД: соберём первую сборную партию и проведем через все этапы — от выбора товара до доставки.',
         cta: 'Начать импорт'
       },
       investors: {
         title: 'Инвесторы-стратеги',
-        description: 'Люди с капиталом, нацеленные на диверсификацию через реальный сектор и товарный бизнес в Италии. Мы подберем ликвидные ниши с высокой маржинальностью, рассчитаем ROI и возьмем на себя полное операционное управление процессами.',
+        description: 'Подберём ликвидные ниши в сегментах вина, продуктов питания и товаров класса люкс с высокой маржинальностью. Рассчитаем ROI и возьмём на себя полное операционное управление.',
         cta: 'Рассчитать ROI'
-      }
-    },
-    whyThisWorks: {
-      badge: 'Наш подход',
-      title: 'Почему это сработает',
-      subtitle: 'Для каждого типа клиента — свой ключевой аргумент и стратегия',
-      distributor: {
-        tabTitle: 'Для дистрибьюторов',
-        title: 'Эксклюзив и отстройка от конкурентов',
-        description: 'Для дистрибьютора ключевое слово — «эксклюзив» и «отстроиться от конкурентов», потому что массмаркет уже у всех есть. Мы находим уникальных итальянских производителей, с которыми нет прямых контрактов у крупных игроков.',
-        point1: 'Прямые контракты с мануфактурами',
-        point2: 'Эксклюзивные права на территорию',
-        point3: 'Стабильные поставки под ключ',
-        point4: 'Отстройка от конкурентов'
-      },
-      beginner: {
-        tabTitle: 'Для новичков',
-        title: 'Безопасность и сборная партия',
-        description: 'Для новичка главное — «безопасность» и «сборная партия» (возможность не покупать сразу целый контейнер). Мы минимизируем риски первого импорта и сопровождаем на каждом этапе.',
-        point1: 'Сборная партия от разных поставщиков',
-        point2: 'Полное сопровождение «от А до Я»',
-        point3: 'Минимальные риски для бюджета',
-        point4: 'Обучение процессам ВЭД'
-      },
-      investor: {
-        tabTitle: 'Для инвесторов',
-        title: 'ROI, ликвидные ниши и ноль операционки',
-        description: 'Для инвестора важны цифры («ROI», «ликвидные ниши») и «отсутствие операционки» (управление процессами). Мы берем на себя всю операционную работу, а вы получаете прозрачную отчетность.',
-        point1: 'Расчет ROI до старта проекта',
-        point2: 'Ликвидные ниши с высокой маржой',
-        point3: 'Полное операционное управление',
-        point4: 'Прозрачная финансовая отчетность'
       }
     },
     whatsapp: 'Связаться в WhatsApp',
@@ -328,47 +308,59 @@ const translations = {
     hero: {
       title: 'Your partner in export and import in Italy and Europe',
       subtitle: 'Strategic management of export-import operations in Italy and the EU',
-      description: 'Comprehensive business integration into the European environment: from developing Go-to-Market strategy to operational supply management and compliance assurance.',
+      description: 'Wine, olive oil, tomatoes, jewelry — we specialize in the export and import of Italian food products and luxury goods.',
       cta: 'Request consultation',
       learnMore: 'Why Us',
       trusted: 'Trusted by 150+ companies'
     },
     specialization: {
-      title: 'Our specialization',
-      subtitle: 'We work with companies and business owners who are looking for:',
-      item1: 'Established supply chains and contractors',
-      item2: 'Controlled entry into a new market',
-      item3: 'Minimization of regulatory, operational, and financial risks',
-      item4: 'Predictable results without loss of control'
+      title: 'Niches I specialize in',
+      subtitle: 'Real products I work with every day',
+      item1: {
+        title: 'Wine & Olive Oil',
+        description: 'Direct contacts with wineries and oil mills in Tuscany, Veneto, and Sicily. Selection of unique products for your market.'
+      },
+      item2: {
+        title: 'Food Products',
+        description: 'Tomatoes, sauces, pasta, cheeses, and delicacies. Full food product certification and quality control.'
+      },
+      item3: {
+        title: 'Jewelry',
+        description: 'Handcrafted Italian jewelry from family workshops. Exclusive collections for your business.'
+      },
+      item4: {
+        title: 'Luxury Goods',
+        description: 'Premium Italian brands, accessories, and interior items. Working directly with manufacturers.'
+      }
     },
     value: {
       title: 'Why choose us',
-      subtitle: 'Confidentiality, expertise and results',
-      confidentiality: {
-        title: 'Absolute confidentiality',
-        description: 'All data is protected. NDA with each client. Complete anonymity of transactions.'
+      subtitle: 'Specific advantages of working with us',
+      directContacts: {
+        title: 'Direct contacts with producers',
+        description: 'Our own database of verified Italian producers — from Tuscan wineries to Milanese jewelry workshops.'
       },
-      speed: {
-        title: 'Speed of execution',
-        description: 'Quick problem solving. Fast request processing. Minimum time to launch.'
+      certification: {
+        title: 'Certification & excise expertise',
+        description: 'Deep understanding of food product certification requirements, excise policy on wine and alcohol.'
       },
-      professionalism: {
-        title: 'Professionalism',
-        description: 'Highest standards of work. Proven expertise. Recognized service quality.'
+      customs: {
+        title: 'EU customs experience',
+        description: 'Years of experience with customs procedures in Italy and EU countries, handling non-standard situations.'
       },
-      expertise: {
-        title: 'Expert consulting',
-        description: 'Experience with major companies. Deep knowledge of international markets.'
-      },
-      support: {
-        title: '24/7 support',
-        description: 'Always in touch. We solve issues in real time.'
+      personalApproach: {
+        title: 'Personal support',
+        description: 'Individual approach to every project. Control at all stages — from finding a supplier to delivery to your warehouse.'
       }
     },
     services: {
       title: 'Our services',
       subtitle: 'Full cycle consulting for your business',
       cta: 'Discuss project',
+      consultation: {
+        title: 'Expert Consultation',
+        description: 'Expert opinion and audit of your current supply chain. Analysis, risk identification, and growth opportunities.'
+      },
       export: {
         title: 'Export consulting',
         description: 'We help enter international markets, find partners, prepare all documentation'
@@ -398,20 +390,20 @@ const translations = {
       title: 'How we work',
       subtitle: 'Simple and transparent process',
       step1: {
-        title: 'Consultation',
-        description: 'We discuss your situation and goals in a confidential setting'
+        title: 'Expert Audit & Brief',
+        description: 'We analyze your request and verify the product category (wine, food, jewelry) for import compliance requirements.'
       },
       step2: {
-        title: 'Analysis',
-        description: 'We study the market, assess opportunities and risks'
+        title: 'Supplier Selection & Verification',
+        description: 'We select producers in Italy, verify their export licenses and quality certificates for specific markets.'
       },
       step3: {
-        title: 'Strategy',
-        description: 'We develop an individual action plan'
+        title: 'Contract & Compliance',
+        description: 'We draft foreign trade contracts, prepare customs documentation, and handle excise issues (for wine) and logistics.'
       },
       step4: {
-        title: 'Implementation',
-        description: 'We support at every stage until the result is achieved'
+        title: 'Delivery & Support',
+        description: 'We oversee shipment across Europe, border clearance, and delivery to your warehouse.'
       },
       strategicSession: {
         title: 'Strategic session',
@@ -500,7 +492,7 @@ const translations = {
     },
     footer: {
       company: 'About company',
-      companyDescription: 'Premium consulting in international trade with guaranteed confidentiality',
+      companyDescription: 'Foreign trade expert. Export of food products and wine from Italy.',
       quickLinks: 'Quick links',
       services: 'Services',
       process: 'Work process',
@@ -516,7 +508,8 @@ const translations = {
       forBusiness: 'for business',
       contactsTitle: 'CONTACTS',
       officeMilan: 'Verona, Italy',
-      allRightsFull: 'All rights reserved.'
+      allRightsFull: 'All rights reserved.',
+      annaTagline: 'Anna — foreign trade expert. Export of food products and wine.'
     },
     process_ui: {
       step: 'Step',
@@ -529,50 +522,18 @@ const translations = {
       subtitle: 'Three types of clients, each with a tailored solution',
       distributors: {
         title: 'Distributors & retailers',
-        description: 'Market professionals seeking exclusive products from small family-owned Italian manufacturers. We help you stand out from competitors, find unique products, and ensure turnkey supply stability.',
+        description: 'We help distributors find exclusive Italian wineries with unique heritage, olive oil and delicacy suppliers. We ensure supply stability and exclusive territorial rights.',
         cta: 'Find exclusives'
       },
       smallBusiness: {
         title: 'Small business & ambitious newcomers',
-        description: 'Entrepreneurs who want to launch their first European import project but fear mistakes and bureaucracy. We become your external trade department: help assemble your first mixed shipment from various suppliers and guide you through every logistics stage.',
+        description: 'Want to start importing Italian wine, food products, or jewelry but don\'t know where to begin? We become your external trade department: assemble your first mixed shipment and guide you through every stage — from product selection to delivery.',
         cta: 'Start importing'
       },
       investors: {
         title: 'Strategic investors',
-        description: 'People with capital aimed at diversification through the real sector and commodity business in Italy. We select liquid niches with high margins, calculate ROI, and take on complete operational management.',
+        description: 'We select liquid niches in wine, food, and luxury goods segments with high margins. We calculate ROI and take on complete operational management.',
         cta: 'Calculate ROI'
-      }
-    },
-    whyThisWorks: {
-      badge: 'Our approach',
-      title: 'Why this works',
-      subtitle: 'For each client type — a key argument and tailored strategy',
-      distributor: {
-        tabTitle: 'For distributors',
-        title: 'Exclusivity & competitive edge',
-        description: 'For distributors, the key words are "exclusivity" and "standing out from competitors," because everyone already has mass-market products. We find unique Italian manufacturers with no direct contracts with major players.',
-        point1: 'Direct contracts with manufacturers',
-        point2: 'Exclusive territorial rights',
-        point3: 'Turnkey stable supply chain',
-        point4: 'Clear competitive differentiation'
-      },
-      beginner: {
-        tabTitle: 'For newcomers',
-        title: 'Safety & mixed shipments',
-        description: 'For newcomers, the key is "safety" and "mixed shipments" (no need to buy a whole container at once). We minimize first import risks and provide guidance at every stage.',
-        point1: 'Mixed shipments from multiple suppliers',
-        point2: 'Full A-to-Z support',
-        point3: 'Minimal budget risks',
-        point4: 'Foreign trade process training'
-      },
-      investor: {
-        tabTitle: 'For investors',
-        title: 'ROI, liquid niches & zero operations',
-        description: 'For investors, it\'s all about numbers ("ROI," "liquid niches") and "zero operations" (process management). We handle all operational work while you receive transparent reporting.',
-        point1: 'ROI calculation before project launch',
-        point2: 'Liquid niches with high margins',
-        point3: 'Complete operational management',
-        point4: 'Transparent financial reporting'
       }
     },
     whatsapp: 'Contact via WhatsApp',
@@ -591,47 +552,59 @@ const translations = {
     hero: {
       title: 'Votre partenaire en exportation et importation en Italie et en Europe',
       subtitle: 'Gestion stratégique des opérations d\'export-import en Italie et dans l\'UE',
-      description: 'Intégration complète de l\'entreprise dans l\'environnement européen : du développement de la stratégie Go-to-Market à la gestion opérationnelle des livraisons et à l\'assurance de la conformité.',
+      description: 'Vin, huile d\'olive, tomates, bijoux — nous nous spécialisons dans l\'export et l\'import de produits alimentaires italiens et de biens de luxe.',
       cta: 'Demander une consultation',
       learnMore: 'Pourquoi nous',
       trusted: 'Approuvé par plus de 150 entreprises'
     },
     specialization: {
-      title: 'Notre spécialisation',
-      subtitle: 'Nous travaillons avec des entreprises et des propriétaires de business qui cherchent :',
-      item1: 'Chaînes de fourniture et sous-traitants établis',
-      item2: 'Entrée contrôlée sur un nouveau marché',
-      item3: 'Minimisation des risques réglementaires, opérationnels et financiers',
-      item4: 'Résultats prévisibles sans perte de contrôle'
+      title: 'Mes niches d\'expertise',
+      subtitle: 'Les vrais produits avec lesquels je travaille au quotidien',
+      item1: {
+        title: 'Vin et huile d\'olive',
+        description: 'Contacts directs avec les vignobles et huileries de Toscane, Vénétie et Sicile. Sélection de produits uniques pour votre marché.'
+      },
+      item2: {
+        title: 'Produits alimentaires',
+        description: 'Tomates, sauces, pâtes, fromages et spécialités. Certification complète des produits alimentaires et contrôle qualité.'
+      },
+      item3: {
+        title: 'Bijouterie',
+        description: 'Bijoux italiens faits main par des ateliers familiaux. Collections exclusives pour votre entreprise.'
+      },
+      item4: {
+        title: 'Produits de luxe',
+        description: 'Marques italiennes premium, accessoires et objets de décoration. Travail direct avec les fabricants.'
+      }
     },
     value: {
       title: 'Pourquoi nous choisir',
-      subtitle: 'Confidentialité, expertise et résultats',
-      confidentiality: {
-        title: 'Confidentialité absolue',
-        description: 'Toutes les données sont protégées. NDA avec chaque client. Anonymat complet des transactions.'
+      subtitle: 'Avantages concrets de travailler avec nous',
+      directContacts: {
+        title: 'Contacts directs avec les producteurs',
+        description: 'Notre propre base de producteurs italiens vérifiés — des vignobles toscans aux ateliers de bijouterie milanais.'
       },
-      speed: {
-        title: 'Vitesse d\'exécution',
-        description: 'Résolution rapide des problèmes. Traitement rapide des demandes. Temps minimum pour le lancement.'
+      certification: {
+        title: 'Expertise en certification et accises',
+        description: 'Compréhension approfondie des exigences de certification alimentaire, de la politique d\'accise sur le vin et l\'alcool.'
       },
-      professionalism: {
-        title: 'Professionalisme',
-        description: 'Normes de travail les plus élevées. Expertise prouvée. Qualité de service reconnue.'
+      customs: {
+        title: 'Expérience douanière UE',
+        description: 'Des années d\'expérience avec les procédures douanières en Italie et dans les pays de l\'UE, gestion des situations non standard.'
       },
-      expertise: {
-        title: 'Conseil expert',
-        description: 'Expérience avec les grandes entreprises. Connaissance approfondie des marchés internationaux.'
-      },
-      support: {
-        title: 'Support 24/7',
-        description: 'Toujours en contact. Nous résolvons les problèmes en temps réel.'
+      personalApproach: {
+        title: 'Accompagnement personnalisé',
+        description: 'Approche individuelle pour chaque projet. Contrôle à toutes les étapes — de la recherche de fournisseur à la livraison dans votre entrepôt.'
       }
     },
     services: {
       title: 'Nos services',
       subtitle: 'Conseil complet pour votre entreprise',
       cta: 'Discuter du projet',
+      consultation: {
+        title: 'Consultation experte',
+        description: 'Avis d\'expert et audit de votre chaîne d\'approvisionnement actuelle. Analyse, identification des risques et opportunités de croissance.'
+      },
       export: {
         title: 'Conseil à l\'exportation',
         description: 'Nous aidons à entrer sur les marchés internationaux, trouver des partenaires, préparer toute la documentation'
@@ -661,20 +634,20 @@ const translations = {
       title: 'Comment nous travaillons',
       subtitle: 'Processus simple et transparent',
       step1: {
-        title: 'Consultation',
-        description: 'Nous discutons de votre situation et de vos objectifs dans un cadre confidentiel'
+        title: 'Audit expert et brief',
+        description: 'Nous analysons votre demande et vérifions la catégorie de produit (vin, alimentation, bijoux) pour la conformité aux exigences d\'importation.'
       },
       step2: {
-        title: 'Analyse',
-        description: 'Nous étudions le marché, évaluons les opportunités et les risques'
+        title: 'Sélection et vérification des fournisseurs',
+        description: 'Nous sélectionnons des producteurs en Italie, vérifions leurs licences d\'exportation et certificats de qualité pour des marchés spécifiques.'
       },
       step3: {
-        title: 'Stratégie',
-        description: 'Nous élaborons un plan d\'action individuel'
+        title: 'Contrat et Compliance',
+        description: 'Nous rédigeons les contrats de commerce extérieur, préparons les documents douaniers et gérons les questions d\'accise (pour le vin) et la logistique.'
       },
       step4: {
-        title: 'Mise en œuvre',
-        description: 'Nous accompagnons à chaque stadio jusqu\'à l\'obtention du résultat'
+        title: 'Livraison et accompagnement',
+        description: 'Nous supervisons l\'expédition en Europe, le passage en douane et la livraison jusqu\'à votre entrepôt.'
       },
       strategicSession: {
         title: 'Session stratégique',
@@ -763,7 +736,7 @@ const translations = {
     },
     footer: {
       company: 'À propos de l\'entreprise',
-      companyDescription: 'Conseil premium dans le commerce international avec garantie de confidentialité',
+      companyDescription: 'Expert en commerce extérieur. Export de produits alimentaires et de vin depuis l\'Italie.',
       quickLinks: 'Liens rapides',
       services: 'Services',
       process: 'Processus de travail',
@@ -779,7 +752,7 @@ const translations = {
       forBusiness: 'pour les affaires',
       readyForNewMarkets: 'Prêt à entrer sur',
       newMarkets: 'de nouveaux marchés?',
-      diagnosticDescription: 'Inscrivez-vous pour une session deagnostica de 30 minutes. Nous analyserons votre cas et vous dirons quels obstacles vous pourriez rencontrer en Italie ou en Europe centrale.',
+      diagnosticDescription: 'Inscrivez-vous pour une session diagnostique de 30 minutes. Nous analyserons votre cas et vous dirons quels obstacles vous pourriez rencontrer en Italie ou en Europe centrale.',
       whatsappTelegramLabel: 'WhatsApp / Telegram',
       whatsappLink: '[Lien direct]',
       emailLabel: 'Email',
@@ -789,7 +762,8 @@ const translations = {
       connectWhatsapp: 'Contactez-nous via WhatsApp',
       contactsTitle: 'CONTACTS',
       officeMilan: 'Vérone, Italie',
-      allRightsFull: 'Tous droits réservés.'
+      allRightsFull: 'Tous droits réservés.',
+      annaTagline: 'Anna — experte en commerce extérieur. Export de produits alimentaires et de vin.'
     },
     process_ui: {
       step: 'Étape',
@@ -802,50 +776,18 @@ const translations = {
       subtitle: 'Trois types de clients, chacun avec une solution sur mesure',
       distributors: {
         title: 'Distributeurs et détaillants',
-        description: 'Des professionnels du marché à la recherche de produits exclusifs de petites manufactures familiales italiennes. Nous vous aidons à vous démarquer de la concurrence, à trouver des produits uniques et à assurer la stabilité des livraisons clé en main.',
+        description: 'Nous aidons les distributeurs à trouver des vignobles italiens exclusifs avec un patrimoine unique, des fournisseurs d\'huile d\'olive et de spécialités. Nous assurons la stabilité des approvisionnements et des droits territoriaux exclusifs.',
         cta: 'Trouver l\'exclusivité'
       },
       smallBusiness: {
         title: 'Petites entreprises et nouveaux ambitieux',
-        description: 'Des entrepreneurs qui souhaitent lancer leur premier projet d\'importation européenne mais craignent les erreurs et la bureaucratie. Nous devenons votre département commerce extérieur : nous vous aidons à constituer votre premier lot mixte et vous guidons à chaque étape logistique.',
+        description: 'Vous souhaitez commencer à importer du vin italien, des produits alimentaires ou des bijoux mais ne savez pas par où commencer ? Nous devenons votre département commerce extérieur : nous constituons votre premier lot mixte et vous guidons à chaque étape — du choix du produit à la livraison.',
         cta: 'Commencer l\'import'
       },
       investors: {
         title: 'Investisseurs stratégiques',
-        description: 'Des personnes disposant de capital visant la diversification par le secteur réel et le commerce de marchandises en Italie. Nous sélectionnons des niches liquides à haute marge, calculons le ROI et prenons en charge la gestion opérationnelle complète.',
+        description: 'Nous sélectionnons des niches liquides dans les segments du vin, de l\'alimentation et des biens de luxe à haute marge. Nous calculons le ROI et prenons en charge la gestion opérationnelle complète.',
         cta: 'Calculer le ROI'
-      }
-    },
-    whyThisWorks: {
-      badge: 'Notre approche',
-      title: 'Pourquoi ça marche',
-      subtitle: 'Pour chaque type de client — un argument clé et une stratégie adaptée',
-      distributor: {
-        tabTitle: 'Pour les distributeurs',
-        title: 'Exclusivité et avantage concurrentiel',
-        description: 'Pour le distributeur, les mots clés sont « exclusivité » et « se démarquer de la concurrence », car tout le monde a déjà du mass-market. Nous trouvons des fabricants italiens uniques sans contrats directs avec les grands acteurs.',
-        point1: 'Contrats directs avec les manufactures',
-        point2: 'Droits territoriaux exclusifs',
-        point3: 'Chaîne d\'approvisionnement clé en main',
-        point4: 'Différenciation concurrentielle claire'
-      },
-      beginner: {
-        tabTitle: 'Pour les débutants',
-        title: 'Sécurité et lots mixtes',
-        description: 'Pour le débutant, l\'essentiel est la « sécurité » et le « lot mixte » (pas besoin d\'acheter un conteneur entier). Nous minimisons les risques de la première importation et accompagnons à chaque étape.',
-        point1: 'Lots mixtes de différents fournisseurs',
-        point2: 'Accompagnement complet de A à Z',
-        point3: 'Risques budgétaires minimaux',
-        point4: 'Formation aux processus de commerce extérieur'
-      },
-      investor: {
-        tabTitle: 'Pour les investisseurs',
-        title: 'ROI, niches liquides et zéro opérationnel',
-        description: 'Pour l\'investisseur, ce sont les chiffres qui comptent (« ROI », « niches liquides ») et « zéro opérationnel » (gestion des processus). Nous prenons en charge tout le travail opérationnel avec une transparence totale.',
-        point1: 'Calcul du ROI avant le lancement',
-        point2: 'Niches liquides à haute marge',
-        point3: 'Gestion opérationnelle complète',
-        point4: 'Rapports financiers transparents'
       }
     },
     whatsapp: 'Contactez-nous via WhatsApp',
@@ -864,47 +806,59 @@ const translations = {
     hero: {
       title: 'Il vostro partner per l\'export e l\'import in Italia e in Europa',
       subtitle: 'Gestione strategica delle operazioni di export-import in Italia e nell\'UE',
-      description: 'Integrazione completa del business nell\'ambiente europeo: dallo sviluppo della strategia Go-to-Market alla gestione operativa delle forniture e alla garanzia della compliance.',
+      description: 'Vino, olio d\'oliva, pomodori, gioielli — siamo specializzati nell\'export e import di prodotti alimentari italiani e beni di lusso.',
       cta: 'Richiedi una consulenza',
       learnMore: 'Perché noi',
       trusted: 'Fidati da più di 150 aziende'
     },
     specialization: {
-      title: 'La nostra specializzazione',
-      subtitle: 'Lavoriamo con aziende e proprietari di business che cercano:',
-      item1: 'Catene di fornitura e subappaltatori stabiliti',
-      item2: 'Entrata controllata su un nuovo mercato',
-      item3: 'Minimizzazione dei rischi regolamentari, operativi e finanziari',
-      item4: 'Risultati prevedibili senza perdita di controllo'
+      title: 'Le mie nicchie di competenza',
+      subtitle: 'I veri prodotti con cui lavoro ogni giorno',
+      item1: {
+        title: 'Vino e olio d\'oliva',
+        description: 'Contatti diretti con cantine e frantoi in Toscana, Veneto e Sicilia. Selezione di prodotti unici per il vostro mercato.'
+      },
+      item2: {
+        title: 'Prodotti alimentari',
+        description: 'Pomodori, salse, pasta, formaggi e specialità. Certificazione completa dei prodotti alimentari e controllo qualità.'
+      },
+      item3: {
+        title: 'Bigiotteria',
+        description: 'Bigiotteria italiana fatta a mano da laboratori familiari. Collezioni esclusive per il vostro business.'
+      },
+      item4: {
+        title: 'Beni di lusso',
+        description: 'Marchi italiani premium, accessori e oggetti d\'arredamento. Lavoro diretto con i produttori.'
+      }
     },
     value: {
       title: 'Perché sceglierci',
-      subtitle: 'Confidenzialità, competenza e risultati',
-      confidentiality: {
-        title: 'Confidenzialità assoluta',
-        description: 'Tutti i dati sono protetti. NDA con ogni cliente. Anonimia completa delle transazioni.'
+      subtitle: 'Vantaggi concreti del lavorare con noi',
+      directContacts: {
+        title: 'Contatti diretti con i produttori',
+        description: 'Il nostro database di produttori italiani verificati — dalle cantine toscane ai laboratori di gioielleria milanesi.'
       },
-      speed: {
-        title: 'Velocità di esecuzione',
-        description: 'Risoluzione rapida dei problemi. Elaborazione rapida delle richieste. Tempo minimo per il lancio.'
+      certification: {
+        title: 'Competenza in certificazione e accise',
+        description: 'Profonda conoscenza dei requisiti di certificazione alimentare, della politica sulle accise per vino e alcolici.'
       },
-      professionalism: {
-        title: 'Professionalità',
-        description: 'Norme di lavoro più alte. Esperienza confermata. Qualità dei servizi riconosciuta.'
+      customs: {
+        title: 'Esperienza doganale UE',
+        description: 'Anni di esperienza con le procedure doganali in Italia e nei paesi dell\'UE, gestione di situazioni non standard.'
       },
-      expertise: {
-        title: 'Consulenza esperta',
-        description: 'Esperienza con le grandi aziende. Conoscenza approfondita dei mercati internazionali.'
-      },
-      support: {
-        title: 'Supporto 24/7',
-        description: 'Sempre in contatto. Risolviamo i problemi in tempo reale.'
+      personalApproach: {
+        title: 'Supporto personalizzato',
+        description: 'Approccio individuale per ogni progetto. Controllo in tutte le fasi — dalla ricerca del fornitore alla consegna nel vostro magazzino.'
       }
     },
     services: {
       title: 'I nostri servizi',
       subtitle: 'Consulenza completa per il tuo business',
       cta: 'Discutiamo del progetto',
+      consultation: {
+        title: 'Consulenza esperta',
+        description: 'Parere esperto e audit della vostra catena di fornitura attuale. Analisi, identificazione dei rischi e opportunità di crescita.'
+      },
       export: {
         title: 'Consulenza esportativa',
         description: 'Aiutiamo ad entrare nei mercati internazionali, trovare partner, preparare tutta la documentazione'
@@ -934,20 +888,20 @@ const translations = {
       title: 'Come lavoriamo',
       subtitle: 'Processo semplice e trasparente',
       step1: {
-        title: 'Consultazione',
-        description: 'Discutiamo della tua situazione e dei tuoi obiettivi in un ambiente confidenziale'
+        title: 'Audit esperto e brief',
+        description: 'Analizziamo la vostra richiesta e verifichiamo la categoria del prodotto (vino, alimentari, bigiotteria) per la conformità ai requisiti di importazione.'
       },
       step2: {
-        title: 'Analisi',
-        description: 'Studiamo il mercato, valutiamo le opportunità e i rischi'
+        title: 'Selezione e verifica dei fornitori',
+        description: 'Selezioniamo produttori in Italia, verifichiamo le licenze di esportazione e i certificati di qualità per mercati specifici.'
       },
       step3: {
-        title: 'Strategia',
-        description: 'Sviluppiamo un piano d\'azione individuale'
+        title: 'Contratto e Compliance',
+        description: 'Redigiamo contratti di commercio estero, prepariamo i documenti doganali e gestiamo le questioni relative alle accise (per il vino) e alla logistica.'
       },
       step4: {
-        title: 'Implementazione',
-        description: 'Ti accompagniamo ad ogni stadio fino a raggiungere il risultato'
+        title: 'Consegna e accompagnamento',
+        description: 'Supervisioniamo la spedizione in Europa, il passaggio doganale e la consegna fino al vostro magazzino.'
       },
       strategicSession: {
         title: 'Sessione strategica',
@@ -1030,7 +984,7 @@ const translations = {
     },
     footer: {
       company: 'Su di noi',
-      companyDescription: 'Consulenza premium nel commercio internazionale con garanzia di confidenzialità',
+      companyDescription: 'Esperta in commercio estero. Export di prodotti alimentari e vino dall\'Italia.',
       quickLinks: 'Collegamenti rapidi',
       services: 'Servizi',
       process: 'Processo di lavoro',
@@ -1056,7 +1010,8 @@ const translations = {
       connectWhatsapp: 'Contattaci via WhatsApp',
       contactsTitle: 'CONTATTI',
       officeMilan: 'Verona, Italia',
-      allRightsFull: 'Tutti i diritti riservati.'
+      allRightsFull: 'Tutti i diritti riservati.',
+      annaTagline: 'Anna — esperta in commercio estero. Export di prodotti alimentari e vino.'
     },
     process_ui: {
       step: 'Passo',
@@ -1069,50 +1024,18 @@ const translations = {
       subtitle: 'Tre tipi di clienti, ognuno con una soluzione su misura',
       distributors: {
         title: 'Distributori e rivenditori',
-        description: 'Professionisti del mercato alla ricerca di prodotti esclusivi da piccole manifatture familiari italiane. Vi aiutiamo a distinguervi dalla concorrenza, a trovare prodotti unici e a garantire la stabilità delle forniture chiavi in mano.',
+        description: 'Aiutiamo i distributori a trovare cantine italiane esclusive con un patrimonio unico, fornitori di olio d\'oliva e specialità. Garantiamo stabilità delle forniture e diritti territoriali esclusivi.',
         cta: 'Trovare l\'esclusività'
       },
       smallBusiness: {
         title: 'Piccole imprese e nuovi ambiziosi',
-        description: 'Imprenditori che vogliono lanciare il loro primo progetto di importazione europea ma temono errori e burocrazia. Diventiamo il vostro dipartimento commercio estero: vi aiutiamo a comporre il primo lotto misto da diversi fornitori e vi guidiamo in ogni fase logistica.',
+        description: 'Volete iniziare a importare vino italiano, prodotti alimentari o bigiotteria ma non sapete da dove iniziare? Diventiamo il vostro dipartimento commercio estero: componiamo il primo lotto misto e vi guidiamo in ogni fase — dalla scelta del prodotto alla consegna.',
         cta: 'Iniziare l\'importazione'
       },
       investors: {
         title: 'Investitori strategici',
-        description: 'Persone con capitale orientate alla diversificazione attraverso il settore reale e il commercio di merci in Italia. Selezioniamo nicchie liquide ad alto margine, calcoliamo il ROI e ci occupiamo della gestione operativa completa.',
+        description: 'Selezioniamo nicchie liquide nei segmenti vino, alimentari e beni di lusso ad alto margine. Calcoliamo il ROI e ci occupiamo della gestione operativa completa.',
         cta: 'Calcolare il ROI'
-      }
-    },
-    whyThisWorks: {
-      badge: 'Il nostro approccio',
-      title: 'Perché funziona',
-      subtitle: 'Per ogni tipo di cliente — un argomento chiave e una strategia su misura',
-      distributor: {
-        tabTitle: 'Per i distributori',
-        title: 'Esclusività e vantaggio competitivo',
-        description: 'Per il distributore, le parole chiave sono «esclusività» e «distinguersi dalla concorrenza», perché il mass-market lo hanno tutti. Troviamo produttori italiani unici senza contratti diretti con i grandi player.',
-        point1: 'Contratti diretti con le manifatture',
-        point2: 'Diritti territoriali esclusivi',
-        point3: 'Catena di fornitura chiavi in mano',
-        point4: 'Differenziazione competitiva chiara'
-      },
-      beginner: {
-        tabTitle: 'Per i principianti',
-        title: 'Sicurezza e lotti misti',
-        description: 'Per il principiante, l\'essenziale è la «sicurezza» e il «lotto misto» (non serve comprare un intero container). Minimizziamo i rischi della prima importazione e accompagniamo in ogni fase.',
-        point1: 'Lotti misti da diversi fornitori',
-        point2: 'Accompagnamento completo dalla A alla Z',
-        point3: 'Rischi di budget minimi',
-        point4: 'Formazione sui processi di commercio estero'
-      },
-      investor: {
-        tabTitle: 'Per gli investitori',
-        title: 'ROI, nicchie liquide e zero operatività',
-        description: 'Per l\'investitore contano i numeri («ROI», «nicchie liquide») e «zero operatività» (gestione dei processi). Ci occupiamo di tutto il lavoro operativo con totale trasparenza.',
-        point1: 'Calcolo del ROI prima del lancio',
-        point2: 'Nicchie liquide ad alto margine',
-        point3: 'Gestione operativa completa',
-        point4: 'Report finanziari trasparenti'
       }
     },
     whatsapp: 'Contattaci via WhatsApp',
