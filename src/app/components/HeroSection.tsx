@@ -84,10 +84,10 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="mb-5 sm:mb-6"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] tracking-tight mb-4 sm:mb-5">
+            <h1 className="text-[2.75rem] sm:text-[3.5rem] lg:text-[4.25rem] font-bold text-slate-900 leading-[1.1] tracking-tight mb-4 sm:mb-5">
               {t('hero.title')}
             </h1>
-            <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-[1.35rem] text-slate-600 leading-relaxed">
               {t('hero.subtitle')}
             </p>
           </motion.div>
@@ -96,7 +96,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-sm sm:text-base text-slate-500 leading-relaxed mb-8 sm:mb-10"
+            className="text-base sm:text-lg text-slate-500 leading-relaxed mb-8 sm:mb-10"
           >
             {t('hero.description')}
           </motion.p>
