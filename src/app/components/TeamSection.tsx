@@ -26,68 +26,22 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
 
         <div className="max-w-7xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 sm:mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3">
-              {t('team.title')}
-            </h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full" />
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="relative"
+              className="lg:col-span-8 order-2 lg:order-1"
             >
-              <div className="absolute -inset-3 bg-gradient-to-br from-yellow-400/10 to-teal-400/10 rounded-3xl blur-2xl" />
-              <div className="relative rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl shadow-black/30 h-full min-h-[400px] sm:min-h-[480px]">
-                <img src="/anna-photo.jpg" alt="Anna" className="w-full h-full object-cover object-[center_15%]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 via-teal-900/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                  <h3 className="text-3xl sm:text-4xl font-bold text-white mb-1">Anna</h3>
-                  <span className="text-sm font-bold text-yellow-400 tracking-wider uppercase">Founder & Business Developer</span>
-                  <div className="flex gap-2.5 mt-5">
-                    {[
-                      { href: 'https://wa.me/393245436954', icon: <WhatsAppIcon className="w-4 h-4" />, ext: true },
-                      { href: 'https://www.linkedin.com/in/anna-culesova-7955ab26a/', icon: <Linkedin className="w-4 h-4" />, ext: true },
-                      { href: 'https://www.instagram.com/boutiquebusiness.consulting', icon: <Instagram className="w-4 h-4" />, ext: true },
-                      { href: 'mailto:anna.culesova@gmail.com', icon: <Mail className="w-4 h-4" />, ext: false },
-                    ].map((s, i) => (
-                      <motion.a
-                        key={i}
-                        href={s.href}
-                        target={s.ext ? '_blank' : undefined}
-                        rel={s.ext ? 'noopener noreferrer' : undefined}
-                        whileHover={{ scale: 1.15, y: -2 }}
-                        className="w-10 h-10 rounded-xl bg-white/15 backdrop-blur-sm border border-white/15 flex items-center justify-center text-white/80 hover:bg-yellow-400 hover:text-teal-900 hover:border-yellow-400 transition-colors duration-300"
-                      >
-                        {s.icon}
-                      </motion.a>
-                    ))}
-                  </div>
-                </div>
-                <div className="absolute top-5 right-5 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl px-3.5 py-2 shadow-lg shadow-yellow-500/30">
-                  <span className="text-teal-900 text-base font-extrabold leading-none">12+</span>
-                  <span className="text-teal-900/70 text-[10px] font-bold block leading-tight">years in Italy</span>
-                </div>
+              <div className="mb-6">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3">
+                  {t('team.title')}
+                </h2>
+                <div className="w-16 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full" />
               </div>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className="flex flex-col justify-center"
-            >
               <p className="text-base sm:text-lg text-white/85 font-medium leading-relaxed mb-7">
                 {t('team.anna.bio')}
               </p>
@@ -102,7 +56,7 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
                       initial={{ opacity: 0, x: -15 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.25 + i * 0.12 }}
+                      transition={{ duration: 0.4, delay: 0.2 + i * 0.12 }}
                       className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-white/[0.12] transition-all duration-300"
                     >
                       <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
@@ -130,6 +84,50 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="lg:col-span-4 order-1 lg:order-2 flex justify-center"
+            >
+              <div className="relative">
+                <div className="absolute -inset-3 bg-gradient-to-br from-yellow-400/10 to-teal-400/10 rounded-3xl blur-2xl" />
+                <div className="relative w-48 h-60 sm:w-56 sm:h-72 rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl shadow-black/30">
+                  <img src="/anna-photo.jpg" alt="Anna" className="w-full h-full object-cover object-[center_15%]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white leading-tight">Anna</h3>
+                    <span className="text-[11px] font-bold text-yellow-400 tracking-wider uppercase">Founder</span>
+                  </div>
+                </div>
+                <div className="absolute -top-3 -right-3 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-lg px-2.5 py-1.5 shadow-lg shadow-yellow-500/30">
+                  <span className="text-teal-900 text-sm font-extrabold leading-none">12+</span>
+                  <span className="text-teal-900/70 text-[9px] font-bold block leading-tight">years</span>
+                </div>
+
+                <div className="flex justify-center gap-2 mt-4">
+                  {[
+                    { href: 'https://wa.me/393245436954', icon: <WhatsAppIcon className="w-3.5 h-3.5" />, ext: true },
+                    { href: 'https://www.linkedin.com/in/anna-culesova-7955ab26a/', icon: <Linkedin className="w-3.5 h-3.5" />, ext: true },
+                    { href: 'https://www.instagram.com/boutiquebusiness.consulting', icon: <Instagram className="w-3.5 h-3.5" />, ext: true },
+                    { href: 'mailto:anna.culesova@gmail.com', icon: <Mail className="w-3.5 h-3.5" />, ext: false },
+                  ].map((s, i) => (
+                    <motion.a
+                      key={i}
+                      href={s.href}
+                      target={s.ext ? '_blank' : undefined}
+                      rel={s.ext ? 'noopener noreferrer' : undefined}
+                      whileHover={{ scale: 1.15, y: -2 }}
+                      className="w-9 h-9 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/60 hover:bg-yellow-400 hover:text-teal-900 hover:border-yellow-400 transition-colors duration-300"
+                    >
+                      {s.icon}
+                    </motion.a>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
