@@ -63,7 +63,7 @@ const translations = {
       description: 'Вино, оливковое масло, томаты, бижутерия — специализируемся на экспорте и импорте итальянских продуктов питания и товаров класса люкс.',
       cta: 'Запросить консультацию',
       learnMore: 'Почему мы',
-      trusted: 'Доверяют более 150+ компаний'
+      trusted: 'Нам доверяют более 150 компаний'
     },
     specialization: {
       title: 'Ниши, в которых я эксперт',
@@ -550,7 +550,7 @@ const translations = {
       companyTagline: 'Conseil aux entreprises'
     },
     hero: {
-      title: 'Votre partenaire en exportation et importation en Italie et en Europe',
+      title: 'Votre partenaire en export et import en Italie et en Europe',
       subtitle: 'Gestion stratégique des opérations d\'export-import en Italie et dans l\'UE',
       description: 'Vin, huile d\'olive, tomates, bijoux — nous nous spécialisons dans l\'export et l\'import de produits alimentaires italiens et de biens de luxe.',
       cta: 'Demander une consultation',
@@ -806,10 +806,10 @@ const translations = {
     hero: {
       title: 'Il vostro partner per l\'export e l\'import in Italia e in Europa',
       subtitle: 'Gestione strategica delle operazioni di export-import in Italia e nell\'UE',
-      description: 'Vino, olio d\'oliva, pomodori, gioielli — siamo specializzati nell\'export e import di prodotti alimentari italiani e beni di lusso.',
+      description: 'Vino, olio d\'oliva, pomodori, gioielli — siamo specializzati nell\'export e nell\'import di prodotti alimentari italiani e beni di lusso.',
       cta: 'Richiedi una consulenza',
       learnMore: 'Perché noi',
-      trusted: 'Fidati da più di 150 aziende'
+      trusted: 'Oltre 150 aziende si fidano di noi'
     },
     specialization: {
       title: 'Le mie nicchie di competenza',
@@ -853,23 +853,23 @@ const translations = {
     },
     services: {
       title: 'I nostri servizi',
-      subtitle: 'Consulenza completa per il tuo business',
+      subtitle: 'Consulenza a ciclo completo per il vostro business',
       cta: 'Discutiamo del progetto',
       consultation: {
         title: 'Consulenza esperta',
         description: 'Parere esperto e audit della vostra catena di fornitura attuale. Analisi, identificazione dei rischi e opportunità di crescita.'
       },
       export: {
-        title: 'Consulenza esportativa',
-        description: 'Aiutiamo ad entrare nei mercati internazionali, trovare partner, preparare tutta la documentazione'
+        title: 'Consulenza per l\'esportazione',
+        description: 'Vi aiutiamo ad entrare nei mercati internazionali, trovare partner e preparare tutta la documentazione'
       },
       import: {
-        title: 'Consulenza importativa',
-        description: 'Trova fornitori affidabili, organizza la logistica, assicura la qualità del prodotto'
+        title: 'Consulenza per l\'importazione',
+        description: 'Troviamo fornitori affidabili, organizziamo la logistica e garantiamo la qualità del prodotto'
       },
       compliance: {
         title: 'Supporto legale',
-        description: 'Verifica dei contraenti, contratti, formalizzazione doganale, conformità legale'
+        description: 'Verifica delle controparti, contratti, sdoganamento, conformità normativa'
       },
       logistics: {
         title: 'Soluzioni logistiche',
@@ -888,7 +888,7 @@ const translations = {
       title: 'Come lavoriamo',
       subtitle: 'Processo semplice e trasparente',
       step1: {
-        title: 'Audit esperto e brief',
+        title: 'Analisi tecnica e brief iniziale',
         description: 'Analizziamo la vostra richiesta e verifichiamo la categoria del prodotto (vino, alimentari, bigiotteria) per la conformità ai requisiti di importazione.'
       },
       step2: {
@@ -896,11 +896,11 @@ const translations = {
         description: 'Selezioniamo produttori in Italia, verifichiamo le licenze di esportazione e i certificati di qualità per mercati specifici.'
       },
       step3: {
-        title: 'Contratto e Compliance',
+        title: 'Contratto e conformità',
         description: 'Redigiamo contratti di commercio estero, prepariamo i documenti doganali e gestiamo le questioni relative alle accise (per il vino) e alla logistica.'
       },
       step4: {
-        title: 'Consegna e accompagnamento',
+        title: 'Consegna e supporto continuo',
         description: 'Supervisioniamo la spedizione in Europa, il passaggio doganale e la consegna fino al vostro magazzino.'
       },
       strategicSession: {
@@ -911,7 +911,7 @@ const translations = {
         office: 'Ufficio: Milano / Verona, Italia'
       },
       security: {
-        title: 'Confidenzialità ad ogni stadio',
+        title: 'Riservatezza in ogni fase',
         nda: 'NDA è firmato prima dell\'inizio della discussione dei dettagli del progetto',
         encryption: 'Tutti i dati sono memorizzati in sistemi crittografati con protezione SSL/TLS',
         access: 'L\'accesso alle informazioni è limitato solo ai membri chiave del team'
@@ -945,7 +945,7 @@ const translations = {
     team: {
       title: 'Chi sono',
       subtitle: 'La tua guida nel mercato italiano',
-      tagline: 'Costruisco ponti tra il tuo business e il mercato italiano',
+      tagline: 'Costruisco ponti tra il vostro business e il mercato italiano',
       cta: 'Prenota una consulenza',
       contactMe: 'Contattami',
       anna: {
@@ -991,14 +991,14 @@ const translations = {
       team: 'Team',
       contact: 'Contatti',
       legal: 'Informazioni legali',
-      privacy: 'Politica di privacy',
-      terms: 'Condizioni d\'uso',
+      privacy: 'Informativa sulla privacy',
+      terms: 'Termini e condizioni',
       nda: 'Accordo di non divulgazione',
       followUs: 'Seguici',
       allRights: 'Tutti i diritti riservati.',
       madeWith: 'Creato con',
-      forBusiness: 'per i business',
-      readyForNewMarkets: 'Pronto ad entrare su',
+      forBusiness: 'per il business',
+      readyForNewMarkets: 'Pronti ad entrare in',
       newMarkets: 'nuovi mercati?',
       diagnosticDescription: 'Iscriviti per una sessione diagnostica di 30 minuti. Analizzeremo il tuo caso e ti diremo quali ostacoli potresti incontrare in Italia o in Europa centrale.',
       whatsappTelegramLabel: 'WhatsApp / Telegram',
@@ -1025,12 +1025,12 @@ const translations = {
       distributors: {
         title: 'Distributori e rivenditori',
         description: 'Aiutiamo i distributori a trovare cantine italiane esclusive con un patrimonio unico, fornitori di olio d\'oliva e specialità. Garantiamo stabilità delle forniture e diritti territoriali esclusivi.',
-        cta: 'Trovare l\'esclusività'
+        cta: 'Trova l\'esclusività'
       },
       smallBusiness: {
         title: 'Piccole imprese e nuovi ambiziosi',
         description: 'Volete iniziare a importare vino italiano, prodotti alimentari o bigiotteria ma non sapete da dove iniziare? Diventiamo il vostro dipartimento commercio estero: componiamo il primo lotto misto e vi guidiamo in ogni fase — dalla scelta del prodotto alla consegna.',
-        cta: 'Iniziare l\'importazione'
+        cta: 'Inizia a importare'
       },
       investors: {
         title: 'Investitori strategici',
