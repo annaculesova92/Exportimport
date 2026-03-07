@@ -23,7 +23,7 @@ interface LanguageProviderProps {
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>('it');
 
   const t = (key: string): string => {
     const keys = key.split('.');
@@ -59,7 +59,7 @@ const translations = {
     },
     hero: {
       title: 'Ваш партнер по экспорту и импорту в Италии и в мире',
-      subtitle: 'Стратегическое управление экспортно-импортными операциями в Италии и ЕС',
+      subtitle: 'Стратегическое управление экспортно-импортными операциями из Италии по всему миру',
       description: 'Вино, оливковое масло, томаты, бижутерия — специализируемся на экспорте и импорте итальянских продуктов питания и товаров класса люкс.',
       cta: 'Запросить консультацию',
       learnMore: 'Почему мы',
@@ -97,8 +97,8 @@ const translations = {
         description: 'Глубокое понимание требований к сертификации пищевой продукции, акцизной политики на вино и алкоголь.'
       },
       customs: {
-        title: 'Опыт работы с таможней ЕС',
-        description: 'Многолетний опыт прохождения таможенных процедур в Италии и странах Евросоюза, решение нестандартных ситуаций.'
+        title: 'Опыт работы с международной таможней',
+        description: 'Многолетний опыт прохождения таможенных процедур в Италии и по всему миру, решение нестандартных ситуаций.'
       },
       personalApproach: {
         title: 'Персональное сопровождение',
@@ -260,7 +260,7 @@ const translations = {
       emailLabel: 'Email',
       emailLink: '[Корпоративный email]',
       locationLabel: 'Локация',
-      locationText: 'Милан / Верона, вся Италия и ЕС',
+      locationText: 'Милан / Верона, вся Италия и весь мир',
       connectWhatsapp: 'Связаться в WhatsApp',
       contactsTitle: 'КОНТАКТЫ',
       officeMilan: 'Верона, Италия',
@@ -307,7 +307,7 @@ const translations = {
     },
     hero: {
       title: 'Your partner in export and import in Italy and worldwide',
-      subtitle: 'Strategic management of export-import operations in Italy and the EU',
+      subtitle: 'Strategic management of export-import operations from Italy worldwide',
       description: 'Wine, olive oil, tomatoes, jewelry — we specialize in the export and import of Italian food products and luxury goods.',
       cta: 'Request consultation',
       learnMore: 'Why Us',
@@ -345,8 +345,8 @@ const translations = {
         description: 'Deep understanding of food product certification requirements, excise policy on wine and alcohol.'
       },
       customs: {
-        title: 'EU customs experience',
-        description: 'Years of experience with customs procedures in Italy and EU countries, handling non-standard situations.'
+        title: 'International customs experience',
+        description: 'Years of experience with international customs procedures in Italy and worldwide, handling non-standard situations.'
       },
       personalApproach: {
         title: 'Personal support',
@@ -551,7 +551,7 @@ const translations = {
     },
     hero: {
       title: 'Votre partenaire en export et import en Italie et dans le monde',
-      subtitle: 'Gestion stratégique des opérations d\'export-import en Italie et dans l\'UE',
+      subtitle: 'Gestion stratégique des opérations d\'export-import depuis l\'Italie dans le monde entier',
       description: 'Vin, huile d\'olive, tomates, bijoux — nous nous spécialisons dans l\'export et l\'import de produits alimentaires italiens et de biens de luxe.',
       cta: 'Demander une consultation',
       learnMore: 'Pourquoi nous',
@@ -589,8 +589,8 @@ const translations = {
         description: 'Compréhension approfondie des exigences de certification alimentaire, de la politique d\'accise sur le vin et l\'alcool.'
       },
       customs: {
-        title: 'Expérience douanière UE',
-        description: 'Des années d\'expérience avec les procédures douanières en Italie et dans les pays de l\'UE, gestion des situations non standard.'
+        title: 'Expérience douanière internationale',
+        description: 'Des années d\'expérience avec les procédures douanières en Italie et dans le monde entier, gestion des situations non standard.'
       },
       personalApproach: {
         title: 'Accompagnement personnalisé',
@@ -699,7 +699,7 @@ const translations = {
         role: 'Experte en commerce extérieur',
         bio: 'Stratège marketing et experte en commerce extérieur avec 12 ans d\'expérience de vie et de travail en Italie',
         experience1: '8 ans en marketing et 4 ans en conseil: spécialisée dans la construction de ventes systématiques et d\'entonnoirs stratégiques pour le secteur B2B',
-        experience2: 'A géré des projets de lancement de marques sur les marchés italiens et européens, responsable de l\'adaptation du produit et de la stratégie commerciale',
+        experience2: 'A géré des projets de lancement de marques sur les marchés italiens et internationaux, responsable de l\'adaptation du produit et de la stratégie commerciale',
         experience3: 'Architecte de communautés d\'affaires: a créé un écosystème pour les entrepreneurs en Italie, fournissant un accès au réseau local et aux partenaires',
         quote: '«Ma mission n\'est pas de me limiter au lancement d\'un projet, mais de construire un système assurant sa rentabilité durable sur le marché»'
       },
@@ -758,7 +758,7 @@ const translations = {
       emailLabel: 'Email',
       emailLink: '[Email professionnel]',
       locationLabel: 'Localisation',
-      locationText: 'Milan / Vérone, toute l\'Italie et l\'UE',
+      locationText: 'Milan / Vérone, toute l\'Italie et le monde entier',
       connectWhatsapp: 'Contactez-nous via WhatsApp',
       contactsTitle: 'CONTACTS',
       officeMilan: 'Vérone, Italie',
@@ -805,7 +805,7 @@ const translations = {
     },
     hero: {
       title: 'Il vostro partner per l\'export e l\'import in Italia e nel Mondo',
-      subtitle: 'Gestione strategica delle operazioni di export-import in Italia e nell\'UE',
+      subtitle: 'Gestione strategica delle operazioni di export-import dall\'Italia in tutto il mondo',
       description: 'Vino, olio d\'oliva, pomodori, gioielli — siamo specializzati nell\'export e nell\'import di prodotti alimentari italiani e beni di lusso.',
       cta: 'Richiedi una consulenza',
       learnMore: 'Perché noi',
@@ -843,8 +843,8 @@ const translations = {
         description: 'Profonda conoscenza dei requisiti di certificazione alimentare, della politica sulle accise per vino e alcolici.'
       },
       customs: {
-        title: 'Esperienza doganale UE',
-        description: 'Anni di esperienza con le procedure doganali in Italia e nei paesi dell\'UE, gestione di situazioni non standard.'
+        title: 'Esperienza doganale internazionale',
+        description: 'Anni di esperienza con le procedure doganali in Italia e in tutto il mondo, gestione di situazioni non standard.'
       },
       personalApproach: {
         title: 'Supporto personalizzato',
@@ -953,7 +953,7 @@ const translations = {
         role: 'Esperta in commercio estero',
         bio: 'Stratega di marketing ed esperta in commercio estero con 12 anni di esperienza di vita e lavoro in Italia',
         experience1: '8 anni nel marketing e 4 anni nella consulenza: specializzata nella costruzione di vendite sistematiche e funnel strategici per il settore B2B',
-        experience2: 'Ha gestito progetti di lancio di marchi sui mercati italiani ed europei, responsabile dell\'adattamento del prodotto e della strategia commerciale',
+        experience2: 'Ha gestito progetti di lancio di marchi sui mercati italiani e internazionali, responsabile dell\'adattamento del prodotto e della strategia commerciale',
         experience3: 'Architetto di comunità aziendali: ha creato un ecosistema per gli imprenditori in Italia, garantendo l\'accesso alla rete locale e ai partner',
         quote: '«La mia missione non è limitarsi al lancio di un progetto, ma costruire un sistema che assicuri la sua redditività sostenibile sul mercato»'
       },
@@ -1006,7 +1006,7 @@ const translations = {
       emailLabel: 'Email',
       emailLink: '[Email aziendale]',
       locationLabel: 'Località',
-      locationText: 'Milano / Verona, tutta l\'Italia e l\'UE',
+      locationText: 'Milano / Verona, tutta l\'Italia e il mondo',
       connectWhatsapp: 'Contattaci via WhatsApp',
       contactsTitle: 'CONTATTI',
       officeMilan: 'Verona, Italia',
