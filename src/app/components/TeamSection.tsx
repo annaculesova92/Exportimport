@@ -19,117 +19,114 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
 
   return (
     <section id="team" className="relative overflow-hidden">
-      <div className="bg-gradient-to-br from-teal-800 via-teal-900 to-teal-950 relative">
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-yellow-400/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-400/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
+      <div className="bg-gradient-to-br from-teal-50 via-white to-yellow-50/40 relative">
+        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-teal-100/40 rounded-full blur-3xl -translate-y-1/3" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-yellow-100/30 rounded-full blur-3xl translate-y-1/3" />
 
-        <div className="max-w-7xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <div className="max-w-6xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-14"
+          >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-teal-700 via-teal-600 to-yellow-600 bg-clip-text text-transparent mb-3">
+              {t('team.title')}
+            </h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full" />
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="lg:col-span-8 order-2 lg:order-1"
-            >
-              <div className="mb-6">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3">
-                  {t('team.title')}
-                </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full" />
-              </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="bg-white/70 backdrop-blur-sm rounded-3xl border border-white/80 shadow-xl shadow-teal-900/5 overflow-hidden"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-12">
 
-              <p className="text-base sm:text-lg text-white/85 font-medium leading-relaxed mb-7">
-                {t('team.anna.bio')}
-              </p>
-
-              <div className="space-y-3 mb-7">
-                {[0, 1, 2].map((i) => {
-                  const expText = t(`team.anna.experience${i + 1}`);
-                  if (!expText || expText === `team.anna.experience${i + 1}`) return null;
-                  return (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, x: -15 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: 0.2 + i * 0.12 }}
-                      className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] hover:border-white/[0.12] transition-all duration-300"
-                    >
-                      <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
-                      <p className="text-sm text-white/65 leading-relaxed">{expText}</p>
-                    </motion.div>
-                  );
-                })}
-              </div>
-
-              <div className="p-5 rounded-xl bg-gradient-to-r from-yellow-400/[0.06] to-teal-400/[0.03] border border-yellow-400/10 mb-7">
-                <div className="flex items-start gap-3">
-                  <Quote className="w-5 h-5 text-yellow-400/40 flex-shrink-0 mt-0.5" />
-                  <p className="text-sm italic text-white/55 leading-relaxed">
-                    {t('team.anna.quote')}
-                  </p>
-                </div>
-              </div>
-
-              <button
-                onClick={onContactClick}
-                className="group self-start px-8 sm:px-10 py-3.5 sm:py-4 bg-gradient-to-r from-yellow-400 to-amber-500 text-teal-900 rounded-xl font-bold text-sm sm:text-base shadow-xl shadow-yellow-500/15 hover:shadow-2xl hover:shadow-yellow-500/25 hover:scale-105 transition-all duration-300 flex items-center gap-2"
-              >
-                {t('team.cta')}
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </button>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="lg:col-span-4 order-1 lg:order-2 flex justify-center"
-            >
-              <div className="relative">
-                <div className="absolute -inset-3 bg-gradient-to-br from-yellow-400/10 to-teal-400/10 rounded-3xl blur-2xl" />
-                <div className="relative w-48 h-60 sm:w-56 sm:h-72 rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl shadow-black/30">
-                  <img src="/anna-photo.jpg" alt="Anna" className="w-full h-full object-cover object-[center_15%]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-teal-900/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white leading-tight">Anna</h3>
-                    <span className="text-[11px] font-bold text-yellow-400 tracking-wider uppercase">Founder</span>
+              <div className="lg:col-span-4 bg-gradient-to-br from-teal-800 to-teal-900 p-6 sm:p-8 flex flex-col items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '24px 24px' }} />
+                <div className="relative z-10 flex flex-col items-center">
+                  <div className="relative mb-5">
+                    <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-2xl overflow-hidden border-2 border-white/15 shadow-xl">
+                      <img src="/anna-photo.jpg" alt="Anna" className="w-full h-full object-cover object-[center_15%]" />
+                    </div>
+                    <div className="absolute -top-2 -right-2 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-lg px-2 py-1 shadow-md">
+                      <span className="text-teal-900 text-xs font-extrabold">12+</span>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-0.5">Anna</h3>
+                  <span className="text-[11px] font-bold text-yellow-400 tracking-wider uppercase mb-5">Founder</span>
+                  <div className="flex gap-2">
+                    {[
+                      { href: 'https://wa.me/393245436954', icon: <WhatsAppIcon className="w-3.5 h-3.5" />, ext: true },
+                      { href: 'https://www.linkedin.com/in/anna-culesova-7955ab26a/', icon: <Linkedin className="w-3.5 h-3.5" />, ext: true },
+                      { href: 'https://www.instagram.com/boutiquebusiness.consulting', icon: <Instagram className="w-3.5 h-3.5" />, ext: true },
+                      { href: 'mailto:anna.culesova@gmail.com', icon: <Mail className="w-3.5 h-3.5" />, ext: false },
+                    ].map((s, i) => (
+                      <motion.a
+                        key={i}
+                        href={s.href}
+                        target={s.ext ? '_blank' : undefined}
+                        rel={s.ext ? 'noopener noreferrer' : undefined}
+                        whileHover={{ scale: 1.15, y: -2 }}
+                        className="w-9 h-9 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center text-white/60 hover:bg-yellow-400 hover:text-teal-900 hover:border-yellow-400 transition-colors duration-300"
+                      >
+                        {s.icon}
+                      </motion.a>
+                    ))}
                   </div>
                 </div>
-                <div className="absolute -top-3 -right-3 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-lg px-2.5 py-1.5 shadow-lg shadow-yellow-500/30">
-                  <span className="text-teal-900 text-sm font-extrabold leading-none">12+</span>
-                  <span className="text-teal-900/70 text-[9px] font-bold block leading-tight">years</span>
+              </div>
+
+              <div className="lg:col-span-8 p-6 sm:p-8 lg:p-10">
+                <p className="text-base sm:text-lg text-slate-700 font-semibold leading-relaxed mb-6">
+                  {t('team.anna.bio')}
+                </p>
+
+                <div className="space-y-2.5 mb-6">
+                  {[0, 1, 2].map((i) => {
+                    const expText = t(`team.anna.experience${i + 1}`);
+                    if (!expText || expText === `team.anna.experience${i + 1}`) return null;
+                    return (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: 0.15 + i * 0.1 }}
+                        className="flex items-start gap-3 p-3.5 rounded-xl bg-teal-50/60 border border-teal-100/60 hover:bg-teal-50 hover:border-teal-200/60 transition-all duration-300"
+                      >
+                        <CheckCircle className="w-[18px] h-[18px] text-teal-600 flex-shrink-0 mt-0.5" />
+                        <p className="text-sm text-slate-600 leading-relaxed">{expText}</p>
+                      </motion.div>
+                    );
+                  })}
                 </div>
 
-                <div className="flex justify-center gap-2 mt-4">
-                  {[
-                    { href: 'https://wa.me/393245436954', icon: <WhatsAppIcon className="w-3.5 h-3.5" />, ext: true },
-                    { href: 'https://www.linkedin.com/in/anna-culesova-7955ab26a/', icon: <Linkedin className="w-3.5 h-3.5" />, ext: true },
-                    { href: 'https://www.instagram.com/boutiquebusiness.consulting', icon: <Instagram className="w-3.5 h-3.5" />, ext: true },
-                    { href: 'mailto:anna.culesova@gmail.com', icon: <Mail className="w-3.5 h-3.5" />, ext: false },
-                  ].map((s, i) => (
-                    <motion.a
-                      key={i}
-                      href={s.href}
-                      target={s.ext ? '_blank' : undefined}
-                      rel={s.ext ? 'noopener noreferrer' : undefined}
-                      whileHover={{ scale: 1.15, y: -2 }}
-                      className="w-9 h-9 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center text-white/60 hover:bg-yellow-400 hover:text-teal-900 hover:border-yellow-400 transition-colors duration-300"
-                    >
-                      {s.icon}
-                    </motion.a>
-                  ))}
+                <div className="p-4 rounded-xl bg-gradient-to-r from-yellow-50/80 to-teal-50/40 border border-yellow-200/40 mb-6">
+                  <div className="flex items-start gap-3">
+                    <Quote className="w-5 h-5 text-yellow-500/50 flex-shrink-0 mt-0.5" />
+                    <p className="text-sm italic text-slate-500 leading-relaxed">
+                      {t('team.anna.quote')}
+                    </p>
+                  </div>
                 </div>
+
+                <button
+                  onClick={onContactClick}
+                  className="group px-7 sm:px-9 py-3 sm:py-3.5 bg-gradient-to-r from-teal-600 to-teal-700 text-white rounded-xl font-bold text-sm shadow-lg shadow-teal-700/15 hover:shadow-xl hover:shadow-teal-700/25 hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                >
+                  {t('team.cta')}
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </button>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
