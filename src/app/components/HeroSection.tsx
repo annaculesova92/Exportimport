@@ -84,7 +84,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="mb-5 sm:mb-6"
           >
-            <h1 className="text-[3.5rem] sm:text-[4.25rem] lg:text-[5.5rem] font-bold text-slate-900 leading-[1.05] tracking-tight mb-6 sm:mb-8">
+            <h1 className="text-[2.75rem] sm:text-[3.5rem] lg:text-[4.5rem] font-bold text-slate-900 leading-[1.08] tracking-tight mb-6 sm:mb-8">
               {t('hero.title')}
             </h1>
             <p className="text-lg sm:text-xl lg:text-[1.35rem] text-slate-600 leading-relaxed">

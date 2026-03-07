@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, Instagram, Linkedin, Send, MapPin, Clock } from 'lucide-react';
+import { Mail, Instagram, Linkedin, Send, MapPin, Phone } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useState } from 'react';
 
@@ -13,7 +13,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 export function ContactSection() {
   const { t } = useLanguage();
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', company: '', email: '', phone: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle');
 
@@ -23,7 +23,7 @@ export function ContactSection() {
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', company: '', email: '', phone: '', message: '' });
       setTimeout(() => setSubmitStatus('idle'), 3000);
     }, 1200);
   };
@@ -38,7 +38,7 @@ export function ContactSection() {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-14"
+          className="text-center mb-10 sm:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-teal-900 mb-3">
             {t('contact.title')}
@@ -48,58 +48,75 @@ export function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 mb-10">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl shadow-slate-200/60 border border-slate-100/80 h-full">
-              <h3 className="text-lg font-bold text-slate-800 mb-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="rounded-2xl overflow-hidden shadow-2xl shadow-slate-200/60 border border-slate-100/80"
+        >
+          <div className="flex flex-col md:flex-row">
+            <div className="flex-1 bg-white p-6 sm:p-8 lg:p-10">
+              <h3 className="text-lg font-bold text-slate-800 mb-2">
                 {t('contact.formTitle')}
               </h3>
+              <p className="text-xs text-slate-400 mb-6">
+                {t('contact.subtitle')}
+              </p>
 
               <form onSubmit={handleSubmit}>
-                <div className="space-y-4 mb-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-500 mb-1.5">
-                      {t('contact.name')}
-                    </label>
+                    <input
+                      type="text"
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:bg-white focus:ring-0 transition-all outline-none text-sm text-slate-800 placeholder:text-slate-400"
+                      placeholder={t('contact.companyPlaceholder')}
+                    />
+                  </div>
+                  <div>
                     <input
                       type="text"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-white border-2 border-slate-100 focus:border-teal-500 focus:ring-0 transition-colors outline-none text-sm text-slate-800 placeholder:text-slate-350"
+                      className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:bg-white focus:ring-0 transition-all outline-none text-sm text-slate-800 placeholder:text-slate-400"
                       placeholder={t('contact.namePlaceholder')}
                     />
                   </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label className="block text-xs font-semibold text-slate-500 mb-1.5">
-                      {t('contact.email')}
-                    </label>
                     <input
                       type="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-white border-2 border-slate-100 focus:border-teal-500 focus:ring-0 transition-colors outline-none text-sm text-slate-800 placeholder:text-slate-350"
+                      className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:bg-white focus:ring-0 transition-all outline-none text-sm text-slate-800 placeholder:text-slate-400"
                       placeholder={t('contact.emailPlaceholder')}
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-slate-500 mb-1.5">
-                      {t('contact.message')}
-                    </label>
-                    <textarea
-                      required
-                      rows={4}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-white border-2 border-slate-100 focus:border-teal-500 focus:ring-0 transition-colors outline-none text-sm text-slate-800 resize-none placeholder:text-slate-350"
-                      placeholder={t('contact.messagePlaceholder')}
+                    <input
+                      type="tel"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="w-full px-4 py-3 rounded-lg bg-amber-50 border border-amber-200 focus:border-amber-500 focus:bg-white focus:ring-0 transition-all outline-none text-sm text-slate-800 placeholder:text-amber-600/60"
+                      placeholder={t('contact.phonePlaceholder')}
                     />
                   </div>
+                </div>
+
+                <div className="mb-4">
+                  <textarea
+                    required
+                    rows={4}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:bg-white focus:ring-0 transition-all outline-none text-sm text-slate-800 resize-none placeholder:text-slate-400"
+                    placeholder={t('contact.messagePlaceholder')}
+                  />
                 </div>
 
                 <motion.button
@@ -107,7 +124,7 @@ export function ContactSection() {
                   disabled={isSubmitting || submitStatus === 'success'}
                   whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className={`w-full py-3.5 rounded-xl font-semibold text-sm text-white flex items-center justify-center gap-2.5 transition-all duration-300 ${
+                  className={`w-full sm:w-auto px-8 py-3 rounded-lg font-semibold text-sm text-white flex items-center justify-center gap-2.5 transition-all duration-300 ${
                     submitStatus === 'success'
                       ? 'bg-emerald-500 shadow-lg shadow-emerald-500/25'
                       : 'bg-gradient-to-r from-teal-700 to-teal-800 hover:from-teal-800 hover:to-teal-900 shadow-lg shadow-teal-800/25 hover:shadow-xl hover:shadow-teal-800/30'
@@ -130,174 +147,95 @@ export function ContactSection() {
                 </motion.button>
               </form>
             </div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="flex flex-col gap-4 justify-center"
-          >
-            <div className="hidden md:flex flex-col gap-4">
-              <a
-                href="https://wa.me/393245436954"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-green-100/40 hover:border-green-100 transition-all duration-300 group"
-              >
-                <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg shadow-green-500/25 group-hover:shadow-xl group-hover:shadow-green-500/35 group-hover:scale-105 transition-all duration-300">
-                  <WhatsAppIcon className="w-5.5 h-5.5 text-white" />
-                </div>
-                <div>
-                  <div className="text-xs font-semibold text-slate-400 mb-0.5">WhatsApp</div>
-                  <div className="text-sm font-bold text-slate-700">+39 324 543 6954</div>
-                </div>
-              </a>
+            <div className="w-full md:w-[280px] lg:w-[320px] bg-gradient-to-b from-teal-700 via-teal-800 to-emerald-900 p-6 sm:p-8 flex flex-col justify-center gap-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-2xl" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-teal-400/10 rounded-full blur-2xl" />
 
-              <a
-                href="https://www.instagram.com/boutiquebusiness.consulting"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-pink-100/40 hover:border-pink-100 transition-all duration-300 group"
-              >
-                <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center shadow-lg shadow-pink-500/25 group-hover:shadow-xl group-hover:shadow-pink-500/35 group-hover:scale-105 transition-all duration-300">
-                  <Instagram className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
-                </div>
-                <div>
-                  <div className="text-xs font-semibold text-slate-400 mb-0.5">Instagram</div>
-                  <div className="text-sm font-bold text-slate-700">@boutiquebusiness.consulting</div>
-                </div>
-              </a>
+              <div className="relative z-10 flex flex-col gap-6">
+                <a
+                  href="https://wa.me/393245436954"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 group"
+                >
+                  <div className="flex-1 text-right">
+                    <div className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">+39 324 543 6954</div>
+                    <div className="text-[10px] text-teal-200/60 uppercase tracking-wider">WhatsApp</div>
+                  </div>
+                  <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300">
+                    <Phone className="w-5 h-5 text-white" strokeWidth={1.8} />
+                  </div>
+                </a>
 
-              <a
-                href="https://www.instagram.com/anny_in_italy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-pink-100/40 hover:border-pink-100 transition-all duration-300 group"
-              >
-                <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-pink-500 via-rose-500 to-orange-400 flex items-center justify-center shadow-lg shadow-pink-500/25 group-hover:shadow-xl group-hover:shadow-pink-500/35 group-hover:scale-105 transition-all duration-300">
-                  <Instagram className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
-                </div>
-                <div>
-                  <div className="text-xs font-semibold text-slate-400 mb-0.5">Personal Instagram</div>
-                  <div className="text-sm font-bold text-slate-700">@anny_in_italy</div>
-                </div>
-              </a>
+                <div className="w-full h-px bg-white/10" />
 
-              <a
-                href="https://www.linkedin.com/in/anna-culesova-7955ab26a/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-blue-100/40 hover:border-blue-100 transition-all duration-300 group"
-              >
-                <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-600/25 group-hover:shadow-xl group-hover:shadow-blue-600/35 group-hover:scale-105 transition-all duration-300">
-                  <Linkedin className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
+                <div className="flex items-center gap-4">
+                  <div className="flex-1 text-right">
+                    <div className="text-sm font-bold text-white">{t('contact.address')}</div>
+                    <div className="text-[10px] text-teal-200/60 uppercase tracking-wider">{t('contact.location')}</div>
+                  </div>
+                  <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-white" strokeWidth={1.8} />
+                  </div>
                 </div>
-                <div>
-                  <div className="text-xs font-semibold text-slate-400 mb-0.5">LinkedIn</div>
-                  <div className="text-sm font-bold text-slate-700">Anna Culesova</div>
-                </div>
-              </a>
 
-              <a
-                href="mailto:anna.culesova@gmail.com"
-                className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-teal-100/40 hover:border-teal-100 transition-all duration-300 group"
-              >
-                <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center shadow-lg shadow-teal-600/25 group-hover:shadow-xl group-hover:shadow-teal-600/35 group-hover:scale-105 transition-all duration-300">
-                  <Mail className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
-                </div>
-                <div>
-                  <div className="text-xs font-semibold text-slate-400 mb-0.5">Email</div>
-                  <div className="text-sm font-bold text-slate-700">anna.culesova@gmail.com</div>
-                </div>
-              </a>
-            </div>
+                <div className="w-full h-px bg-white/10" />
 
-            <div className="flex md:hidden justify-center gap-5 py-2">
-              <a
-                href="https://wa.me/393245436954"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg shadow-green-500/25 hover:scale-110 transition-transform duration-300"
-                aria-label="WhatsApp"
-              >
-                <WhatsAppIcon className="w-6 h-6 text-white" />
-              </a>
-              <a
-                href="https://www.instagram.com/boutiquebusiness.consulting"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 flex items-center justify-center shadow-lg shadow-pink-500/25 hover:scale-110 transition-transform duration-300"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-6 h-6 text-white" strokeWidth={1.8} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/anna-culesova-7955ab26a/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-600/25 hover:scale-110 transition-transform duration-300"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-6 h-6 text-white" strokeWidth={1.8} />
-              </a>
-              <a
-                href="mailto:anna.culesova@gmail.com"
-                className="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center shadow-lg shadow-teal-600/25 hover:scale-110 transition-transform duration-300"
-                aria-label="Email"
-              >
-                <Mail className="w-6 h-6 text-white" strokeWidth={1.8} />
-              </a>
-            </div>
-          </motion.div>
-        </div>
+                <a
+                  href="mailto:anna.culesova@gmail.com"
+                  className="flex items-center gap-4 group"
+                >
+                  <div className="flex-1 text-right">
+                    <div className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">anna.culesova@gmail.com</div>
+                    <div className="text-[10px] text-teal-200/60 uppercase tracking-wider">Email</div>
+                  </div>
+                  <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300">
+                    <Mail className="w-5 h-5 text-white" strokeWidth={1.8} />
+                  </div>
+                </a>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.15 }}
-          className="relative rounded-2xl overflow-hidden shadow-xl shadow-slate-200/60 border border-slate-100/80"
-        >
-          <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=10.95%2C45.42%2C11.02%2C45.45&layer=mapnik&marker=45.4384%2C10.9917"
-            className="w-full h-[280px] sm:h-[320px] border-0 grayscale-[30%] contrast-[1.05]"
-            loading="lazy"
-            title="Verona, Italy"
-          />
+                <div className="w-full h-px bg-white/10" />
 
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-5 sm:p-6">
-            <div className="flex flex-wrap items-center gap-4 sm:gap-8">
-              <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/10">
-                  <MapPin className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
-                </div>
-                <div>
-                  <div className="text-[10px] font-semibold text-white/60 uppercase tracking-wider">{t('contact.location')}</div>
-                  <div className="text-sm font-bold text-white">{t('contact.address')}</div>
+                <div className="flex justify-center gap-3 pt-1">
+                  <a
+                    href="https://www.instagram.com/boutiquebusiness.consulting"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/25 hover:scale-110 transition-all duration-300"
+                    aria-label="Instagram Business"
+                  >
+                    <Instagram className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/anny_in_italy/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/25 hover:scale-110 transition-all duration-300"
+                    aria-label="Instagram Personal"
+                  >
+                    <Instagram className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/anna-culesova-7955ab26a/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/25 hover:scale-110 transition-all duration-300"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
+                  </a>
+                  <a
+                    href="https://wa.me/393245436954"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/25 hover:scale-110 transition-all duration-300"
+                    aria-label="WhatsApp"
+                  >
+                    <WhatsAppIcon className="w-4.5 h-4.5 text-white" />
+                  </a>
                 </div>
               </div>
-
-              <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/10">
-                  <Clock className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
-                </div>
-                <div>
-                  <div className="text-[10px] font-semibold text-white/60 uppercase tracking-wider">{t('contact.hours')}</div>
-                  <div className="text-sm font-bold text-white">{t('contact.workingHours')}</div>
-                </div>
-              </div>
-
-              <a href="mailto:anna.culesova@gmail.com" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
-                <div className="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/10">
-                  <Mail className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
-                </div>
-                <div>
-                  <div className="text-[10px] font-semibold text-white/60 uppercase tracking-wider">Email</div>
-                  <div className="text-sm font-bold text-white">anna.culesova@gmail.com</div>
-                </div>
-              </a>
             </div>
           </div>
         </motion.div>
