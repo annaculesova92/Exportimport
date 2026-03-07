@@ -171,6 +171,21 @@ export function ContactSection() {
               </a>
 
               <a
+                href="https://www.instagram.com/anny_in_italy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-pink-100/40 hover:border-pink-100 transition-all duration-300 group"
+              >
+                <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-pink-500 via-rose-500 to-orange-400 flex items-center justify-center shadow-lg shadow-pink-500/25 group-hover:shadow-xl group-hover:shadow-pink-500/35 group-hover:scale-105 transition-all duration-300">
+                  <Instagram className="w-5.5 h-5.5 text-white" strokeWidth={1.8} />
+                </div>
+                <div>
+                  <div className="text-xs font-semibold text-slate-400 mb-0.5">Personal Instagram</div>
+                  <div className="text-sm font-bold text-slate-700">@anny_in_italy</div>
+                </div>
+              </a>
+
+              <a
                 href="https://www.linkedin.com/in/anna-culesova-7955ab26a/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -186,7 +201,7 @@ export function ContactSection() {
               </a>
 
               <a
-                href="mailto:mary.lobach@gmail.com"
+                href="mailto:anna.culesova@gmail.com"
                 className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-slate-100/80 shadow-md shadow-slate-100/50 hover:shadow-xl hover:shadow-teal-100/40 hover:border-teal-100 transition-all duration-300 group"
               >
                 <div className="w-13 h-13 min-w-[3.25rem] min-h-[3.25rem] rounded-2xl bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center shadow-lg shadow-teal-600/25 group-hover:shadow-xl group-hover:shadow-teal-600/35 group-hover:scale-105 transition-all duration-300">
@@ -194,7 +209,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-slate-400 mb-0.5">Email</div>
-                  <div className="text-sm font-bold text-slate-700">mary.lobach@gmail.com</div>
+                  <div className="text-sm font-bold text-slate-700">anna.culesova@gmail.com</div>
                 </div>
               </a>
             </div>
@@ -228,7 +243,7 @@ export function ContactSection() {
                 <Linkedin className="w-6 h-6 text-white" strokeWidth={1.8} />
               </a>
               <a
-                href="mailto:mary.lobach@gmail.com"
+                href="mailto:anna.culesova@gmail.com"
                 className="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center shadow-lg shadow-teal-600/25 hover:scale-110 transition-transform duration-300"
                 aria-label="Email"
               >

@@ -199,16 +199,6 @@ const translations = {
         experience3: 'Архитектор деловых сообществ: создала экосистему для предпринимателей в Италии, обеспечивая доступ к локальному нетворку и партнёрам',
         quote: '«Моя задача — не ограничиться запуском проекта, а выстроить систему, обеспечивающую его устойчивую прибыльность на рынке»'
       },
-      marina: {
-        name: 'Марина Лобач',
-        role: 'Co-founder',
-        title: 'Эксперт по операционному менеджменту',
-        bio: '10 лет глубокой экспертизы в управлении бизнес-процессами',
-        experience1: 'Международные Import-Export операции и развитие проектов на итальянском рынке',
-        experience2: 'Запустила ряд успешных стартапов в Италии, глубоко понимая все сложности создания бизнеса с нуля на местном рынке',
-        experience3: 'Организовала более 40 выставочных проектов в Европе и России, обеспечивая стратегию, логистику присутствия и результат для брендов',
-        quote: '«Мы не посредники. Мы — проводники в итальянскую систему.»'
-      }
     },
     contact: {
       title: 'Свяжитесь с нами',
@@ -475,16 +465,6 @@ const translations = {
         experience3: 'Architect of business communities: created an ecosystem for entrepreneurs in Italy, providing access to local network and partners',
         quote: '"My mission is not just to launch a project, but to build a system ensuring its sustainable profitability in the market"'
       },
-      marina: {
-        name: 'Marina Lobach',
-        role: 'Co-founder',
-        title: 'Operational Management Expert',
-        bio: '10 years of deep expertise in business process management',
-        experience1: 'International Import-Export operations and project development in the Italian market',
-        experience2: 'Launched a number of successful startups in Italy, deeply understanding all the complexities of starting a business from scratch in the local market',
-        experience3: 'Organized over 40 exhibition projects in Europe and Russia, ensuring strategy, presence logic and results for brands',
-        quote: '"We are not intermediaries. We are guides to the Italian system."'
-      }
     },
     contact: {
       title: 'Confidential request',
@@ -747,16 +727,6 @@ const translations = {
         experience3: 'Architecte de communautés d\'affaires: a créé un écosystème pour les entrepreneurs en Italie, fournissant un accès au réseau local et aux partenaires',
         quote: '«Ma mission n\'est pas de me limiter au lancement d\'un projet, mais de construire un système assurant sa rentabilité durable sur le marché»'
       },
-      marina: {
-        name: 'Marina Lobach',
-        role: 'Co-fondatrice',
-        title: 'Experte en gestion opérationnelle',
-        bio: '10 ans d\'expertise approfondie dans la gestion des processus d\'entreprise',
-        experience1: 'Opérations Import-Export internationales et développement de projets sur le marché italien',
-        experience2: 'A lancé plusieurs startups de succès en Italie, comprenant toutes les complexités de la création d\'une entreprise à partir de zéro sur le marché local',
-        experience3: 'A organisé plus de 40 projets de salon en Europe et en Russie, assurant stratégie, logique de présence et résultats pour les marques',
-        quote: '«Nous ne sommes pas des intermédiaires. Nous sommes des guides vers le système italien.»'
-      }
     },
     contact: {
       title: 'Demande confidentielle',
@@ -1029,16 +999,6 @@ const translations = {
         experience3: 'Architetto di comunità aziendali: ha creato un ecosistema per gli imprenditori in Italia, garantendo l\'accesso alla rete locale e ai partner',
         quote: '«La mia missione non è limitarsi al lancio di un progetto, ma costruire un sistema che assicuri la sua redditività sostenibile sul mercato»'
       },
-      marina: {
-        name: 'Marina Lobach',
-        role: 'Co-fondatrice',
-        title: 'Esperta di gestione operativa',
-        bio: '10 anni di profonda esperienza nella gestione dei processi aziendali',
-        experience1: 'Operazioni Import-Export internazionali e sviluppo di progetti sul mercato italiano',
-        experience2: 'Ha avviato una serie di startup di successo in Italia, comprendendo tutte le complessità della creazione di un\'azienda da zero sul mercato locale',
-        experience3: 'Ha organizzato più di 40 progetti di fiera in Europa e Russia, garantendo strategia, logica di presenza e risultati per i marchi',
-        quote: '«Non siamo intermediari. Siamo guide nel sistema italiano.»'
-      }
     },
     contact: {
       title: 'Contattaci',
