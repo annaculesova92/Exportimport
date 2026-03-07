@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Shield, Globe, Ship, TrendingUp } from 'lucide-react';
+import { ArrowRight, Shield, Globe, Ship, TrendingUp, Sparkles, Wine, Gem } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 
 interface HeroSectionProps {
@@ -10,7 +10,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-50 via-white to-teal-50/30 pt-10 pb-20 sm:pt-14 sm:pb-28 lg:pt-20 lg:pb-36 overflow-hidden">
+    <section className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-slate-50 via-white to-teal-50/30 py-8 sm:py-10 lg:py-12 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 right-[10%] w-[500px] h-[500px] bg-teal-100/40 rounded-full blur-[100px]" />
         <div className="absolute bottom-10 left-[5%] w-[400px] h-[400px] bg-emerald-100/30 rounded-full blur-[80px]" />
@@ -18,7 +18,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
       </div>
 
       <motion.div
-        className="absolute top-32 right-[15%] hidden lg:block"
+        className="absolute top-24 right-[14%] hidden lg:block"
         animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       >
@@ -28,7 +28,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
       </motion.div>
 
       <motion.div
-        className="absolute top-48 right-[30%] hidden lg:block"
+        className="absolute top-40 right-[28%] hidden lg:block"
         animate={{ y: [0, 10, 0], x: [0, -5, 0] }}
         transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
       >
@@ -38,12 +38,32 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-36 right-[18%] hidden lg:block"
+        className="absolute bottom-28 right-[16%] hidden lg:block"
         animate={{ y: [0, -12, 0], rotate: [0, -3, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
       >
         <div className="w-12 h-12 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg border border-teal-100 flex items-center justify-center">
           <Ship className="w-6 h-6 text-teal-500" />
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[55%] right-[6%] hidden lg:block"
+        animate={{ y: [0, 8, 0], rotate: [0, 8, 0] }}
+        transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+      >
+        <div className="w-11 h-11 bg-white/70 backdrop-blur-sm rounded-xl shadow-md border border-yellow-200/60 flex items-center justify-center">
+          <Wine className="w-5 h-5 text-yellow-600" />
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="absolute top-[30%] right-[5%] hidden xl:block"
+        animate={{ y: [0, -10, 0], rotate: [0, -6, 0] }}
+        transition={{ duration: 7.5, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
+      >
+        <div className="w-10 h-10 bg-white/70 backdrop-blur-sm rounded-xl shadow-md border border-teal-100/60 flex items-center justify-center">
+          <Gem className="w-5 h-5 text-teal-400" />
         </div>
       </motion.div>
 
@@ -55,29 +75,43 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
         <div className="w-3 h-3 bg-teal-400 rounded-full" />
       </motion.div>
       <motion.div
-        className="absolute top-[30%] right-[45%] hidden xl:block opacity-40"
+        className="absolute top-[25%] right-[42%] hidden xl:block opacity-40"
         animate={{ scale: [1, 1.3, 1], opacity: [0.4, 0.7, 0.4] }}
         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
       >
         <div className="w-2 h-2 bg-emerald-400 rounded-full" />
       </motion.div>
       <motion.div
-        className="absolute top-[75%] right-[40%] hidden xl:block opacity-50"
+        className="absolute top-[70%] right-[38%] hidden xl:block opacity-50"
         animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0.8, 0.5] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
       >
         <div className="w-2.5 h-2.5 bg-teal-300 rounded-full" />
       </motion.div>
+      <motion.div
+        className="absolute top-[18%] right-[22%] hidden xl:block opacity-30"
+        animate={{ scale: [1, 1.4, 1], opacity: [0.3, 0.6, 0.3] }}
+        transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+      >
+        <div className="w-1.5 h-1.5 bg-yellow-400 rounded-full" />
+      </motion.div>
+      <motion.div
+        className="absolute top-[80%] right-[10%] hidden xl:block opacity-40"
+        animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.7, 0.4] }}
+        transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
+      >
+        <div className="w-2 h-2 bg-emerald-300 rounded-full" />
+      </motion.div>
 
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-teal-200/50 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="inline-flex items-center space-x-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-8 sm:mb-10 border border-teal-200/60 shadow-sm"
+            className="inline-flex items-center space-x-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-6 border border-teal-200/60 shadow-sm"
           >
             <Shield className="w-4 h-4 text-teal-600" />
             <span className="text-xs sm:text-sm font-semibold text-teal-700">
@@ -89,12 +123,12 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="mb-8 sm:mb-10"
+            className="mb-5 sm:mb-6"
           >
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.1] mb-6 sm:mb-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-[1.05] tracking-tight mb-5 sm:mb-6">
               {t('hero.title')}
             </h1>
-            <p className="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed max-w-2xl">
+            <p className="text-lg sm:text-xl lg:text-2xl text-slate-600 leading-relaxed max-w-2xl font-light">
               {t('hero.subtitle')}
             </p>
           </motion.div>
@@ -103,7 +137,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-sm sm:text-base text-slate-500 leading-relaxed mb-10 sm:mb-12 max-w-2xl"
+            className="text-base sm:text-lg text-slate-400 leading-relaxed mb-8 sm:mb-10 max-w-2xl"
           >
             {t('hero.description')}
           </motion.p>
