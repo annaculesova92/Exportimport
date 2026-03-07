@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, Instagram, Linkedin, Send, MapPin, Phone } from 'lucide-react';
+import { Mail, Instagram, Linkedin, Send, MapPin, Phone, Clock } from 'lucide-react';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { useState } from 'react';
 
@@ -13,7 +13,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 export function ContactSection() {
   const { t } = useLanguage();
-  const [formData, setFormData] = useState({ name: '', company: '', email: '', phone: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', company: '', email: '', phone: '', subject: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle');
 
@@ -23,7 +23,7 @@ export function ContactSection() {
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
-      setFormData({ name: '', company: '', email: '', phone: '', message: '' });
+      setFormData({ name: '', company: '', email: '', phone: '', subject: '', message: '' });
       setTimeout(() => setSubmitStatus('idle'), 3000);
     }, 1200);
   };
@@ -52,188 +52,225 @@ export function ContactSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl overflow-hidden shadow-2xl shadow-slate-200/60 border border-slate-100/80"
+          className="mb-8"
         >
-          <div className="flex flex-col md:flex-row">
-            <div className="flex-1 bg-white p-6 sm:p-8 lg:p-10">
-              <h3 className="text-lg font-bold text-slate-800 mb-2">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8">
+            <div className="md:col-span-2 flex flex-col justify-center">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-3">
                 {t('contact.formTitle')}
               </h3>
-              <p className="text-xs text-slate-400 mb-6">
+              <p className="text-sm text-slate-500 leading-relaxed mb-6">
                 {t('contact.subtitle')}
               </p>
 
-              <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <input
-                      type="text"
-                      value={formData.company}
-                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:bg-white focus:ring-0 transition-all outline-none text-sm text-slate-800 placeholder:text-slate-400"
-                      placeholder={t('contact.companyPlaceholder')}
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:bg-white focus:ring-0 transition-all outline-none text-sm text-slate-800 placeholder:text-slate-400"
-                      placeholder={t('contact.namePlaceholder')}
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:bg-white focus:ring-0 transition-all outline-none text-sm text-slate-800 placeholder:text-slate-400"
-                      placeholder={t('contact.emailPlaceholder')}
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg bg-amber-50 border border-amber-200 focus:border-amber-500 focus:bg-white focus:ring-0 transition-all outline-none text-sm text-slate-800 placeholder:text-amber-600/60"
-                      placeholder={t('contact.phonePlaceholder')}
-                    />
-                  </div>
-                </div>
-
-                <div className="mb-4">
-                  <textarea
-                    required
-                    rows={4}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-teal-500 focus:bg-white focus:ring-0 transition-all outline-none text-sm text-slate-800 resize-none placeholder:text-slate-400"
-                    placeholder={t('contact.messagePlaceholder')}
-                  />
-                </div>
-
-                <motion.button
-                  type="submit"
-                  disabled={isSubmitting || submitStatus === 'success'}
-                  whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className={`w-full sm:w-auto px-8 py-3 rounded-lg font-semibold text-sm text-white flex items-center justify-center gap-2.5 transition-all duration-300 ${
-                    submitStatus === 'success'
-                      ? 'bg-emerald-500 shadow-lg shadow-emerald-500/25'
-                      : 'bg-gradient-to-r from-teal-700 to-teal-800 hover:from-teal-800 hover:to-teal-900 shadow-lg shadow-teal-800/25 hover:shadow-xl hover:shadow-teal-800/30'
-                  } disabled:opacity-60 disabled:cursor-not-allowed`}
-                >
-                  {isSubmitting ? (
-                    <motion.div
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                      className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
-                    />
-                  ) : submitStatus === 'success' ? (
-                    <>{t('contact.sent')}</>
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4" />
-                      {t('contact.submit')}
-                    </>
-                  )}
-                </motion.button>
-              </form>
-            </div>
-
-            <div className="w-full md:w-[280px] lg:w-[320px] bg-gradient-to-b from-teal-700 via-teal-800 to-emerald-900 p-6 sm:p-8 flex flex-col justify-center gap-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-2xl" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-teal-400/10 rounded-full blur-2xl" />
-
-              <div className="relative z-10 flex flex-col gap-6">
+              <div className="flex flex-col gap-4">
                 <a
                   href="https://wa.me/393245436954"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 group"
+                  className="flex items-center gap-3.5 group"
                 >
-                  <div className="flex-1 text-right">
-                    <div className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">+39 324 543 6954</div>
-                    <div className="text-[10px] text-teal-200/60 uppercase tracking-wider">WhatsApp</div>
+                  <div className="w-11 h-11 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0 group-hover:bg-teal-600 transition-colors duration-300">
+                    <Phone className="w-5 h-5 text-teal-700 group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
                   </div>
-                  <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300">
-                    <Phone className="w-5 h-5 text-white" strokeWidth={1.8} />
+                  <div>
+                    <div className="text-sm font-bold text-teal-700 group-hover:text-teal-800 transition-colors">+39 324 543 6954</div>
+                    <div className="text-xs text-slate-400">WhatsApp</div>
                   </div>
                 </a>
-
-                <div className="w-full h-px bg-white/10" />
-
-                <div className="flex items-center gap-4">
-                  <div className="flex-1 text-right">
-                    <div className="text-sm font-bold text-white">{t('contact.address')}</div>
-                    <div className="text-[10px] text-teal-200/60 uppercase tracking-wider">{t('contact.location')}</div>
-                  </div>
-                  <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-white" strokeWidth={1.8} />
-                  </div>
-                </div>
-
-                <div className="w-full h-px bg-white/10" />
 
                 <a
                   href="mailto:anna.culesova@gmail.com"
-                  className="flex items-center gap-4 group"
+                  className="flex items-center gap-3.5 group"
                 >
-                  <div className="flex-1 text-right">
-                    <div className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors">anna.culesova@gmail.com</div>
-                    <div className="text-[10px] text-teal-200/60 uppercase tracking-wider">Email</div>
+                  <div className="w-11 h-11 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0 group-hover:bg-teal-600 transition-colors duration-300">
+                    <Mail className="w-5 h-5 text-teal-700 group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
                   </div>
-                  <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300">
-                    <Mail className="w-5 h-5 text-white" strokeWidth={1.8} />
+                  <div>
+                    <div className="text-sm font-bold text-teal-700 group-hover:text-teal-800 transition-colors">anna.culesova@gmail.com</div>
+                    <div className="text-xs text-slate-400">Email</div>
                   </div>
                 </a>
 
-                <div className="w-full h-px bg-white/10" />
+                <div className="flex items-center gap-3.5">
+                  <div className="w-11 h-11 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-teal-700" strokeWidth={1.8} />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-slate-700">{t('contact.address')}</div>
+                    <div className="text-xs text-slate-400">{t('contact.location')}</div>
+                  </div>
+                </div>
 
-                <div className="flex justify-center gap-3 pt-1">
+                <div className="flex items-center gap-3 pt-2">
                   <a
                     href="https://www.instagram.com/boutiquebusiness.consulting"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/25 hover:scale-110 transition-all duration-300"
+                    className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-all duration-300 group"
                     aria-label="Instagram Business"
                   >
-                    <Instagram className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
+                    <Instagram className="w-4 h-4 text-slate-500 group-hover:text-white transition-colors" strokeWidth={1.8} />
                   </a>
                   <a
                     href="https://www.instagram.com/anny_in_italy/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/25 hover:scale-110 transition-all duration-300"
+                    className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-all duration-300 group"
                     aria-label="Instagram Personal"
                   >
-                    <Instagram className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
+                    <Instagram className="w-4 h-4 text-slate-500 group-hover:text-white transition-colors" strokeWidth={1.8} />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/anna-culesova-7955ab26a/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/25 hover:scale-110 transition-all duration-300"
+                    className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-all duration-300 group"
                     aria-label="LinkedIn"
                   >
-                    <Linkedin className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
+                    <Linkedin className="w-4 h-4 text-slate-500 group-hover:text-white transition-colors" strokeWidth={1.8} />
                   </a>
                   <a
                     href="https://wa.me/393245436954"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-white/25 hover:scale-110 transition-all duration-300"
+                    className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-all duration-300 group"
                     aria-label="WhatsApp"
                   >
-                    <WhatsAppIcon className="w-4.5 h-4.5 text-white" />
+                    <WhatsAppIcon className="w-4 h-4 text-slate-500 group-hover:text-white transition-colors" />
                   </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="md:col-span-3">
+              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl shadow-slate-200/60 border border-slate-100/80">
+                <h4 className="text-base font-bold text-slate-700 mb-5">
+                  {t('contact.formTitle')}
+                </h4>
+
+                <form onSubmit={handleSubmit}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-500 mb-1.5">
+                        {t('contact.name')} <span className="text-teal-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="w-full px-4 py-2.5 rounded-lg bg-white border border-slate-200 focus:border-teal-500 focus:ring-0 transition-all outline-none text-sm text-slate-800 placeholder:text-slate-400"
+                        placeholder={t('contact.namePlaceholder')}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-500 mb-1.5">
+                        Email <span className="text-teal-500">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="w-full px-4 py-2.5 rounded-lg bg-white border border-slate-200 focus:border-teal-500 focus:ring-0 transition-all outline-none text-sm text-slate-800 placeholder:text-slate-400"
+                        placeholder={t('contact.emailPlaceholder')}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="mb-4">
+                    <label className="block text-xs font-semibold text-slate-500 mb-1.5">
+                      {t('contact.company')}
+                    </label>
+                    <input
+                      type="text"
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      className="w-full px-4 py-2.5 rounded-lg bg-white border border-slate-200 focus:border-teal-500 focus:ring-0 transition-all outline-none text-sm text-slate-800 placeholder:text-slate-400"
+                      placeholder={t('contact.companyPlaceholder')}
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label className="block text-xs font-semibold text-slate-500 mb-1.5">
+                      {t('contact.message')} <span className="text-teal-500">*</span>
+                    </label>
+                    <textarea
+                      required
+                      rows={4}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="w-full px-4 py-2.5 rounded-lg bg-white border border-slate-200 focus:border-teal-500 focus:ring-0 transition-all outline-none text-sm text-slate-800 resize-none placeholder:text-slate-400"
+                      placeholder={t('contact.messagePlaceholder')}
+                    />
+                  </div>
+
+                  <motion.button
+                    type="submit"
+                    disabled={isSubmitting || submitStatus === 'success'}
+                    whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className={`px-8 py-3 rounded-lg font-semibold text-sm text-white flex items-center justify-center gap-2.5 transition-all duration-300 border ${
+                      submitStatus === 'success'
+                        ? 'bg-emerald-500 border-emerald-500 shadow-lg shadow-emerald-500/25'
+                        : 'bg-white border-teal-700 text-teal-700 hover:bg-teal-700 hover:text-white shadow-sm hover:shadow-lg hover:shadow-teal-800/20'
+                    } disabled:opacity-60 disabled:cursor-not-allowed`}
+                  >
+                    {isSubmitting ? (
+                      <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                        className="w-5 h-5 border-2 border-teal-300 border-t-teal-700 rounded-full"
+                      />
+                    ) : submitStatus === 'success' ? (
+                      <span className="text-white">{t('contact.sent')}</span>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4" />
+                        <span className="text-teal-700 group-hover:text-white">{t('contact.submit')}</span>
+                      </>
+                    )}
+                  </motion.button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.15 }}
+          className="relative rounded-2xl overflow-hidden shadow-xl shadow-slate-200/60 border border-slate-100/80"
+        >
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=10.95%2C45.42%2C11.02%2C45.45&layer=mapnik&marker=45.4384%2C10.9917"
+            className="w-full h-[280px] sm:h-[320px] border-0 grayscale-[30%] contrast-[1.05]"
+            loading="lazy"
+            title="Verona, Italy"
+          />
+
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent p-4 sm:p-5">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-8">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/10">
+                  <MapPin className="w-4 h-4 text-white" strokeWidth={1.8} />
+                </div>
+                <div>
+                  <div className="text-[10px] font-semibold text-white/60 uppercase tracking-wider">{t('contact.location')}</div>
+                  <div className="text-sm font-bold text-white">{t('contact.address')}</div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/10">
+                  <Clock className="w-4 h-4 text-white" strokeWidth={1.8} />
+                </div>
+                <div>
+                  <div className="text-[10px] font-semibold text-white/60 uppercase tracking-wider">{t('contact.hours')}</div>
+                  <div className="text-sm font-bold text-white">{t('contact.workingHours')}</div>
                 </div>
               </div>
             </div>
