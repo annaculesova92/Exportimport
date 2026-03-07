@@ -186,10 +186,11 @@ const translations = {
       }
     },
     team: {
-      title: 'Наша команда',
-      subtitle: 'Эксперты с глобальным опытом',
-      tagline: 'Мы соединяем ваш бизнес с итальянским рынком',
+      title: 'Обо мне',
+      subtitle: 'Ваш проводник на итальянский рынок',
+      tagline: 'Я соединяю ваш бизнес с итальянским рынком',
       cta: 'Записаться на консультацию',
+      contactMe: 'Связаться со мной',
       anna: {
         name: 'Анна',
         role: 'Co-founder, Business Developer',
@@ -452,10 +453,11 @@ const translations = {
       }
     },
     team: {
-      title: 'Our team',
-      subtitle: 'Experts with global experience',
-      tagline: 'We build bridges between your business and the Italian market',
+      title: 'About me',
+      subtitle: 'Your guide to the Italian market',
+      tagline: 'I build bridges between your business and the Italian market',
       cta: 'Book a consultation',
+      contactMe: 'Get in touch',
       anna: {
         name: 'Anna',
         role: 'Co-founder, Business Developer',
@@ -714,10 +716,11 @@ const translations = {
       }
     },
     team: {
-      title: 'Notre équipe',
-      subtitle: 'Experts avec expérience mondiale',
-      tagline: 'Nous construisons des ponts entre votre entreprise et le marché italien',
+      title: 'À propos de moi',
+      subtitle: 'Votre guide vers le marché italien',
+      tagline: 'Je construis des ponts entre votre entreprise et le marché italien',
       cta: 'Réserver une consultation',
+      contactMe: 'Me contacter',
       anna: {
         name: 'Anna',
         role: 'Co-fondatrice, Business Developer',
@@ -986,10 +989,11 @@ const translations = {
       }
     },
     team: {
-      title: 'Il nostro team',
-      subtitle: 'Esperti con esperienza globale',
-      tagline: 'Costruiamo ponti tra il tuo business e il mercato italiano',
+      title: 'Chi sono',
+      subtitle: 'La tua guida nel mercato italiano',
+      tagline: 'Costruisco ponti tra il tuo business e il mercato italiano',
       cta: 'Prenota una consulenza',
+      contactMe: 'Contattami',
       anna: {
         name: 'Anna',
         role: 'Co-fondatrice, Business Developer',
