@@ -204,8 +204,8 @@ const translations = {
       contactMe: 'Связаться со мной',
       anna: {
         name: 'Анна',
-        role: 'Co-founder, Business Developer',
-        bio: 'Маркетолог-стратег и Business Developer с 12-летним опытом жизни и работы в Италии',
+        role: 'Эксперт по ВЭД',
+        bio: 'Маркетолог-стратег и эксперт по внешнеэкономической деятельности с 12-летним опытом жизни и работы в Италии',
         experience1: '8 лет в маркетинге и 4 года в консалтинге: специализируется на построении системных продаж и стратегических воронках для B2B-сектора',
         experience2: 'Управляла проектами по выводу брендов на рынки Италии и Европы, отвечая за адаптацию продукта и коммерческую стратегию',
         experience3: 'Архитектор деловых сообществ: создала экосистему для предпринимателей в Италии, обеспечивая доступ к локальному нетворку и партнёрам',
@@ -452,8 +452,8 @@ const translations = {
       contactMe: 'Get in touch',
       anna: {
         name: 'Anna',
-        role: 'Co-founder, Business Developer',
-        bio: 'Marketing strategist and Business Developer with 12 years of living and working experience in Italy',
+        role: 'Foreign Trade Expert',
+        bio: 'Marketing strategist and foreign trade expert with 12 years of living and working experience in Italy',
         experience1: '8 years in marketing and 4 years in consulting: specializes in building systematic sales and strategic funnels for the B2B sector',
         experience2: 'Managed projects to launch brands in Italian and European markets, responsible for product adaptation and commercial strategy',
         experience3: 'Architect of business communities: created an ecosystem for entrepreneurs in Italy, providing access to local network and partners',
@@ -696,8 +696,8 @@ const translations = {
       contactMe: 'Me contacter',
       anna: {
         name: 'Anna',
-        role: 'Co-fondatrice, Business Developer',
-        bio: 'Stratège marketing et Business Developer avec 12 ans d\'expérience de vie et de travail en Italie',
+        role: 'Experte en commerce extérieur',
+        bio: 'Stratège marketing et experte en commerce extérieur avec 12 ans d\'expérience de vie et de travail en Italie',
         experience1: '8 ans en marketing et 4 ans en conseil: spécialisée dans la construction de ventes systématiques et d\'entonnoirs stratégiques pour le secteur B2B',
         experience2: 'A géré des projets de lancement de marques sur les marchés italiens et européens, responsable de l\'adaptation du produit et de la stratégie commerciale',
         experience3: 'Architecte de communautés d\'affaires: a créé un écosystème pour les entrepreneurs en Italie, fournissant un accès au réseau local et aux partenaires',
@@ -950,8 +950,8 @@ const translations = {
       contactMe: 'Contattami',
       anna: {
         name: 'Anna',
-        role: 'Co-fondatrice, Business Developer',
-        bio: 'Stratega di marketing e Business Developer con 12 anni di esperienza di vita e lavoro in Italia',
+        role: 'Esperta in commercio estero',
+        bio: 'Stratega di marketing ed esperta in commercio estero con 12 anni di esperienza di vita e lavoro in Italia',
         experience1: '8 anni nel marketing e 4 anni nella consulenza: specializzata nella costruzione di vendite sistematiche e funnel strategici per il settore B2B',
         experience2: 'Ha gestito progetti di lancio di marchi sui mercati italiani ed europei, responsabile dell\'adattamento del prodotto e della strategia commerciale',
         experience3: 'Architetto di comunità aziendali: ha creato un ecosistema per gli imprenditori in Italia, garantendo l\'accesso alla rete locale e ai partner',

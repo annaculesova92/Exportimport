@@ -23,15 +23,15 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-teal-100/40 rounded-full blur-3xl -translate-y-1/3" />
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-yellow-100/30 rounded-full blur-3xl translate-y-1/3" />
 
-        <div className="max-w-6xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <div className="max-w-6xl mx-auto relative z-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-14 lg:py-16">
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12 sm:mb-14"
+            className="text-center mb-8 sm:mb-10"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-teal-700 via-teal-600 to-yellow-600 bg-clip-text text-transparent mb-3">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-teal-700 via-teal-600 to-yellow-600 bg-clip-text text-transparent mb-3">
               {t('team.title')}
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full" />

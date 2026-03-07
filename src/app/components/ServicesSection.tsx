@@ -27,9 +27,9 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
   ];
 
   return (
-    <section id="services" className="py-16 sm:py-20 md:py-24 bg-white">
+    <section id="services" className="py-12 sm:py-14 md:py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-14">
+        <div className="text-center mb-8 sm:mb-10">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}

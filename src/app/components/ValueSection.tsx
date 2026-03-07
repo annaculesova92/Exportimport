@@ -15,13 +15,13 @@ export function ValueSection() {
   ];
 
   return (
-    <section id="value" className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-white via-teal-50/20 to-white relative overflow-hidden">
+    <section id="value" className="py-12 sm:py-14 md:py-16 bg-gradient-to-br from-white via-teal-50/20 to-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-teal-400 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-14">
+        <div className="max-w-3xl mx-auto text-center mb-10">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}

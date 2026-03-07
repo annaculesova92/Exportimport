@@ -31,7 +31,7 @@ export function ProcessSection() {
   ];
 
   return (
-    <section id="process" className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
+    <section id="process" className="py-12 sm:py-14 md:py-16 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
       {/* Animated Dots Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute inset-0" style={{
@@ -42,17 +42,17 @@ export function ProcessSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-teal-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-teal-900 mb-3">
               {t('process.title')}
             </h2>
-            <p className="text-lg text-slate-600">
+            <p className="text-base text-slate-600">
               {t('process.subtitle')}
             </p>
           </motion.div>

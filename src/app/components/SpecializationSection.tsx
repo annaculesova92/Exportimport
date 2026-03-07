@@ -13,7 +13,7 @@ export function SpecializationSection() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-teal-900 via-teal-800 to-emerald-900 relative overflow-hidden">
+    <section className="py-12 sm:py-14 md:py-16 bg-gradient-to-br from-teal-900 via-teal-800 to-emerald-900 relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-yellow-400/5 rounded-full blur-3xl -translate-y-1/3 translate-x-1/4" />
 
@@ -23,9 +23,9 @@ export function SpecializationSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="text-center mb-10"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white">
             {t('specialization.title')}
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full mb-4" />

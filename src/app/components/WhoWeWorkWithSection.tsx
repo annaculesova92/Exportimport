@@ -35,7 +35,7 @@ export function WhoWeWorkWithSection() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 md:py-28 relative overflow-hidden bg-white">
+    <section className="py-12 sm:py-14 md:py-16 relative overflow-hidden bg-white">
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-300/50 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-300/50 to-transparent" />
@@ -57,9 +57,9 @@ export function WhoWeWorkWithSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10 sm:mb-16"
+          className="text-center mb-8 sm:mb-10"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3">
             {t('whoWeWorkWith.title')}
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-500 max-w-2xl mx-auto px-2">
@@ -139,7 +139,7 @@ export function WhoWeWorkWithSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-center mt-10 sm:mt-14"
+          className="text-center mt-8 sm:mt-10"
         >
           <motion.a
             href="#contact"
