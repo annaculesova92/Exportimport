@@ -56,7 +56,12 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
             className="flex-shrink-0 relative"
             style={{ width: '300px', marginTop: '60px' }}
           >
-            <div className="w-[280px] h-[280px] rounded-full bg-gradient-to-br from-teal-700 via-teal-800 to-emerald-900 shadow-2xl shadow-teal-900/30 flex flex-col items-center justify-center p-8 relative">
+            <a
+              href="https://wa.me/393245436954"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-[280px] h-[280px] rounded-full bg-gradient-to-br from-teal-700 via-teal-800 to-emerald-900 shadow-2xl shadow-teal-900/30 flex flex-col items-center justify-center p-8 relative cursor-pointer hover:shadow-3xl hover:shadow-teal-900/40 hover:scale-[1.03] transition-all duration-300"
+            >
               <div className="absolute inset-[6px] rounded-full border-2 border-dashed border-teal-400/30" />
 
               <div className="relative z-10 text-center">
@@ -71,7 +76,7 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
                   {t('services.consultation.description')}
                 </p>
               </div>
-            </div>
+            </a>
           </motion.div>
 
           <div className="flex-1 flex flex-col gap-3 relative pt-0">
@@ -151,7 +156,12 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
             viewport={{ once: true }}
             className="mb-6"
           >
-            <div className="relative bg-gradient-to-br from-teal-700 via-teal-800 to-emerald-800 rounded-2xl p-6 shadow-xl shadow-teal-900/10 overflow-hidden">
+            <a
+              href="https://wa.me/393245436954"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative bg-gradient-to-br from-teal-700 via-teal-800 to-emerald-800 rounded-2xl p-6 shadow-xl shadow-teal-900/10 overflow-hidden active:scale-[0.98] transition-transform"
+            >
               <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-2xl" />
               <div className="relative z-10 flex items-start gap-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl flex items-center justify-center shadow-lg shadow-yellow-500/30">
@@ -171,7 +181,7 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
                   </p>
                 </div>
               </div>
-            </div>
+            </a>
           </motion.div>
 
           <div className="flex flex-col gap-2.5">
