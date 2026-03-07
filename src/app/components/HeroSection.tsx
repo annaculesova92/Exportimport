@@ -10,7 +10,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-50 via-white to-teal-50/30 pt-8 pb-16 sm:pt-10 sm:pb-20 lg:pt-12 lg:pb-24 overflow-hidden">
+    <section className="relative flex flex-col justify-center bg-gradient-to-br from-slate-50 via-white to-teal-50/30 pt-4 pb-10 sm:pt-6 sm:pb-14 lg:pt-8 lg:pb-16 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 right-[10%] w-[500px] h-[500px] bg-teal-100/40 rounded-full blur-[100px]" />
         <div className="absolute bottom-10 left-[5%] w-[400px] h-[400px] bg-emerald-100/30 rounded-full blur-[80px]" />
@@ -18,7 +18,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
       </div>
 
       <motion.div
-        className="absolute top-28 right-[15%] hidden lg:block"
+        className="absolute top-8 right-[15%] hidden lg:block"
         animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       >
@@ -28,7 +28,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
       </motion.div>
 
       <motion.div
-        className="absolute top-44 right-[28%] hidden lg:block"
+        className="absolute top-24 right-[28%] hidden lg:block"
         animate={{ y: [0, 10, 0], x: [0, -5, 0] }}
         transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
       >
@@ -38,7 +38,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-28 right-[18%] hidden lg:block"
+        className="absolute bottom-16 right-[18%] hidden lg:block"
         animate={{ y: [0, -12, 0], rotate: [0, -3, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
       >
@@ -48,14 +48,14 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
       </motion.div>
 
       <motion.div
-        className="absolute top-[60%] right-[8%] hidden xl:block opacity-60"
+        className="absolute top-[55%] right-[8%] hidden xl:block opacity-60"
         animate={{ scale: [1, 1.2, 1], opacity: [0.6, 0.9, 0.6] }}
         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
       >
         <div className="w-3 h-3 bg-teal-400 rounded-full" />
       </motion.div>
       <motion.div
-        className="absolute top-[30%] right-[45%] hidden xl:block opacity-40"
+        className="absolute top-[25%] right-[45%] hidden xl:block opacity-40"
         animate={{ scale: [1, 1.3, 1], opacity: [0.4, 0.7, 0.4] }}
         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
       >
@@ -70,7 +70,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="inline-flex items-center space-x-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-6 sm:mb-8 border border-teal-200/60 shadow-sm"
+            className="inline-flex items-center space-x-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-5 border border-teal-200/60 shadow-sm"
           >
             <Shield className="w-4 h-4 text-teal-600" />
             <span className="text-xs sm:text-sm font-semibold text-teal-700">
@@ -82,12 +82,12 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="mb-6 sm:mb-8"
+            className="mb-5 sm:mb-6"
           >
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.15] mb-5 sm:mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] tracking-tight mb-4 sm:mb-5">
               {t('hero.title')}
             </h1>
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-600 leading-relaxed">
               {t('hero.subtitle')}
             </p>
           </motion.div>
