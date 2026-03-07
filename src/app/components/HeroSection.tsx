@@ -84,7 +84,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="mb-5 sm:mb-6"
           >
-            <h1 className="text-[3.5rem] sm:text-[4.25rem] lg:text-[5.5rem] font-bold text-slate-900 leading-[1.05] tracking-tight mb-4 sm:mb-5">
+            <h1 className="text-[3.5rem] sm:text-[4.25rem] lg:text-[5.5rem] font-bold text-slate-900 leading-[1.05] tracking-tight mb-6 sm:mb-8">
               {t('hero.title')}
             </h1>
             <p className="text-lg sm:text-xl lg:text-[1.35rem] text-slate-600 leading-relaxed">
@@ -113,15 +113,6 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
             >
               <span>{t('hero.cta')}</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button
-              onClick={() => {
-                const el = document.getElementById('value');
-                el?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="px-8 py-4 sm:px-10 sm:py-5 bg-white border-2 border-slate-200 text-slate-700 rounded-2xl font-semibold text-sm sm:text-base hover:border-teal-300 hover:text-teal-700 hover:bg-teal-50/50 transition-all duration-300"
-            >
-              {t('hero.learnMore')}
             </button>
           </motion.div>
         </div>
