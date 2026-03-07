@@ -69,13 +69,13 @@ function UpwardArrow({ className }: { className?: string }) {
 
 export function BackgroundDecorations() {
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div className="fixed inset-0 pointer-events-none z-[1] overflow-hidden">
       <motion.div
         className="absolute top-[8%] left-[3%] hidden lg:block"
         animate={{ rotate: [0, 360] }}
         transition={{ duration: 120, repeat: Infinity, ease: 'linear' }}
       >
-        <GlobeGrid className="w-32 h-32 text-teal-300/[0.07]" />
+        <GlobeGrid className="w-36 h-36 text-teal-500/20" />
       </motion.div>
 
       <motion.div
@@ -83,7 +83,7 @@ export function BackgroundDecorations() {
         animate={{ rotate: [0, -360] }}
         transition={{ duration: 150, repeat: Infinity, ease: 'linear' }}
       >
-        <CompassRose className="w-24 h-24 text-emerald-400/[0.06]" />
+        <CompassRose className="w-28 h-28 text-amber-500/[0.18]" />
       </motion.div>
 
       <motion.div
@@ -91,15 +91,15 @@ export function BackgroundDecorations() {
         animate={{ opacity: [0.03, 0.07, 0.03] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <ShippingRoute className="w-full h-8 text-teal-400/[0.08]" />
+        <ShippingRoute className="w-full h-10 text-teal-600/[0.18]" />
       </motion.div>
 
       <motion.div
         className="absolute top-[55%] left-[5%] hidden lg:block"
-        animate={{ y: [0, -8, 0], opacity: [0.04, 0.08, 0.04] }}
+        animate={{ y: [0, -8, 0], opacity: [0.15, 0.22, 0.15] }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <NetworkDots className="w-28 h-28 text-teal-500/[0.07]" />
+        <NetworkDots className="w-32 h-32 text-amber-500/20" />
       </motion.div>
 
       <motion.div
@@ -107,7 +107,7 @@ export function BackgroundDecorations() {
         animate={{ rotate: [0, 360] }}
         transition={{ duration: 180, repeat: Infinity, ease: 'linear' }}
       >
-        <GlobeGrid className="w-40 h-40 text-emerald-300/[0.05]" />
+        <GlobeGrid className="w-44 h-44 text-teal-500/[0.16]" />
       </motion.div>
 
       <motion.div
@@ -115,7 +115,7 @@ export function BackgroundDecorations() {
         animate={{ y: [0, -6, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       >
-        <UpwardArrow className="w-6 h-12 text-teal-400/[0.08]" />
+        <UpwardArrow className="w-7 h-14 text-emerald-500/20" />
       </motion.div>
 
       <motion.div
@@ -123,7 +123,7 @@ export function BackgroundDecorations() {
         animate={{ y: [0, -6, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
       >
-        <UpwardArrow className="w-5 h-10 text-emerald-400/[0.06]" />
+        <UpwardArrow className="w-6 h-12 text-teal-500/[0.18]" />
       </motion.div>
 
       <motion.div
@@ -131,15 +131,15 @@ export function BackgroundDecorations() {
         animate={{ opacity: [0.03, 0.06, 0.03] }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
       >
-        <ShippingRoute className="w-full h-6 text-emerald-400/[0.06]" />
+        <ShippingRoute className="w-full h-8 text-amber-500/[0.16]" />
       </motion.div>
 
       <motion.div
         className="absolute top-[90%] right-[8%] hidden lg:block"
-        animate={{ y: [0, -5, 0], opacity: [0.04, 0.07, 0.04] }}
+        animate={{ y: [0, -5, 0], opacity: [0.12, 0.2, 0.12] }}
         transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
       >
-        <NetworkDots className="w-20 h-20 text-teal-400/[0.06]" />
+        <NetworkDots className="w-24 h-24 text-emerald-500/[0.18]" />
       </motion.div>
 
       <motion.div
@@ -147,7 +147,7 @@ export function BackgroundDecorations() {
         animate={{ rotate: [0, -360] }}
         transition={{ duration: 200, repeat: Infinity, ease: 'linear' }}
       >
-        <CompassRose className="w-16 h-16 text-teal-300/[0.05]" />
+        <CompassRose className="w-20 h-20 text-amber-400/[0.15]" />
       </motion.div>
     </div>
   );
