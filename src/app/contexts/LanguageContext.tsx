@@ -58,7 +58,7 @@ const translations = {
       companyTagline: 'Business Consulting'
     },
     hero: {
-      title: 'Ваш партнер по экспорту и импорту в Италии и Европе',
+      title: 'Ваш партнер по экспорту и импорту в Италии и в мире',
       subtitle: 'Стратегическое управление экспортно-импортными операциями в Италии и ЕС',
       description: 'Вино, оливковое масло, томаты, бижутерия — специализируемся на экспорте и импорте итальянских продуктов питания и товаров класса люкс.',
       cta: 'Запросить консультацию',
@@ -155,11 +155,11 @@ const translations = {
       },
       step4: {
         title: 'Поставка и сопровождение',
-        description: 'Контролируем отгрузку в Европе, прохождение границы и доставку до вашего склада.'
+        description: 'Контролируем отгрузку, прохождение границы и доставку до вашего склада по всему миру.'
       },
       strategicSession: {
         title: 'Стратегическая сессия',
-        description: 'Запишитесь на первичную консультацию для оценки экспортного потенциала и выявления регуляторных барьеров на целевых рынках Италии и Центральной Европы.',
+        description: 'Запишитесь на первичную консультацию для оценки экспортного потенциала и выявления регуляторных барьеров на целевых рынках Италии и мира.',
         whatsappTelegram: 'WhatsApp / Telegram: [Прямая ссылка]',
         email: 'Email: [Корпоративный email]',
         office: 'Офис: Милан / Верона, Италия'
@@ -207,7 +207,7 @@ const translations = {
         role: 'Эксперт по ВЭД',
         bio: 'Маркетолог-стратег и эксперт по внешнеэкономической деятельности с 12-летним опытом жизни и работы в Италии',
         experience1: '8 лет в маркетинге и 4 года в консалтинге: специализируется на построении системных продаж и стратегических воронках для B2B-сектора',
-        experience2: 'Управляла проектами по выводу брендов на рынки Италии и Европы, отвечая за адаптацию продукта и коммерческую стратегию',
+        experience2: 'Управляла проектами по выводу брендов на международные рынки, отвечая за адаптацию продукта и коммерческую стратегию',
         experience3: 'Архитектор деловых сообществ: создала экосистему для предпринимателей в Италии, обеспечивая доступ к локальному нетворку и партнёрам',
         quote: '«Моя задача — не ограничиться запуском проекта, а выстроить систему, обеспечивающую его устойчивую прибыльность на рынке»'
       },
@@ -254,7 +254,7 @@ const translations = {
       forBusiness: 'для бизнеса',
       readyForNewMarkets: 'Готовы к выходу на',
       newMarkets: 'новые рынки?',
-      diagnosticDescription: 'Запишитесь на 30-минутную диагностическую сессию. Мы разберём ваш кейс и скажем, с какими барьерами вы можете столкнуться в Италии или Центральной Европе.',
+      diagnosticDescription: 'Запишитесь на 30-минутную диагностическую сессию. Мы разберём ваш кейс и скажем, с какими барьерами вы можете столкнуться в Италии и за рубежом.',
       whatsappTelegramLabel: 'WhatsApp / Telegram',
       whatsappLink: '[Прямая ссылка на чат]',
       emailLabel: 'Email',
@@ -306,7 +306,7 @@ const translations = {
       companyTagline: 'Business Consulting'
     },
     hero: {
-      title: 'Your partner in export and import in Italy and Europe',
+      title: 'Your partner in export and import in Italy and worldwide',
       subtitle: 'Strategic management of export-import operations in Italy and the EU',
       description: 'Wine, olive oil, tomatoes, jewelry — we specialize in the export and import of Italian food products and luxury goods.',
       cta: 'Request consultation',
@@ -403,11 +403,11 @@ const translations = {
       },
       step4: {
         title: 'Delivery & Support',
-        description: 'We oversee shipment across Europe, border clearance, and delivery to your warehouse.'
+        description: 'We oversee shipment worldwide, border clearance, and delivery to your warehouse.'
       },
       strategicSession: {
         title: 'Strategic session',
-        description: 'Sign up for an initial consultation to assess export potential and identify regulatory barriers on target markets in Italy and Central Europe.',
+        description: 'Sign up for an initial consultation to assess export potential and identify regulatory barriers on target markets in Italy and globally.',
         whatsappTelegram: 'WhatsApp / Telegram: [Direct link]',
         email: 'Email: [Corporate email]',
         office: 'Office: Milan / Verona, Italy'
@@ -455,7 +455,7 @@ const translations = {
         role: 'Foreign Trade Expert',
         bio: 'Marketing strategist and foreign trade expert with 12 years of living and working experience in Italy',
         experience1: '8 years in marketing and 4 years in consulting: specializes in building systematic sales and strategic funnels for the B2B sector',
-        experience2: 'Managed projects to launch brands in Italian and European markets, responsible for product adaptation and commercial strategy',
+        experience2: 'Managed projects to launch brands in Italian and international markets, responsible for product adaptation and commercial strategy',
         experience3: 'Architect of business communities: created an ecosystem for entrepreneurs in Italy, providing access to local network and partners',
         quote: '"My mission is not just to launch a project, but to build a system ensuring its sustainable profitability in the market"'
       },
@@ -550,7 +550,7 @@ const translations = {
       companyTagline: 'Conseil aux entreprises'
     },
     hero: {
-      title: 'Votre partenaire en export et import en Italie et en Europe',
+      title: 'Votre partenaire en export et import en Italie et dans le monde',
       subtitle: 'Gestion stratégique des opérations d\'export-import en Italie et dans l\'UE',
       description: 'Vin, huile d\'olive, tomates, bijoux — nous nous spécialisons dans l\'export et l\'import de produits alimentaires italiens et de biens de luxe.',
       cta: 'Demander une consultation',
@@ -647,11 +647,11 @@ const translations = {
       },
       step4: {
         title: 'Livraison et accompagnement',
-        description: 'Nous supervisons l\'expédition en Europe, le passage en douane et la livraison jusqu\'à votre entrepôt.'
+        description: 'Nous supervisons l\'expédition dans le monde entier, le passage en douane et la livraison jusqu\'à votre entrepôt.'
       },
       strategicSession: {
         title: 'Session stratégique',
-        description: 'Inscrivez-vous pour une consultation initiale pour évaluer le potentiel d\'exportation et identifier les barrières réglementaires sur les marchés cibles en Italie et en Europe centrale.',
+        description: 'Inscrivez-vous pour une consultation initiale pour évaluer le potentiel d\'exportation et identifier les barrières réglementaires sur les marchés cibles en Italie et dans le monde.',
         whatsappTelegram: 'WhatsApp / Telegram: [Lien direct]',
         email: 'Email: [Email professionnel]',
         office: 'Bureau: Milan / Vérone, Italie'
@@ -752,7 +752,7 @@ const translations = {
       forBusiness: 'pour les affaires',
       readyForNewMarkets: 'Prêt à entrer sur',
       newMarkets: 'de nouveaux marchés?',
-      diagnosticDescription: 'Inscrivez-vous pour une session diagnostique de 30 minutes. Nous analyserons votre cas et vous dirons quels obstacles vous pourriez rencontrer en Italie ou en Europe centrale.',
+      diagnosticDescription: 'Inscrivez-vous pour une session diagnostique de 30 minutes. Nous analyserons votre cas et vous dirons quels obstacles vous pourriez rencontrer en Italie et à l\'international.',
       whatsappTelegramLabel: 'WhatsApp / Telegram',
       whatsappLink: '[Lien direct]',
       emailLabel: 'Email',
@@ -901,11 +901,11 @@ const translations = {
       },
       step4: {
         title: 'Consegna e supporto',
-        description: 'Supervisioniamo la spedizione in Europa, il passaggio doganale e la consegna fino al vostro magazzino.'
+        description: 'Supervisioniamo la spedizione in tutto il mondo, il passaggio doganale e la consegna fino al vostro magazzino.'
       },
       strategicSession: {
         title: 'Sessione strategica',
-        description: 'Iscriviti per una consulenza iniziale per valutare il potenziale di esportazione e identificare le barriere regolamentari sui mercati di destinazione in Italia e Europa centrale.',
+        description: 'Iscriviti per una consulenza iniziale per valutare il potenziale di esportazione e identificare le barriere regolamentari sui mercati di destinazione in Italia e nel mondo.',
         whatsappTelegram: 'WhatsApp / Telegram: [Link diretto]',
         email: 'Email: [Email aziendale]',
         office: 'Ufficio: Milano / Verona, Italia'
@@ -1000,7 +1000,7 @@ const translations = {
       forBusiness: 'per il business',
       readyForNewMarkets: 'Pronti ad entrare in',
       newMarkets: 'nuovi mercati?',
-      diagnosticDescription: 'Iscriviti per una sessione diagnostica di 30 minuti. Analizzeremo il tuo caso e ti diremo quali ostacoli potresti incontrare in Italia o in Europa centrale.',
+      diagnosticDescription: 'Iscriviti per una sessione diagnostica di 30 minuti. Analizzeremo il tuo caso e ti diremo quali ostacoli potresti incontrare in Italia e all\'estero.',
       whatsappTelegramLabel: 'WhatsApp / Telegram',
       whatsappLink: '[Link diretto]',
       emailLabel: 'Email',
