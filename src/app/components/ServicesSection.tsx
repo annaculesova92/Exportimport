@@ -56,18 +56,18 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
             className="flex-shrink-0 relative"
             style={{ width: '300px', marginTop: '60px' }}
           >
-            <div className="w-[280px] h-[280px] rounded-full bg-white shadow-2xl shadow-slate-200/60 border border-slate-100 flex flex-col items-center justify-center p-8 relative">
-              <div className="absolute inset-[6px] rounded-full border-2 border-dashed border-teal-100" />
+            <div className="w-[280px] h-[280px] rounded-full bg-gradient-to-br from-teal-700 via-teal-800 to-emerald-900 shadow-2xl shadow-teal-900/30 flex flex-col items-center justify-center p-8 relative">
+              <div className="absolute inset-[6px] rounded-full border-2 border-dashed border-teal-400/30" />
 
               <div className="relative z-10 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-teal-600/25">
-                  <MessageSquareMore className="w-8 h-8 text-white" strokeWidth={1.8} />
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-amber-500/30">
+                  <MessageSquareMore className="w-8 h-8 text-teal-900" strokeWidth={1.8} />
                 </div>
-                <h3 className="text-base font-bold text-teal-800 mb-1">
+                <h3 className="text-base font-bold text-white mb-1">
                   {t('services.consultation.title')}
                 </h3>
                 <div className="w-12 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto my-2" />
-                <p className="text-[11px] text-slate-500 leading-relaxed">
+                <p className="text-[11px] text-teal-100/80 leading-relaxed">
                   {t('services.consultation.description')}
                 </p>
               </div>
