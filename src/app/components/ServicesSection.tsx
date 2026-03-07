@@ -28,38 +28,6 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
     { icon: ShieldCheck, key: 'risk', num: '06' },
   ];
 
-  const segmentColors = [
-    '#0f766e',
-    '#0d9488',
-    '#14b8a6',
-    '#2dd4bf',
-    '#5eead4',
-    '#99f6e4',
-  ];
-
-  const cx = 200;
-  const cy = 200;
-  const outerR = 170;
-  const innerR = 80;
-  const startAngle = -180;
-  const totalSpan = 180;
-  const gap = 2;
-  const segAngle = (totalSpan - gap * (services.length - 1)) / services.length;
-
-  function polarToCart(angleDeg: number, r: number) {
-    const rad = (angleDeg * Math.PI) / 180;
-    return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
-  }
-
-  function arcPath(a1: number, a2: number, r1: number, r2: number) {
-    const p1 = polarToCart(a1, r1);
-    const p2 = polarToCart(a2, r1);
-    const p3 = polarToCart(a2, r2);
-    const p4 = polarToCart(a1, r2);
-    const large = a2 - a1 > 180 ? 1 : 0;
-    return `M${p1.x},${p1.y} A${r1},${r1} 0 ${large} 1 ${p2.x},${p2.y} L${p3.x},${p3.y} A${r2},${r2} 0 ${large} 0 ${p4.x},${p4.y} Z`;
-  }
-
   return (
     <section id="services" className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-white via-white to-slate-50/60">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,119 +47,100 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
           </motion.div>
         </div>
 
-        <div className="hidden lg:block">
-          <div className="flex flex-col items-center">
-            <div className="flex items-start justify-center gap-6 mb-6 max-w-4xl mx-auto">
-              {services.map((service, i) => {
-                const isHovered = hoveredIndex === i;
+        <div className="hidden lg:flex items-start gap-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex-shrink-0 relative"
+            style={{ width: '300px', marginTop: '60px' }}
+          >
+            <div className="w-[280px] h-[280px] rounded-full bg-white shadow-2xl shadow-slate-200/60 border border-slate-100 flex flex-col items-center justify-center p-8 relative">
+              <div className="absolute inset-[6px] rounded-full border-2 border-dashed border-teal-100" />
+
+              <div className="relative z-10 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-600 to-teal-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-teal-600/25">
+                  <MessageSquareMore className="w-8 h-8 text-white" strokeWidth={1.8} />
+                </div>
+                <h3 className="text-base font-bold text-teal-800 mb-1">
+                  {t('services.consultation.title')}
+                </h3>
+                <div className="w-12 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto my-2" />
+                <p className="text-[11px] text-slate-500 leading-relaxed">
+                  {t('services.consultation.description')}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          <div className="flex-1 flex flex-col gap-3 relative pt-0">
+            <svg className="absolute left-0 top-0 w-16 h-full pointer-events-none" style={{ zIndex: 0 }}>
+              {services.map((_, i) => {
+                const itemY = i * 76 + 38;
+                const circleCenter = 140 + 38;
                 return (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: -15 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: i * 0.06 }}
-                    onHoverStart={() => setHoveredIndex(i)}
-                    onHoverEnd={() => setHoveredIndex(null)}
-                    className="flex-1 text-center cursor-pointer group"
-                  >
-                    <div className="flex flex-col items-center">
-                      <h4 className={`text-xs font-bold uppercase tracking-wider mb-1.5 transition-colors duration-300 ${isHovered ? 'text-teal-700' : 'text-slate-700'}`}>
-                        {t(`services.${service.key}.title`)}
-                      </h4>
-                      <p className="text-[10px] text-slate-400 leading-snug mb-3 line-clamp-2 px-1">
-                        {t(`services.${service.key}.description`)}
-                      </p>
-                      <div className="flex flex-col items-center gap-1">
-                        <div className={`w-3 h-3 rounded-full border-2 transition-all duration-300 ${isHovered ? 'border-teal-500 bg-teal-500 scale-125' : 'border-slate-300 bg-white'}`} />
-                        <div className="w-px h-4 bg-slate-200" />
-                      </div>
-                    </div>
-                  </motion.div>
+                  <g key={i}>
+                    <path
+                      d={`M 0 ${itemY} Q -30 ${itemY} -60 ${circleCenter}`}
+                      fill="none"
+                      stroke={hoveredIndex === i ? '#0d9488' : '#e2e8f0'}
+                      strokeWidth="1.5"
+                      className="transition-colors duration-300"
+                    />
+                  </g>
                 );
               })}
-            </div>
+            </svg>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-              style={{ width: 400, height: 220 }}
-            >
-              <svg viewBox="0 0 400 200" className="w-full h-full overflow-visible">
-                <defs>
-                  <filter id="semiShadow">
-                    <feDropShadow dx="0" dy="4" stdDeviation="6" floodOpacity="0.08" />
-                  </filter>
-                  <linearGradient id="whiteGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#f8fafc" />
-                    <stop offset="100%" stopColor="#e2e8f0" />
-                  </linearGradient>
-                </defs>
+            {services.map((service, index) => {
+              const isHovered = hoveredIndex === index;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.08 }}
+                  onHoverStart={() => setHoveredIndex(index)}
+                  onHoverEnd={() => setHoveredIndex(null)}
+                  className="group cursor-pointer relative"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className={`flex-shrink-0 w-11 h-11 rounded-full border-2 flex items-center justify-center transition-all duration-300 z-10 ${
+                      isHovered
+                        ? 'bg-teal-600 border-teal-600 shadow-lg shadow-teal-600/25 scale-110'
+                        : 'bg-white border-slate-200'
+                    }`}>
+                      <service.icon className={`w-5 h-5 transition-colors duration-300 ${isHovered ? 'text-white' : 'text-teal-600'}`} strokeWidth={2} />
+                    </div>
 
-                <path
-                  d={`M${cx - outerR},${cy} A${outerR},${outerR} 0 0 0 ${cx + outerR},${cy} L${cx + outerR},${cy + 15} A${outerR},${outerR} 0 0 1 ${cx - outerR},${cy + 15} Z`}
-                  fill="url(#whiteGrad)"
-                  filter="url(#semiShadow)"
-                />
+                    <div className={`flex-1 rounded-xl px-5 py-3.5 flex items-center gap-4 transition-all duration-300 ${
+                      isHovered
+                        ? 'bg-gradient-to-r from-teal-700 to-teal-800 shadow-lg shadow-teal-800/15'
+                        : 'bg-slate-50 border border-slate-100'
+                    }`}>
+                      <div className="flex-1 min-w-0">
+                        <h3 className={`text-sm font-bold transition-colors duration-300 ${isHovered ? 'text-white' : 'text-slate-800'}`}>
+                          {t(`services.${service.key}.title`)}
+                        </h3>
+                        <p className={`text-xs leading-relaxed mt-0.5 transition-colors duration-300 ${isHovered ? 'text-teal-100/80' : 'text-slate-500'}`}>
+                          {t(`services.${service.key}.description`)}
+                        </p>
+                      </div>
 
-                {services.map((service, i) => {
-                  const a1 = startAngle + i * (segAngle + gap);
-                  const a2 = a1 + segAngle;
-                  const isHovered = hoveredIndex === i;
-                  const midAngle = (a1 + a2) / 2;
-                  const iconPos = polarToCart(midAngle, (outerR + innerR) / 2);
-
-                  return (
-                    <g
-                      key={i}
-                      className="cursor-pointer"
-                      onMouseEnter={() => setHoveredIndex(i)}
-                      onMouseLeave={() => setHoveredIndex(null)}
-                    >
-                      <path
-                        d={arcPath(a1, a2, isHovered ? outerR + 6 : outerR, innerR)}
-                        fill={segmentColors[i]}
-                        opacity={isHovered ? 1 : 0.85}
-                        className="transition-all duration-300"
-                        style={isHovered ? { filter: `drop-shadow(0 4px 12px ${segmentColors[i]}50)` } : {}}
-                      />
-                      <service.icon
-                        x={iconPos.x - 10}
-                        y={iconPos.y - 10}
-                        width={20}
-                        height={20}
-                        color="white"
-                        strokeWidth={2}
-                        className="pointer-events-none"
-                        style={{ opacity: isHovered ? 1 : 0.7 }}
-                      />
-                    </g>
-                  );
-                })}
-
-                <circle cx={cx} cy={cy} r={innerR} fill="white" filter="url(#semiShadow)" />
-
-                <g>
-                  <MessageSquareMore
-                    x={cx - 14}
-                    y={cy - 28}
-                    width={28}
-                    height={28}
-                    color="#0d9488"
-                    strokeWidth={1.8}
-                  />
-                  <text x={cx} y={cy + 12} textAnchor="middle" fill="#0f766e" fontSize="9" fontWeight="800" fontFamily="system-ui, sans-serif" className="uppercase tracking-wider select-none">
-                    {t('services.consultation.title')}
-                  </text>
-                  <text x={cx} y={cy + 24} textAnchor="middle" fill="#d97706" fontSize="7" fontWeight="700" fontFamily="system-ui, sans-serif" className="uppercase tracking-widest select-none">
-                    KEY
-                  </text>
-                </g>
-              </svg>
-            </motion.div>
+                      <span className={`flex-shrink-0 w-7 h-7 rounded-full text-[10px] font-bold flex items-center justify-center transition-all duration-300 ${
+                        isHovered
+                          ? 'bg-white/20 text-white'
+                          : 'bg-teal-100 text-teal-700'
+                      }`}>
+                        {service.num}
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
 
@@ -225,7 +174,7 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="flex flex-col gap-2.5">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -236,13 +185,16 @@ export function ServicesSection({ onContactClick }: ServicesSectionProps) {
                 className="group"
               >
                 <div className="flex items-center gap-3 bg-white rounded-xl px-4 py-3 border border-slate-100 hover:border-teal-200 hover:shadow-md transition-all duration-300">
-                  <div className="w-9 h-9 rounded-lg bg-teal-50 border border-teal-100 flex items-center justify-center flex-shrink-0 group-hover:bg-teal-600 group-hover:border-teal-600 transition-all duration-300">
+                  <div className="w-9 h-9 rounded-full bg-teal-50 border border-teal-100 flex items-center justify-center flex-shrink-0 group-hover:bg-teal-600 group-hover:border-teal-600 transition-all duration-300">
                     <service.icon className="w-4 h-4 text-teal-600 group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="text-sm font-semibold text-slate-800">{t(`services.${service.key}.title`)}</h3>
                     <p className="text-xs text-slate-500 line-clamp-1">{t(`services.${service.key}.description`)}</p>
                   </div>
+                  <span className="w-6 h-6 rounded-full bg-teal-100 text-teal-700 text-[9px] font-bold flex items-center justify-center flex-shrink-0">
+                    {service.num}
+                  </span>
                 </div>
               </motion.div>
             ))}
