@@ -57,7 +57,7 @@ export function ContactSection() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8">
             <div className="md:col-span-2 flex flex-col justify-center">
               <h3 className="text-xl sm:text-2xl font-bold text-slate-800 mb-3">
-                {t('contact.formTitle')}
+                {t('contact.contactInfoTitle')}
               </h3>
               <p className="text-sm text-slate-500 leading-relaxed mb-6">
                 {t('contact.subtitle')}
@@ -102,42 +102,42 @@ export function ContactSection() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 pt-2">
+                <div className="flex items-center gap-2.5 pt-2">
                   <a
                     href="https://www.instagram.com/boutiquebusiness.consulting"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-all duration-300 group"
+                    className="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center hover:bg-teal-700 hover:scale-110 transition-all duration-300 shadow-md shadow-teal-600/25"
                     aria-label="Instagram Business"
                   >
-                    <Instagram className="w-4 h-4 text-slate-500 group-hover:text-white transition-colors" strokeWidth={1.8} />
+                    <Instagram className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
                   </a>
                   <a
                     href="https://www.instagram.com/anny_in_italy/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-all duration-300 group"
+                    className="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center hover:bg-teal-700 hover:scale-110 transition-all duration-300 shadow-md shadow-teal-600/25"
                     aria-label="Instagram Personal"
                   >
-                    <Instagram className="w-4 h-4 text-slate-500 group-hover:text-white transition-colors" strokeWidth={1.8} />
+                    <Instagram className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/anna-culesova-7955ab26a/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-all duration-300 group"
+                    className="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center hover:bg-teal-700 hover:scale-110 transition-all duration-300 shadow-md shadow-teal-600/25"
                     aria-label="LinkedIn"
                   >
-                    <Linkedin className="w-4 h-4 text-slate-500 group-hover:text-white transition-colors" strokeWidth={1.8} />
+                    <Linkedin className="w-4.5 h-4.5 text-white" strokeWidth={1.8} />
                   </a>
                   <a
                     href="https://wa.me/393245436954"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center hover:bg-teal-600 hover:text-white transition-all duration-300 group"
+                    className="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center hover:bg-teal-700 hover:scale-110 transition-all duration-300 shadow-md shadow-teal-600/25"
                     aria-label="WhatsApp"
                   >
-                    <WhatsAppIcon className="w-4 h-4 text-slate-500 group-hover:text-white transition-colors" />
+                    <WhatsAppIcon className="w-4.5 h-4.5 text-white" />
                   </a>
                 </div>
               </div>
@@ -211,9 +211,9 @@ export function ContactSection() {
                     disabled={isSubmitting || submitStatus === 'success'}
                     whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`px-8 py-3 rounded-lg font-semibold text-sm text-white flex items-center justify-center gap-2.5 transition-all duration-300 border ${
+                    className={`group px-8 py-3 rounded-lg font-semibold text-sm flex items-center justify-center gap-2.5 transition-all duration-300 border ${
                       submitStatus === 'success'
-                        ? 'bg-emerald-500 border-emerald-500 shadow-lg shadow-emerald-500/25'
+                        ? 'bg-emerald-500 border-emerald-500 text-white shadow-lg shadow-emerald-500/25'
                         : 'bg-white border-teal-700 text-teal-700 hover:bg-teal-700 hover:text-white shadow-sm hover:shadow-lg hover:shadow-teal-800/20'
                     } disabled:opacity-60 disabled:cursor-not-allowed`}
                   >
@@ -227,8 +227,8 @@ export function ContactSection() {
                       <span className="text-white">{t('contact.sent')}</span>
                     ) : (
                       <>
-                        <Send className="w-4 h-4" />
-                        <span className="text-teal-700 group-hover:text-white">{t('contact.submit')}</span>
+                        <Send className="w-4 h-4 text-teal-700 group-hover:text-white transition-colors" />
+                        <span className="text-teal-700 group-hover:text-white transition-colors">{t('contact.submit')}</span>
                       </>
                     )}
                   </motion.button>
