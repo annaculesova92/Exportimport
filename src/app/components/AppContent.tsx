@@ -10,6 +10,7 @@ import { TeamSection } from '@/app/components/TeamSection';
 import { ContactSection } from '@/app/components/ContactSection';
 import { ContactModal } from '@/app/components/ContactModal';
 import { Footer } from '@/app/components/Footer';
+import { BackgroundDecorations } from '@/app/components/BackgroundDecorations';
 import { useLanguage } from '@/app/contexts/LanguageContext';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowUp, Mail } from 'lucide-react';
@@ -33,6 +34,7 @@ export function AppContent() {
 
   return (
     <div className="min-h-screen bg-background antialiased">
+      <BackgroundDecorations />
       <Navigation onContactClick={() => setIsContactModalOpen(true)} />
 
       <main className="pt-16 sm:pt-20">
