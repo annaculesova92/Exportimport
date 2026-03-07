@@ -9,11 +9,13 @@ export function ValueSection() {
   const [progress, setProgress] = useState(0);
 
   const solutions = [
-    { icon: Contact, key: 'directContacts' },
-    { icon: FileCheck, key: 'certification' },
-    { icon: Ship, key: 'customs' },
-    { icon: UserCheck, key: 'personalApproach' },
+    { icon: Contact, key: 'directContacts', percent: 25 },
+    { icon: FileCheck, key: 'certification', percent: 25 },
+    { icon: Ship, key: 'customs', percent: 25 },
+    { icon: UserCheck, key: 'personalApproach', percent: 25 },
   ];
+
+  const colors = ['#0d9488', '#d97706', '#2563eb', '#059669'];
 
   useEffect(() => {
     setProgress(0);
@@ -23,34 +25,71 @@ export function ValueSection() {
           setActiveIndex(i => (i + 1) % solutions.length);
           return 0;
         }
-        return prev + 0.5;
+        return prev + 0.4;
       });
     }, 30);
     return () => clearInterval(interval);
   }, [activeIndex]);
 
   const ActiveIcon = solutions[activeIndex].icon;
-  const accentColor = '#0d9488';
+  const size = 280;
+  const cx = size / 2;
+  const cy = size / 2;
+  const outerR = 120;
+  const innerR = 75;
+  const gapAngle = 3;
+
+  function describeArc(startAngle: number, endAngle: number, r1: number, r2: number) {
+    const s1 = (startAngle - 90) * Math.PI / 180;
+    const e1 = (endAngle - 90) * Math.PI / 180;
+    const x1o = cx + r1 * Math.cos(s1);
+    const y1o = cy + r1 * Math.sin(s1);
+    const x2o = cx + r1 * Math.cos(e1);
+    const y2o = cy + r1 * Math.sin(e1);
+    const x1i = cx + r2 * Math.cos(e1);
+    const y1i = cy + r2 * Math.sin(e1);
+    const x2i = cx + r2 * Math.cos(s1);
+    const y2i = cy + r2 * Math.sin(s1);
+    const largeArc = endAngle - startAngle > 180 ? 1 : 0;
+    return `M ${x1o} ${y1o} A ${r1} ${r1} 0 ${largeArc} 1 ${x2o} ${y2o} L ${x1i} ${y1i} A ${r2} ${r2} 0 ${largeArc} 0 ${x2i} ${y2i} Z`;
+  }
+
+  const segmentAngle = 360 / solutions.length;
+
+  const iconPositions = solutions.map((_, i) => {
+    const midAngle = (i * segmentAngle + segmentAngle / 2 - 90) * Math.PI / 180;
+    const midR = (outerR + innerR) / 2;
+    return {
+      x: cx + midR * Math.cos(midAngle),
+      y: cy + midR * Math.sin(midAngle),
+    };
+  });
+
+  const labelPositions = solutions.map((_, i) => {
+    const midAngle = i * segmentAngle + segmentAngle / 2 - 90;
+    const midRad = midAngle * Math.PI / 180;
+    const labelR = outerR + 28;
+    return {
+      x: cx + labelR * Math.cos(midRad),
+      y: cy + labelR * Math.sin(midRad),
+      align: i === 0 ? 'center' : i === 1 ? 'left' : i === 2 ? 'center' : 'right',
+    };
+  });
 
   return (
-    <section id="value" className="py-20 sm:py-24 md:py-28 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-600 rounded-full blur-[200px]" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-emerald-700 rounded-full blur-[150px]" />
-      </div>
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16 sm:mb-20">
+    <section id="value" className="py-20 sm:py-24 md:py-28 relative overflow-hidden bg-gradient-to-b from-white via-teal-50/20 to-slate-50">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-3xl mx-auto text-center mb-14 sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3">
               {t('value.title')}
             </h2>
-            <p className="text-base text-slate-400">
+            <p className="text-base text-slate-500">
               {t('value.subtitle')}
             </p>
           </motion.div>
@@ -62,128 +101,122 @@ export function ValueSection() {
           viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <div className="relative w-[320px] h-[320px] sm:w-[400px] sm:h-[400px] mb-12">
-            <div className="absolute inset-[40px] sm:inset-[50px] rounded-full border border-white/[0.06]" />
-            <div className="absolute inset-[60px] sm:inset-[75px] rounded-full border border-dashed border-white/[0.04]" />
-
-            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400">
-              <circle cx="200" cy="200" r="160" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="2" />
-
-              {solutions.map((_, i) => {
-                const segLen = (2 * Math.PI * 160) / 4;
-                const gap = 12;
-                const dash = segLen - gap;
-                const offset = (2 * Math.PI * 160) / 4 - i * segLen;
+          <div className="relative mb-10" style={{ width: size + 120, height: size + 60 }}>
+            <svg
+              viewBox={`-60 -30 ${size + 120} ${size + 60}`}
+              className="w-full h-full"
+            >
+              {solutions.map((sol, i) => {
+                const startA = i * segmentAngle + gapAngle / 2;
+                const endA = (i + 1) * segmentAngle - gapAngle / 2;
                 const isActive = i === activeIndex;
+                const path = describeArc(startA, endA, outerR, innerR);
 
                 return (
-                  <circle
-                    key={i}
-                    cx="200" cy="200" r="160"
-                    fill="none"
-                    stroke={isActive ? accentColor : 'transparent'}
-                    strokeWidth="3"
-                    strokeDasharray={`${dash * progress / 100} ${2 * Math.PI * 160 - dash * progress / 100}`}
-                    strokeDashoffset={offset}
-                    strokeLinecap="round"
-                    style={isActive ? { filter: `drop-shadow(0 0 8px ${accentColor}60)` } : {}}
-                  />
+                  <g key={i}>
+                    <path
+                      d={path}
+                      fill={isActive ? colors[i] : `${colors[i]}15`}
+                      stroke={isActive ? colors[i] : `${colors[i]}30`}
+                      strokeWidth="1"
+                      className="cursor-pointer transition-all duration-400"
+                      onClick={() => { setActiveIndex(i); setProgress(0); }}
+                      style={isActive ? { filter: `drop-shadow(0 4px 12px ${colors[i]}30)` } : {}}
+                    />
+
+                    {isActive && (
+                      <path
+                        d={describeArc(startA, startA + (endA - startA) * progress / 100, outerR + 4, outerR)}
+                        fill={`${colors[i]}60`}
+                        className="pointer-events-none"
+                      />
+                    )}
+
+                    <g
+                      className="cursor-pointer"
+                      onClick={() => { setActiveIndex(i); setProgress(0); }}
+                    >
+                      <sol.icon
+                        x={iconPositions[i].x - 11}
+                        y={iconPositions[i].y - 11}
+                        width={22}
+                        height={22}
+                        color={isActive ? 'white' : colors[i]}
+                        strokeWidth={2}
+                      />
+                    </g>
+
+                    <text
+                      x={labelPositions[i].x}
+                      y={labelPositions[i].y}
+                      textAnchor={labelPositions[i].align === 'center' ? 'middle' : labelPositions[i].align === 'left' ? 'start' : 'end'}
+                      dominantBaseline="middle"
+                      fill={isActive ? colors[i] : '#94a3b8'}
+                      fontSize="10"
+                      fontWeight={isActive ? '700' : '500'}
+                      fontFamily="system-ui, sans-serif"
+                      className="cursor-pointer select-none transition-all duration-300"
+                      onClick={() => { setActiveIndex(i); setProgress(0); }}
+                    >
+                      {t(`value.${sol.key}.title`)}
+                    </text>
+                  </g>
                 );
               })}
+
+              <circle cx={cx} cy={cy} r={innerR - 8} fill="white" stroke="#f1f5f9" strokeWidth="1" />
             </svg>
 
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center" style={{ paddingBottom: 30, paddingRight: 0 }}>
               <motion.div
                 key={activeIndex}
-                initial={{ scale: 0.6, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ type: 'spring', stiffness: 200, damping: 16 }}
-                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-teal-500/10 border border-teal-400/20 flex items-center justify-center"
+                initial={{ scale: 0.5, opacity: 0, rotate: -20 }}
+                animate={{ scale: 1, opacity: 1, rotate: 0 }}
+                transition={{ type: 'spring', stiffness: 220, damping: 18 }}
+                className="flex flex-col items-center gap-1"
               >
-                <ActiveIcon className="w-9 h-9 sm:w-11 sm:h-11 text-teal-400" strokeWidth={1.5} />
+                <ActiveIcon
+                  className="w-10 h-10 sm:w-12 sm:h-12"
+                  style={{ color: colors[activeIndex] }}
+                  strokeWidth={1.5}
+                />
+                <span className="text-xs font-bold" style={{ color: colors[activeIndex] }}>
+                  0{activeIndex + 1}
+                </span>
               </motion.div>
             </div>
-
-            {solutions.map((sol, i) => {
-              const positions = [
-                { top: '0%', left: '50%', tx: '-50%', ty: '0', labelY: -32, labelAnchor: 'center' as const },
-                { top: '50%', left: '100%', tx: '-100%', ty: '-50%', labelX: 36, labelAnchor: 'left' as const },
-                { top: '100%', left: '50%', tx: '-50%', ty: '-100%', labelY: 32, labelAnchor: 'center' as const },
-                { top: '50%', left: '0%', tx: '0%', ty: '-50%', labelX: -36, labelAnchor: 'right' as const },
-              ];
-              const pos = positions[i];
-              const isActive = i === activeIndex;
-
-              return (
-                <div key={i} className="absolute" style={{ top: pos.top, left: pos.left, transform: `translate(${pos.tx}, ${pos.ty})` }}>
-                  <div className="relative">
-                    <button
-                      onClick={() => { setActiveIndex(i); setProgress(0); }}
-                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-400 ${
-                        isActive
-                          ? 'bg-teal-500 shadow-lg shadow-teal-500/30 scale-110'
-                          : 'bg-slate-800 border border-white/10 hover:border-white/20 hover:bg-slate-700'
-                      }`}
-                    >
-                      <sol.icon className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors duration-300 ${isActive ? 'text-white' : 'text-slate-400'}`} strokeWidth={2} />
-                    </button>
-
-                    <div
-                      className="absolute whitespace-nowrap"
-                      style={{
-                        ...(pos.labelAnchor === 'center' ? {
-                          left: '50%',
-                          transform: 'translateX(-50%)',
-                          ...(pos.labelY! < 0 ? { bottom: `${-pos.labelY!}px` } : { top: `${pos.labelY!}px` }),
-                          textAlign: 'center' as const,
-                        } : pos.labelAnchor === 'left' ? {
-                          left: `${pos.labelX!}px`,
-                          top: '50%',
-                          transform: 'translateY(-50%)',
-                        } : {
-                          right: `${-pos.labelX!}px`,
-                          top: '50%',
-                          transform: 'translateY(-50%)',
-                        }),
-                      }}
-                    >
-                      <span className={`text-xs sm:text-sm font-semibold transition-colors duration-300 ${isActive ? 'text-teal-300' : 'text-slate-500'}`}>
-                        {t(`value.${sol.key}.title`)}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
           </div>
 
           <motion.div
             key={activeIndex}
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35 }}
+            transition={{ duration: 0.3 }}
             className="text-center max-w-lg"
           >
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
+            <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3">
+              {t(`value.${solutions[activeIndex].key}.title`)}
+            </h3>
+            <p className="text-sm sm:text-base text-slate-500 leading-relaxed">
               {t(`value.${solutions[activeIndex].key}.description`)}
             </p>
           </motion.div>
 
-          <div className="flex gap-3 mt-8">
+          <div className="flex gap-2.5 mt-8">
             {solutions.map((_, i) => (
               <button
                 key={i}
                 onClick={() => { setActiveIndex(i); setProgress(0); }}
-                className="relative h-1 rounded-full overflow-hidden transition-all duration-300"
+                className="relative h-1.5 rounded-full overflow-hidden transition-all duration-300"
                 style={{
                   width: i === activeIndex ? '40px' : '10px',
-                  backgroundColor: 'rgba(255,255,255,0.1)',
+                  backgroundColor: i === activeIndex ? `${colors[activeIndex]}20` : '#e2e8f0',
                 }}
               >
                 {i === activeIndex && (
                   <div
-                    className="absolute inset-y-0 left-0 rounded-full bg-teal-400"
-                    style={{ width: `${progress}%` }}
+                    className="absolute inset-y-0 left-0 rounded-full"
+                    style={{ width: `${progress}%`, backgroundColor: colors[activeIndex] }}
                   />
                 )}
               </button>
