@@ -57,7 +57,7 @@ export function TeamSection({ onContactClick }: TeamSectionProps) {
                       <span className="text-teal-900 text-xs font-extrabold">12+</span>
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-0.5">Anna</h3>
+                  <h3 className="text-2xl font-bold text-white mb-0.5">Anna Culesova</h3>
                   <span className="text-[11px] font-bold text-yellow-400 tracking-wider uppercase mb-5">Founder</span>
                   <div className="flex gap-2">
                     {[
