@@ -60,7 +60,7 @@ const translations = {
     hero: {
       title: 'Ваш партнер по экспорту и импорту в Италии и в мире',
       subtitle: 'Стратегическое управление экспортно-импортными операциями из Италии по всему миру',
-      description: 'Вино, оливковое масло, томаты, бижутерия — специализируемся на экспорте и импорте итальянских продуктов питания и товаров класса люкс.',
+      description: 'Вино, оливковое масло, бижутерия — специализируемся на экспорте и импорте итальянских продуктов питания и товаров класса люкс.',
       cta: 'Запросить консультацию',
       learnMore: 'Почему мы',
       trusted: 'Нам доверяют более 150 компаний'
@@ -203,7 +203,7 @@ const translations = {
       cta: 'Записаться на консультацию',
       contactMe: 'Связаться со мной',
       anna: {
-        name: 'Анна',
+        name: 'Анна Кулешова',
         role: 'Эксперт по ВЭД',
         bio: 'Маркетолог-стратег и эксперт по внешнеэкономической деятельности с 12-летним опытом жизни и работы в Италии',
         experience1: '8 лет в маркетинге и 4 года в консалтинге: специализируется на построении системных продаж и стратегических воронках для B2B-сектора',
@@ -312,7 +312,7 @@ const translations = {
     hero: {
       title: 'Your partner in export and import in Italy and worldwide',
       subtitle: 'Strategic management of export-import operations from Italy worldwide',
-      description: 'Wine, olive oil, tomatoes, jewelry — we specialize in the export and import of Italian food products and luxury goods.',
+      description: 'Wine, olive oil, jewelry — we specialize in the export and import of Italian food products and luxury goods.',
       cta: 'Request consultation',
       learnMore: 'Why Us',
       trusted: 'Trusted by 150+ companies'
@@ -455,7 +455,7 @@ const translations = {
       cta: 'Book a consultation',
       contactMe: 'Get in touch',
       anna: {
-        name: 'Anna',
+        name: 'Anna Culesova',
         role: 'Foreign Trade Expert',
         bio: 'Marketing strategist and foreign trade expert with 12 years of living and working experience in Italy',
         experience1: '8 years in marketing and 4 years in consulting: specializes in building systematic sales and strategic funnels for the B2B sector',
@@ -557,7 +557,7 @@ const translations = {
     hero: {
       title: 'Votre partenaire en export et import en Italie et dans le monde',
       subtitle: 'Gestion stratégique des opérations d\'export-import depuis l\'Italie dans le monde entier',
-      description: 'Vin, huile d\'olive, tomates, bijoux — nous nous spécialisons dans l\'export et l\'import de produits alimentaires italiens et de biens de luxe.',
+      description: 'Vin, huile d\'olive, bijoux — nous nous spécialisons dans l\'export et l\'import de produits alimentaires italiens et de biens de luxe.',
       cta: 'Demander une consultation',
       learnMore: 'Pourquoi nous',
       trusted: 'Approuvé par plus de 150 entreprises'
@@ -700,7 +700,7 @@ const translations = {
       cta: 'Réserver une consultation',
       contactMe: 'Me contacter',
       anna: {
-        name: 'Anna',
+        name: 'Anna Culesova',
         role: 'Experte en commerce extérieur',
         bio: 'Stratège marketing et experte en commerce extérieur avec 12 ans d\'expérience de vie et de travail en Italie',
         experience1: '8 ans en marketing et 4 ans en conseil: spécialisée dans la construction de ventes systématiques et d\'entonnoirs stratégiques pour le secteur B2B',
@@ -812,7 +812,7 @@ const translations = {
     hero: {
       title: 'Il vostro partner per l\'export e l\'import in Italia e nel Mondo',
       subtitle: 'Gestione strategica delle operazioni di export-import dall\'Italia in tutto il mondo',
-      description: 'Vino, olio d\'oliva, pomodori, gioielli — siamo specializzati nell\'export e nell\'import di prodotti alimentari italiani e beni di lusso.',
+      description: 'Vino, olio d\'oliva, gioielli — siamo specializzati nell\'export e nell\'import di prodotti alimentari italiani e beni di lusso.',
       cta: 'Richiedi una consulenza',
       learnMore: 'Perché noi',
       trusted: 'Oltre 150 aziende si fidano di noi'
@@ -955,7 +955,7 @@ const translations = {
       cta: 'Prenota una consulenza',
       contactMe: 'Contattami',
       anna: {
-        name: 'Anna',
+        name: 'Anna Culesova',
         role: 'Esperta in commercio estero',
         bio: 'Stratega di marketing ed esperta in commercio estero con 12 anni di esperienza di vita e lavoro in Italia',
         experience1: '8 anni nel marketing e 4 anni nella consulenza: specializzata nella costruzione di vendite sistematiche e funnel strategici per il settore B2B',
